@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8" /> 
+<title>Full Frontal - JavaScript Conference</title> 
+<style> 
+@font-face {
+	font-family: 'ff';
+	src: url('ff-webfont.eot');
+	src: local('☺'), url('ff-webfont.woff') format('woff'), url('ff-webfont.ttf') format('truetype'), url('ff-webfont.svg#webfontSkGM2pLM') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@-webkit-keyframes border {
+  0% {
+    border-top: 5px solid #00899b;
+  }
+  100% {
+    border-top: 5px solid #3994C6;
+  }
+}
+
+html {
+  border-top: 5px solid #00899b;
+  -webkit-animation-name: border;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+
+body {
+  border-top: 1px solid #13778C;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; 
+  text-align: center;
+  background: #ded599;
+  font-size: 62.5%;
+  color: #fff;
+}
+ 
+ 
+h1 {
+  font-family: 'ff', Arial, sans-serif;
+  text-transform: lowercase;
+  letter-spacing: -0.05em;
+  font-weight: bold; 
+  font-size: 16em; 
+  display: block;
+  margin: 100px auto 0;
+  height: 1.1em;
+  width: 1.1em;
+  background: #00899b;
+  color: #ded599;
+  line-height: 1.3em;
+  padding-right: 0.05em;
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  -o-box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  -ms-box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  -moz-border-radius-topleft: 0.3em;
+  -moz-border-radius-bottomright: 0.3em;
+  -webkit-border-top-left-radius: 0.3em;
+  -webkit-border-bottom-right-radius: 0.3em;
+  border-top-left-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+}
+ 
+h1 span {
+  display: none;
+}
+ 
+h2, p {
+  letter-spacing: -0.05em;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  font-size: 3.6em;
+  font-weight: bold;
+  margin-top: 0em;
+}
+
+h2 {
+  margin-top: 2em;
+  margin-bottom: 0.2em;
+}
+.more {
+  margin-top: 4em;
+  font-family: arial;
+  font-size: 1.8em;
+}
+
+.more a {
+  color: #fff;
+}
+</style> 
+</head> 
+<body> 
+    <h1>F<span>ull</span><span> </span>F<span>rontal</span></h1> 
+    <h2><span>JavaScript Conference</span></h2>
+    <p><span class="comingsoon">Coming <time datetime="2011-11-113">11-11-11</time></span></p>
+<p class="more">Find out about previous years: <a href="http://2010.full-frontal.org">2010</a>, <a href="http://2009.full-frontal.org">2009</a></p>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="http://jsconsole.com/remote.js?remy"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1656750-25']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body> 
+</html>
