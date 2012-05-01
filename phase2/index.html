@@ -13,19 +13,65 @@
   
 </head>
 <body>
-  <div id="map"></div>
 
-  <div id="content">
-    <div>
-      Map tiles by <a href="http://stamen.com">Stamen Design</a>,
-      under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>.
-      Data by <a href="http://openstreetmap.org">OpenStreetMap</a>,
-      under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.
-    </div>
+  <header>
+    <div class="ledge"></div><div class="chip"></div>
+    
+  <div class="wrapper">
+    <img class="logo" src="/images/logo.png" width="140" height="130" alt="Full Frontal">
+    <p>tickets go live in&hellip;</p>
+    <time id="countdown" datetime="2012-05-01T17:41:00+0100">
+      <div class="days">
+        <span class="value">13</span>
+        <span class="label">days</span>
+      </div>
+      <div class="hour">
+        <span class="value">TH</span>
+        <span class="label">hour</span>
+      </div>
+      <div class="mins">
+        <span class="value">JU</span>
+        <span class="label"><abbr title="minutes">mins</abbr></span>
+      </div>
+      <div class="secs">
+        <span class="value">LY</span>
+        <span class="label"><abbr title="seconds">secs</abbr></span>
+      </div>
+      <div class="dots"></div>
+    </time>
   </div>
+  </header>
 
-  <script src="http://maps.googleapis.com/maps/api/js?&amp;sensor=false"></script>
-  <script src="http://maps.stamen.com/js/tile.stamen.js"></script>
-  <script src="/js/map.js"></script>
+  <div class="main"><div class="wrapper">
+    <p class="lede vevent">
+      <strong class="summary">Full Frontal 2012</strong> is a one day <strong>JavaScript Conference</strong> 
+      <br>at the <span class="location">Duke of York’s Picturehouse in Brighton, UK </span>
+      <br>on the <time class="dtstart" title="2012-11-09T09:00"><strong>9th of November 2012</strong></time>
+    <p>
+
+    <div>
+      <section>
+        <p>
+          Give us your email address* and we’ll keep you up to date with all of
+          the latest news about Full Frontal, including speakers, tickets and more.
+        </p>
+      </section>
+    </div>
+  </div></div>
+
+  <footer>
+    <p class="previous">
+      Previous years<br>
+      <a href="http://2009.full-frontal.org/">2009</a>,
+      <a href="http://2010.full-frontal.org/">2010</a>,
+      <a href="http://2011.full-frontal.org/">2011</a>
+    </p>
+    <a href="http://leftlogic.com">
+      <img src="/images/leftlogic.png" width="227" height="47" alt="Left Logic">
+    </a>
+  </footer>
+
+  <script src="/js/fullfrontal.js"></script>
+
 </body> 
 </html>
