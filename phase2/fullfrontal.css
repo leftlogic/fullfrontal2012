@@ -22,7 +22,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  color: #fff;
 }
 
 header {
@@ -47,13 +47,13 @@ header .ledge {
   background-image: url(/images/ledge.png);
   background-position: center bottom;
   background-repeat: repeat-x;
-  right: 50%;
+  right: 45%;
 }
 header .chip {
   background-image: url(/images/chip.png);
   background-position: left bottom;
   background-repeat: no-repeat;
-  left: 50%;
+  left: 55%;
 }
 header .wrapper {
   width: 778px;
@@ -75,6 +75,7 @@ header .logo {
   float: right;
   position: relative;
   overflow: hidden;
+  color: #bfbfbf;
 }
 #countdown div {
   float: left;
@@ -96,19 +97,21 @@ header .logo {
   font-size: 64px;
   text-transform: uppercase;
   text-align: center;
-  color: #bfbfbf;
 }
-#countdown .dots {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  float: none;
-  margin: 0;
-  background-image: url(/images/dots.png);
+
+.date-twitter {
+  font-family: Xenon;
+  font-size: 128px;
+  text-align: center;
+  text-shadow: 4px 4px 0px #000;
 }
+.date {
+  color: #fff;
+}
+.twitter {
+  font-size: 64px;
+}
+
 footer {
   width: 960px;
   margin: 50px auto;
@@ -139,6 +142,26 @@ footer .previous {
 .lede strong {
   color: #fff;
 }
+.tabs {
+  font-family: Xenon;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.tab {
+  width: 33%;
+  display: block;
+  float: left;
+  padding: 20px 0;
+  background-color: #0eaf16;
+  list-style-type: none;
+  color: #87d78b;
+}
+
+
+
 section {
   background: #fff;
   border: 2px solid #000;
