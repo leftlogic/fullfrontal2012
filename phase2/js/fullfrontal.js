@@ -1,3 +1,20 @@
+$(document).ready(function () {
+  
+  var $tabContent = $('.tab-content'),
+      $tabs = $('.tab');
+
+  if ($('.tabs').css('display') != 'none') {
+    $tabContent.hide();
+    $tabs.click(function () {
+      $tabs.removeClass('tab-selected');
+      $tab = $(this).addClass('tab-selected');
+      $tabContent.hide();
+      $tabContent.filter('[data-tab=' + $tab.data('tab') + ']').show();
+    });
+  }
+});
+
+
 (function () { 
   var countdown = document.getElementById('countdown'),
       d = countdown.getElementsByClassName('days')[0].getElementsByClassName('value')[0],

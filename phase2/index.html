@@ -16,57 +16,96 @@
 
   <header>
     <div class="ledge"></div><div class="chip"></div>
-    
-  <div class="wrapper">
-    <img class="logo" src="/images/logo.png" width="140" height="130" alt="Full Frontal">
-    <p>tickets go live in&hellip;</p>
-    <time id="countdown" datetime="2012-05-01T17:41:00+0100">
-      <div class="days">
-        <span class="value">13</span>
-        <span class="label">days</span>
-      </div>
-      <div class="hour">
-        <span class="value">TH</span>
-        <span class="label">hour</span>
-      </div>
-      <div class="mins">
-        <span class="value">JU</span>
-        <span class="label"><abbr title="minutes">mins</abbr></span>
-      </div>
-      <div class="secs">
-        <span class="value">LY</span>
-        <span class="label"><abbr title="seconds">secs</abbr></span>
-      </div>
-    </time>
-  </div>
+    <div class="wrapper">
+      <img class="logo" src="/images/logo.png" width="140" height="130" alt="Full Frontal">
+      <p>tickets go live in&hellip;</p>
+      <time id="countdown" datetime="2012-05-01T17:41:00+0100">
+        <div class="days">
+          <span class="value">13</span>
+          <span class="label">days</span>
+        </div>
+        <div class="hour">
+          <span class="value">TH</span>
+          <span class="label">hour</span>
+        </div>
+        <div class="mins">
+          <span class="value">JU</span>
+          <span class="label"><abbr title="minutes">mins</abbr></span>
+        </div>
+        <div class="secs">
+          <span class="value">LY</span>
+          <span class="label"><abbr title="seconds">secs</abbr></span>
+        </div>
+      </time>
+    </div>
   </header>
 
   <div class="main"><div class="wrapper">
     <p class="lede vevent">
       <strong class="summary">Full Frontal 2012</strong> is a one day <strong>JavaScript Conference</strong> 
       <br>at the <span class="location">Duke of York’s Picturehouse in Brighton, UK </span>
-      <br>on the <time class="dtstart" title="2012-11-09T09:00" datetime="2012-11-09T09:00"><strong>9th of November 2012</strong></time>
+      <br>on the <time class="dtstart" title="2012-11-09T09:00" datetime="2012-11-09T09:00">
+        <strong>9th of November 2012</strong>
+      </time>
     </p>
 
     <div>
       <ul class="tabs">
-        <li class="tab">Become a sponsor</li>
-        <li class="tab">Propose a talk/speaker</li>
-        <li class="tab selected">Register your interest</li>
+        <li class="tab" data-tab="sponsor">
+          <span>Become a sponsor</span>
+        </li>
+        <li class="tab tab-center" data-tab="talk">
+          <span>Propose a talk/speaker</span>
+        </li>
+        <li class="tab" data-tab="register">
+          <span>Register your interest</span>
+        </li>
       </ul>
-      <section>
-        <p>
-          Give us your email address* and we’ll keep you up to date with all of
-          the latest news about Full Frontal, including speakers, tickets and more.
-        </p>
+
+      <section class="tab-content" data-tab="sponsor">
+        <h2>Become a sponsor</h2>
+        <div class="wrapper">
+          <p>
+            Find out how your company can sponsor Full Frontal by reviewing our
+            <a href="/sponsorship.html">sponsorship packages</a> and
+            <a href="mailto:events@leftlogic.com?subject=FF2012%20Sponsorship">get in touch</a>
+            with us to discuss how we can work together.
+          </p>
+        </div>
       </section>
+
+      <section class="tab-content" data-tab="talk">
+        <h2>Propose a talk/speaker</h2>
+        <div class="wrapper">
+          <p>
+            Want to speak at Full Frontal 2011? We'd love to give you the platform
+            to speak to hundreds of developers and designers, so what are you waiting for,
+            <a href="mailto:events@leftlogic.com?subject=FF2012%20Speaking%20Proposal">get in touch!</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="tab-content" data-tab="register">
+        <h2>Register your interest</h2>
+        <div class="wrapper">
+          <p>
+            Give us your email address* and we’ll keep you up to date with all of
+            the latest news about Full Frontal, including speakers, tickets and more.
+          </p>
+          <form class="register-interest">
+              <input type="email" placeholder="joe@bloggs.com">
+              <button type="submit">Register</button>
+          </form>
+          <small>* We wont share your email address with anyone. Promise.</small>
+        </div>
+      </section>
+
     </div>
 
     <div class="date-twitter">
       <time class="date" datetime="2012-11-09T09:00"><strong>09.11.12</strong></time>
       <a class="twitter" href="https://twitter.com/fullfrontalconf" title="Follow Full Frontal on Twitter">@fullfrontalconf</a>
     </div>
-
 
   </div></div>
 
@@ -77,11 +116,12 @@
       <a href="http://2010.full-frontal.org/">2010</a>,
       <a href="http://2011.full-frontal.org/">2011</a>
     </p>
-    <a href="http://leftlogic.com">
-      <img src="/images/leftlogic.png" width="227" height="47" alt="Left Logic">
-    </a>
+    <a class="left-logic" href="http://leftlogic.com">Left Logic</a>
   </footer>
 
+</div>
+
+  <script src="/js/jquery.js"></script>
   <script src="/js/fullfrontal.js"></script>
 
 </body> 

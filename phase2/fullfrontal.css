@@ -24,6 +24,10 @@ a {
 a:hover {
   color: #fff;
 }
+small {
+  size: 15px;
+  color: #666;
+}
 
 header {
   position: relative;
@@ -56,7 +60,7 @@ header .chip {
   left: 55%;
 }
 header .wrapper {
-  width: 778px;
+  max-width: 778px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -79,7 +83,7 @@ header .logo {
 }
 #countdown div {
   float: left;
-  width: 120px;
+  max-width: 120px;
   margin-right: 40px;
 }
 #countdown .secs{
@@ -99,21 +103,8 @@ header .logo {
   text-align: center;
 }
 
-.date-twitter {
-  font-family: Xenon;
-  font-size: 128px;
-  text-align: center;
-  text-shadow: 4px 4px 0px #000;
-}
-.date {
-  color: #fff;
-}
-.twitter {
-  font-size: 64px;
-}
-
 footer {
-  width: 960px;
+  max-width: 960px;
   margin: 50px auto;
   text-align: center;
 }
@@ -122,7 +113,19 @@ footer .previous {
    line-height: 19px;
    margin-bottom: 75px; 
 }
-
+.left-logic {
+  display: block;
+  margin: 0 auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 227px;
+  height: 47px;
+  background-image: url(/images/leftlogic.png);
+}
+.left-logic:hover {
+  background-position: bottom;
+}
 
 .main {
   background-image: url(/images/grad.png);
@@ -130,11 +133,13 @@ footer .previous {
   padding-top: 85px;
 }
 .main .wrapper {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;  
 }
+
 .lede {
   margin: 0;
+  margin-bottom: 80px;
   font-size: 35px;
   text-align: center;
   text-shadow: 1px 1px 0px #000;
@@ -142,33 +147,204 @@ footer .previous {
 .lede strong {
   color: #fff;
 }
-.tabs {
+
+.date-twitter {
   font-family: Xenon;
-  font-size: 16px;
+  font-size: 128px;
   text-align: center;
+  text-shadow: 4px 4px 0px #000;
+  margin-top: 80px;
+}
+.date {
+  color: #fff;
+}
+.twitter {
+  font-size: 64px;
+}
+
+.tabs {
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 .tab {
-  width: 33%;
+  width: 29%;
   display: block;
   float: left;
+  list-style-type: none;
+  background-repeat: no-repeat;
+  background-position: center -170px;
+}
+.tab-center {
+  margin: 0 6.6%;
+}
+.tab[data-tab=sponsor] {
+  background-image: url(/images/t-sponsor.png);
+}
+.tab[data-tab=talk] {
+  background-image: url(/images/t-talk.png);
+}
+.tab[data-tab=register] {
+  background-image: url(/images/t-register.png);
+}
+.tab span,
+.tab-content h2 {
+  font-family: Xenon;
+  font-size: 16px;
+  text-align: center;
+  display: block;
   padding: 20px 0;
+  margin-top: 170px;
   background-color: #0eaf16;
+  border: 2px solid #000;
   list-style-type: none;
   color: #87d78b;
 }
 
+.tab:hover {
+  cursor: pointer;
+  background-position: center top;
+}
+.tab:hover span {
+  color: #fff;
+}
 
+.tab-selected {
+ background-position: center top; 
+}
+.tab-selected:hover {
+  cursor: default;
+}
+.tab-selected span {
+  padding-bottom: 22px;
+  border-bottom: none;
+  background-color: #fff;
+  color: #000;
+}
+.tab-selected:hover span {
+  color: #000;
+}
 
-section {
+.tab-content .wrapper {
   background: #fff;
   border: 2px solid #000;
   color: #000;
   padding: 35px 45px;
+  margin-top: -2px;
   font-size: 25px;
 }
-section p {
+.tab-content h2 {
+  display: none;
   margin: 0;
+  margin-top: 20px;
+  color: #fff;
+}
+.tab-content p {
+  margin: 0;
+}
+
+.register-interest {
+  position: relative;
+  margin: 40px 0;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px #000;
+}
+.register-interest input {
+  margin: 0;
+  border: 0;
+  padding: 20px 30px;
+  padding-right: 117px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 40px;
+}
+.register-interest input:focus {
+  outline: 0;  
+}
+.register-interest button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 87px;
+  height: 100%;
+  cursor: pointer;
+  background-color: #000;
+  background-image: url(/images/submit.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: #fff;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.register-interest button:hover {
+  background-color: #0EAF16;
+}
+
+
+@media screen and (max-width: 480px) {
+  header .logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  #countdown {
+    float: none;
+    margin: 0 auto;
+    width: 320px;
+  }
+  #countdown div {
+    margin: 6px;
+  }
+  #countdown .value {
+    font-size: 64px;
+  }
+  #countdown .label {
+    font-size: 32px;
+  }
+  .main {
+    padding-top: 55px;
+  }
+  .lede {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .tabs {
+    display: none;
+  }
+  .tab-content {
+    margin: 0 10px;
+  }
+  .tab-content h2 {
+    display: block;
+  }
+  .tab-content .wrapper {
+    font-size: 16px;
+    padding: 15px;
+  }
+  .register-interest {
+    margin: 10px 0;
+  }
+  .register-interest input {
+    padding: 14px 10px;
+    padding-right: 97px;
+    font-size: 16px;
+  }
+  .date-twitter {
+    font-size: 64px;
+    margin-top: 40px;
+  }
+  .twitter {
+    font-size: 32px;
+  }
+  footer {
+    margin: 25px auto;
+  }
+  footer .previous {
+    margin-bottom: 30px;
+  }
 }
