@@ -69,6 +69,7 @@ header p {
   margin-bottom: 25px;
   text-align: center;
   text-transform: uppercase;
+  line-height: 10px;
 }
 header .logo {
   float: left;
@@ -94,11 +95,13 @@ header .logo {
   margin-bottom: 7px; /* Should be 10px - logo a little too small */
   padding-left: 4px;
   font-size: 128px;
+  line-height: 85px;
   text-align: center;
 }
 #countdown .label {
   display: block;
   font-size: 64px;
+  line-height: 39px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -157,11 +160,16 @@ footer .previous {
 }
 .date {
   color: #fff;
+  line-height: 89px;
 }
 .twitter {
   font-size: 64px;
+  line-height: 50px;
 }
 
+.tabbed-area {
+  position: relative;
+}
 .tabs {
   margin: 0;
   padding: 0;
@@ -176,7 +184,7 @@ footer .previous {
   background-position: center -170px;
 }
 .tab-center {
-  margin: 0 6.6%;
+  margin: 0 6.501%;
 }
 .tab[data-tab=sponsor] {
   background-image: url(/images/t-sponsor.png);
@@ -187,8 +195,9 @@ footer .previous {
 .tab[data-tab=register] {
   background-image: url(/images/t-register.png);
 }
-.tab span,
-.tab-content h2 {
+/*.tab span,
+.tab-content h2 {*/
+.tab span {
   font-family: Xenon;
   font-size: 16px;
   text-align: center;
@@ -199,6 +208,9 @@ footer .previous {
   border: 2px solid #000;
   list-style-type: none;
   color: #87d78b;
+
+
+  position: absolute;
 }
 
 .tab:hover {
@@ -234,10 +246,10 @@ footer .previous {
   font-size: 25px;
 }
 .tab-content h2 {
-  display: none;
-  margin: 0;
+  /*display: none;*/
+/*  margin: 0;
   margin-top: 20px;
-  color: #fff;
+  color: #fff;*/
 }
 .tab-content p {
   margin: 0;
@@ -255,6 +267,7 @@ footer .previous {
   padding: 20px 30px;
   padding-right: 117px;
   width: 100%;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 40px;
 }
@@ -331,8 +344,12 @@ footer .previous {
   }
   .register-interest input {
     padding: 14px 10px;
-    padding-right: 97px;
+    padding-right: 67px;
     font-size: 16px;
+  }
+  .register-interest button {
+    width: 57px;
+    background-image: url(/images/submit-small.png);
   }
   .date-twitter {
     font-size: 64px;
