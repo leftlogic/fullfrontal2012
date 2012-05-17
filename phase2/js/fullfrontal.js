@@ -1,27 +1,25 @@
-// $(document).ready(function () {
-  
-  var $tabContent = $('.tab-content').find('.wrapper'),
-      $tabs = $('.tab');
+var $tabContent = $('.tab-content .wrapper'),
+    $tabs = $('.tab');
 
-  if ($tabs.css('position') == 'absolute') {
-    $tabs.click(function () {
-      $tabs.removeClass('tab-selected');
-      $tab = $(this).addClass('tab-selected');
-      $tabContent.hide();
-      $tab.siblings('.wrapper').show();
-    });
-  }
-// });
+if ($tabs.css('position') == 'absolute') {
+  $tabs.click(function () {
+    $tabs.removeClass('tab-selected');
+    $tab = $(this).addClass('tab-selected');
+    $tabContent.hide().filter(this.hash).show();
+    // $tab.siblings('.wrapper').show();
+  });
+}
 
 
 (function () { 
   var countdown = document.getElementById('countdown'),
+      // d = countdown.querySelector('.days .value'),
       d = countdown.getElementsByClassName('days')[0].getElementsByClassName('value')[0],
       h = countdown.getElementsByClassName('hour')[0].getElementsByClassName('value')[0],
       m = countdown.getElementsByClassName('mins')[0].getElementsByClassName('value')[0],
       s = countdown.getElementsByClassName('secs')[0].getElementsByClassName('value')[0],
       time = new Date(countdown.getAttribute('datetime')),
-      r = Math.floor(time - new Date()),
+      r = (time - new Date()) | 0,
       cutoff = 3,
       thefinalcountdown;
 
@@ -34,7 +32,8 @@
   
   setTimeout(function () {
     if (r > 5) {  
-      setInterval(function () {  
+      setInterval(function () {
+        r = (time - new Date()) | 0;
         var _s = 1000,
             _m = _s * 60,
             _h = _m * 60,
@@ -58,7 +57,7 @@
       thefinalcountdown = setInterval(function () {
         s.innerHTML = pad(cutoff--);
         if (cutoff < 0) {
-          clearInterval (thefinalcountdown);
+          clearInterval(thefinalcountdown);
 
           d.innerHTML = "ON";
           h.innerHTML = "SA";
