@@ -159,58 +159,60 @@ footer .previous {
   margin-top: 80px;
 }
 .date {
+  display: block;
   color: #fff;
   line-height: 89px;
 }
 .twitter {
+  display: block;
   font-size: 64px;
   line-height: 50px;
+  margin-top: 30px;
 }
 
 .tabbed-area {
   position: relative;
+  padding-top: 241px;
 }
-.tabs {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+
 .tab {
-  width: 29%;
+  position: absolute;
+  top: 0;
+  width: 30%;
   display: block;
-  float: left;
-  list-style-type: none;
+  margin: 0;
   background-repeat: no-repeat;
   background-position: center -170px;
+  z-index: 10;
 }
-.tab-center {
-  margin: 0 6.501%;
-}
-.tab[data-tab=sponsor] {
+.tab-sponsor .tab {
   background-image: url(/images/t-sponsor.png);
+  right: 0;
 }
-.tab[data-tab=talk] {
+.tab-talk .tab {
   background-image: url(/images/t-talk.png);
+  left: 35%;
 }
-.tab[data-tab=register] {
+.tab-register .tab {
   background-image: url(/images/t-register.png);
+  left: 0;
 }
-/*.tab span,
-.tab-content h2 {*/
+
 .tab span {
   font-family: Xenon;
   font-size: 16px;
   text-align: center;
   display: block;
-  padding: 20px 0;
+  padding: 15px 10px;
   margin-top: 170px;
+  line-height: 20px;
   background-color: #0eaf16;
   border: 2px solid #000;
-  list-style-type: none;
   color: #87d78b;
+}
 
-
-  position: absolute;
+.tab-sponsor .tab span br {
+  display: none;
 }
 
 .tab:hover {
@@ -228,7 +230,7 @@ footer .previous {
   cursor: default;
 }
 .tab-selected span {
-  padding-bottom: 22px;
+  padding-bottom: 17px;
   border-bottom: none;
   background-color: #fff;
   color: #000;
@@ -238,21 +240,26 @@ footer .previous {
 }
 
 .tab-content .wrapper {
+  display: none;
   background: #fff;
   border: 2px solid #000;
   color: #000;
+  margin-top: -19px;
   padding: 35px 45px;
-  margin-top: -2px;
   font-size: 25px;
 }
-.tab-content h2 {
-  /*display: none;*/
-/*  margin: 0;
-  margin-top: 20px;
-  color: #fff;*/
+.submitted .tab-register .wrapper {
+  display: block;
 }
 .tab-content p {
   margin: 0;
+}
+.tab-content .error {
+  margin-top: 30px;
+  color: red;
+}
+.tab-content .wrapper a:hover {
+  color: #000;
 }
 
 .register-interest {
@@ -297,8 +304,57 @@ footer .previous {
   background-color: #0EAF16;
 }
 
+@media screen and (max-width: 870px) {
+  .lede br {
+    display: none;
+  }
+}
+@media screen and (max-width: 970px) {
+  .lede,
+  .tabbed-area {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 790px) {
+  header .logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  #countdown {
+    float: none;
+    margin: 0 auto;
+    width: 580px;
+  }
+  #countdown div {
+    margin: 14px;
+  }
+  #countdown .value {
+/*    font-size: 64px;
+    line-height: 28px;*/
+  }
+  #countdown .label {
+/*    font-size: 32px;
+    line-height: 38px;*/
+  }
+}
+
+@media screen and (min-width: 580px) and (max-width: 759px) {
+  .tab-sponsor .tab span br {
+    display: inline;
+  }
+  .tab-content .wrapper {
+    margin-top: 1px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  header {
+    padding-bottom: 34px;
+  }
   header .logo {
     float: none;
     display: block;
@@ -315,9 +371,11 @@ footer .previous {
   }
   #countdown .value {
     font-size: 64px;
+    line-height: 28px;
   }
   #countdown .label {
     font-size: 32px;
+    line-height: 38px;
   }
   .main {
     padding-top: 55px;
@@ -326,18 +384,27 @@ footer .previous {
     font-size: 20px;
     margin-bottom: 10px;
   }
-  .tabs {
-    display: none;
+  .tabbed-area {
+    padding-top: 0;
+    margin-top: 40px;
   }
-  .tab-content {
-    margin: 0 10px;
-  }
-  .tab-content h2 {
+  .tab {
+    position: static;
+    width: 100%;
     display: block;
+    background-image: none;
+  }
+  .tab:hover {
+    cursor: default;
+  }
+  .tab span {
+    margin-top: 10px;
   }
   .tab-content .wrapper {
+    display: block;
     font-size: 16px;
     padding: 15px;
+    margin-top: -2px;
   }
   .register-interest {
     margin: 10px 0;
@@ -352,11 +419,15 @@ footer .previous {
     background-image: url(/images/submit-small.png);
   }
   .date-twitter {
-    font-size: 64px;
     margin-top: 40px;
+    font-size: 64px;
+  }
+  .date {
+    line-height: 41px;
   }
   .twitter {
     font-size: 32px;
+    margin-top: 10px;
   }
   footer {
     margin: 25px auto;

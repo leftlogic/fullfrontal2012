@@ -1,5 +1,25 @@
+<?php
+  $thanks = false;
+  $error = false;
+  $email = '';
+
+  function validEmail($e) {
+    return (preg_match("/^([_a-z0-9-\+]+(\.[_a-z0-9-\+]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4}))$/", $e));
+  }
+
+  if (isset($_POST['email']) && $_POST['email'] && validEmail($_POST['email'])) {
+    $email = $_POST['email'];
+    $fp = fopen('emails.txt', 'a+');
+    fwrite($fp, $email . "\n");
+    fclose($fp);
+    $thanks = true;
+  } elseif (isset($_POST['email'])) {
+    $error = true;
+  } 
+?>
+
 <!DOCTYPE html> 
-<html>
+<html<?= $thanks || $error ? ' class="submitted"' : '' ?>>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -51,31 +71,29 @@
     </p>
 
     <div class="tabbed-area">
-      <ul class="tabs">
-        <li class="tab" data-tab="sponsor">
-          <span>Become a sponsor</span>
-        </li>
-        <li class="tab tab-center" data-tab="talk">
-          <span>Propose a talk/speaker</span>
-        </li>
-        <li class="tab" data-tab="register">
-          <span>Register your interest</span>
-        </li>
-      </ul>
-
-      <section class="tab-content" data-tab="sponsor">
-        <h2 class="tab"><span>Become a sponsor</span></h2>
+      <section class="tab-content tab-register">
+        <h2 class="tab <?= $thanks || $error ? ' tab-selected' : '' ?>"><span>Register your interest</span></h2>
         <div class="wrapper">
-          <p>
-            Find out how your company can sponsor Full Frontal by reviewing our
-            <a href="/sponsorship.html">sponsorship packages</a> and
-            <a href="mailto:events@leftlogic.com?subject=FF2012%20Sponsorship">get in touch</a>
-            with us to discuss how we can work together.
-          </p>
+          <?php if ($thanks) : ?>
+            <p>Thank you for registering your interest in Full Frontal 2012</p>
+          <?php else: ?>
+            <p>
+              Give us your email address* and we’ll keep you up to date with all of
+              the latest news about Full Frontal, including speakers, tickets and more.
+            </p>
+            <?php if ($error) : ?>
+              <p class="error">There was an error collecting your email address, please try again.</p>
+            <?php endif; ?>
+            <form class="register-interest" action="/" method="post">
+                <input type="email" name="email" placeholder="joe@bloggs.com" required <?php echo isset($_POST['email']) ? 'value="' . $_POST['email'] . '"' : ''; ?>>
+                <button type="submit">Register</button>
+            </form>
+            <small>* We wont share your email address with anyone. Promise.</small>
+          <?php endif; ?>
         </div>
       </section>
 
-      <section class="tab-content" data-tab="talk">
+      <section class="tab-content tab-talk">
         <h2 class="tab"><span>Propose a talk/speaker</span></h2>
         <div class="wrapper">
           <p>
@@ -86,18 +104,15 @@
         </div>
       </section>
 
-      <section class="tab-content" data-tab="register">
-        <h2 class="tab"><span>Register your interest</span></h2>
+      <section class="tab-content tab-sponsor">
+        <h2 class="tab"><span>Become a <br> sponsor</span></h2>
         <div class="wrapper">
           <p>
-            Give us your email address* and we’ll keep you up to date with all of
-            the latest news about Full Frontal, including speakers, tickets and more.
+            Find out how your company can sponsor Full Frontal by reviewing our
+            <a href="/sponsorship.html">sponsorship packages</a> and
+            <a href="mailto:events@leftlogic.com?subject=FF2012%20Sponsorship">get in touch</a>
+            with us to discuss how we can work together.
           </p>
-          <form class="register-interest">
-              <input type="email" placeholder="joe@bloggs.com">
-              <button type="submit">Register</button>
-          </form>
-          <small>* We wont share your email address with anyone. Promise.</small>
         </div>
       </section>
 
@@ -124,6 +139,17 @@
 
   <script src="/js/jquery.js"></script>
   <script src="/js/fullfrontal.js"></script>
+  <script>
+    // Google Analytics
+    var _gaq = _gaq || [], d = document, n = 'className', g = 'getElementById', i = 'time';
+    _gaq.push(['_setAccount', 'UA-1656750-25']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 
 </body> 
 </html>
