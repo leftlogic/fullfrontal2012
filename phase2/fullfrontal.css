@@ -38,8 +38,8 @@ header {
   z-index: 1;
   color: #000;
 }
-header .ledge,
-header .chip {
+header .ponch,
+header .chips {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -47,17 +47,18 @@ header .chip {
   right: 0;
   z-index: -1;
 }
-header .ledge {
+header .ponch {
   background-image: url(/images/ledge.png);
   background-position: center bottom;
   background-repeat: repeat-x;
-  right: 45%;
-}
-header .chip {
-  background-image: url(/images/chip.png);
-  background-position: left bottom;
-  background-repeat: no-repeat;
   left: 55%;
+
+}
+header .chips {
+  background-image: url(/images/chip.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  right: 45%;
 }
 header .wrapper {
   max-width: 778px;
@@ -170,7 +171,7 @@ footer .previous {
   margin-top: 30px;
 }
 
-.tabbed-area {
+.tabs {
   position: relative;
   padding-top: 241px;
 }
@@ -198,20 +199,21 @@ footer .previous {
   left: 0;
 }
 
-.tab span {
+.tab h2 {
   font-family: Xenon;
   font-size: 16px;
   text-align: center;
   display: block;
   padding: 15px 10px;
   margin-top: 170px;
+  margin-bottom: 0;
   line-height: 20px;
   background-color: #0eaf16;
   border: 2px solid #000;
   color: #87d78b;
 }
 
-.tab-sponsor .tab span br {
+.tab-sponsor .tab h2 br {
   display: none;
 }
 
@@ -219,7 +221,7 @@ footer .previous {
   cursor: pointer;
   background-position: center top;
 }
-.tab:hover span {
+.tab:hover h2 {
   color: #fff;
 }
 
@@ -229,13 +231,13 @@ footer .previous {
 .tab-selected:hover {
   cursor: default;
 }
-.tab-selected span {
+.tab-selected h2 {
   padding-bottom: 17px;
   border-bottom: none;
   background-color: #fff;
   color: #000;
 }
-.tab-selected:hover span {
+.tab-selected:hover h2 {
   color: #000;
 }
 
@@ -247,6 +249,9 @@ footer .previous {
   margin-top: -19px;
   padding: 35px 45px;
   font-size: 25px;
+}
+.tab-content .tab-hidden {
+  display: none;
 }
 .submitted .tab-register .wrapper {
   display: block;
@@ -261,6 +266,37 @@ footer .previous {
 .tab-content .wrapper a:hover {
   color: #000;
 }
+
+.noJS .tabs {
+  padding-top: 0;
+  margin-top: 40px;
+}
+.noJS .tab {
+  position: static;
+  width: 100%;
+  display: block;
+  background-image: none;
+}
+.noJS .tab:hover {
+  cursor: default;
+}
+.noJS .tab h2 {
+  color: #fff;
+  margin-top: 10px;
+}
+.noJS .tab-selected h2 {
+  color: #000;
+}
+.noJS .tab-content .wrapper {
+  display: block;
+  font-size: 16px;
+  padding: 15px;
+  margin-top: -2px;
+}
+.noJS .tab-content .tab-hidden {
+  display: block;
+}
+
 
 .register-interest {
   position: relative;
@@ -311,7 +347,7 @@ footer .previous {
 }
 @media screen and (max-width: 970px) {
   .lede,
-  .tabbed-area {
+  .tabs {
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -343,7 +379,7 @@ footer .previous {
 }
 
 @media screen and (min-width: 580px) and (max-width: 759px) {
-  .tab-sponsor .tab span br {
+  .tab-sponsor .tab h2 br {
     display: inline;
   }
   .tab-content .wrapper {
@@ -352,6 +388,9 @@ footer .previous {
 }
 
 @media screen and (max-width: 580px) {
+  body {
+    font-weight: 200;
+  }
   header {
     padding-bottom: 34px;
   }
@@ -384,7 +423,7 @@ footer .previous {
     font-size: 20px;
     margin-bottom: 10px;
   }
-  .tabbed-area {
+  .tabs {
     padding-top: 0;
     margin-top: 40px;
   }
@@ -397,14 +436,21 @@ footer .previous {
   .tab:hover {
     cursor: default;
   }
-  .tab span {
+  .tab h2 {
+    color: #fff;
     margin-top: 10px;
+  }
+  .tab-selected h2 {
+    color: #000;
   }
   .tab-content .wrapper {
     display: block;
     font-size: 16px;
     padding: 15px;
     margin-top: -2px;
+  }
+  .tab-content .tab-hidden {
+    display: block;
   }
   .register-interest {
     margin: 10px 0;

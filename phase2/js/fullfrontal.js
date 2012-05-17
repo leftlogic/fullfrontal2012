@@ -1,27 +1,33 @@
+$('html').removeClass('noJS');
+
 var $tabContent = $('.tab-content .wrapper'),
     $tabs = $('.tab');
 
-if ($tabs.css('position') == 'absolute') {
-  $tabs.click(function () {
-    $tabs.removeClass('tab-selected');
-    $tab = $(this).addClass('tab-selected');
-    $tabContent.hide().filter(this.hash).show();
-    // $tab.siblings('.wrapper').show();
-  });
-}
+window.onhashchange = function () {
+    var $match = $tabs.filter('[href$="' + location.hash + '"]');
+    if ($match.length) {
+      $tabs.removeClass('tab-selected');
+      $match.addClass('tab-selected');
+      $tabContent.addClass('tab-hidden').filter(location.hash).removeClass('tab-hidden');
+    }
+};
 
+if (location.hash) window.onhashchange();
 
 (function () { 
   var countdown = document.getElementById('countdown'),
-      // d = countdown.querySelector('.days .value'),
-      d = countdown.getElementsByClassName('days')[0].getElementsByClassName('value')[0],
-      h = countdown.getElementsByClassName('hour')[0].getElementsByClassName('value')[0],
-      m = countdown.getElementsByClassName('mins')[0].getElementsByClassName('value')[0],
-      s = countdown.getElementsByClassName('secs')[0].getElementsByClassName('value')[0],
+      d = countdown.querySelector('.days .value'),
+      h = countdown.querySelector('.hour .value'),
+      m = countdown.querySelector('.mins .value'),
+      s = countdown.querySelector('.secs .value'),
       time = new Date(countdown.getAttribute('datetime')),
-      r = (time - new Date()) | 0,
-      cutoff = 3,
-      thefinalcountdown;
+      cutoff = 5,
+      thefinalcountdown,
+      r, // remaining time
+      _s = 1000,
+      _m = _s * 60,
+      _h = _m * 60,
+      _d = _h * 24;
 
   var pad = function (number) {
     if (number < 10) {
@@ -29,16 +35,21 @@ if ($tabs.css('position') == 'absolute') {
     }
     return number;
   };
+
+  var theEnd = function () {
+    clearInterval(thefinalcountdown);
+    d.innerHTML = "ON";
+    h.innerHTML = "SA";
+    m.innerHTML = "LE";
+    s.innerHTML = "!!";
+  }
   
   setTimeout(function () {
-    if (r > 5) {  
-      setInterval(function () {
+    r = (time - new Date()) | 0;
+    if (r > cutoff) {  
+      thefinalcountdown = setInterval(function () {
         r = (time - new Date()) | 0;
-        var _s = 1000,
-            _m = _s * 60,
-            _h = _m * 60,
-            _d = _h * 24,
-            rd = Math.floor(r / _d),
+        var rd = Math.floor(r / _d),
             rh = Math.floor((r % _d) / _h),
             rm = Math.floor((r % _h) / _m),
             rs = Math.floor((r % _m) / _s);
@@ -47,6 +58,10 @@ if ($tabs.css('position') == 'absolute') {
         h.innerHTML = pad(rh);
         m.innerHTML = pad(rm);
         s.innerHTML = pad(rs);
+
+        if (r < 0) {
+          theEnd();
+        }
       }, 1000);
     } else {
       d.innerHTML = "00";
@@ -57,12 +72,7 @@ if ($tabs.css('position') == 'absolute') {
       thefinalcountdown = setInterval(function () {
         s.innerHTML = pad(cutoff--);
         if (cutoff < 0) {
-          clearInterval(thefinalcountdown);
-
-          d.innerHTML = "ON";
-          h.innerHTML = "SA";
-          m.innerHTML = "LE";
-          s.innerHTML = "!!";
+          theEnd();
         }
       }, 1000);
     }
