@@ -1,6 +1,6 @@
 $('html').removeClass('noJS');
 
-var $tabContent = $('.tab-content .wrapper'),
+var $tabContent = $('.tab-content .wrapper').addClass('tab-hidden'),
     $tabs = $('.tab');
 
 window.onhashchange = function () {

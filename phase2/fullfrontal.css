@@ -18,7 +18,7 @@ body {
   color: #c0c0c0;
 }
 a {
-  color: #0eaf16;
+  color: #00af3b;
   text-decoration: none;
 }
 a:hover {
@@ -208,7 +208,7 @@ footer .previous {
   margin-top: 170px;
   margin-bottom: 0;
   line-height: 20px;
-  background-color: #0eaf16;
+  background-color: #00af3b;
   border: 2px solid #000;
   color: #87d78b;
 }
@@ -242,7 +242,6 @@ footer .previous {
 }
 
 .tab-content .wrapper {
-  display: none;
   background: #fff;
   border: 2px solid #000;
   color: #000;
@@ -264,7 +263,8 @@ footer .previous {
   color: red;
 }
 .tab-content .wrapper a:hover {
-  color: #000;
+  text-decoration: underline;
+  color: #00af3b;
 }
 
 .noJS .tabs {
@@ -337,7 +337,7 @@ footer .previous {
   overflow: hidden;
 }
 .register-interest button:hover {
-  background-color: #0EAF16;
+  background-color: #00af3b;
 }
 
 @media screen and (max-width: 870px) {
