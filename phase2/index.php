@@ -37,15 +37,11 @@
   <![endif]-->
   
 </head>
-<<<<<<< HEAD
 
-<!--[if IE 8]><body class="ie"><![endif]-->
-<!--[if gt IE 8]><body><![endif]-->
-<!--[if !IE]><!--><body><!--<![endif]-->
+<!--[if IE 8]><body class="ie <?= $thanks || $error ? ' submitted' : '' ?>"><![endif]-->
+<!--[if gt IE 8]><body<?= $thanks || $error ? ' class="submitted"' : '' ?>><![endif]-->
+<!--[if !IE]><!--><body<?= $thanks || $error ? ' class="submitted"' : '' ?>><!--<![endif]-->
 
-=======
-<body class="<?= $thanks || $error ? ' submitted' : '' ?>">
->>>>>>> 9157a8dec7413cb78d30df6885d3f200f57e0d9e
   <header>
     <div class="ponch"></div><div class="chips"></div><!-- know your TV cop characters -->
     <div class="wrapper">
