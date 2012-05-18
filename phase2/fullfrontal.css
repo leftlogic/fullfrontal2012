@@ -14,8 +14,12 @@ body {
   font-weight: 100;
   font-size: 16px;
   margin: 0;
-  background: #262626;
+  background-color: #262626;
+  background-image: url(/images/bg.png);
   color: #c0c0c0;
+}
+.ie {
+  min-width: 960px;
 }
 a {
   color: #00af3b;
@@ -351,6 +355,11 @@ footer .previous {
     margin-left: 10px;
     margin-right: 10px;
   }
+}
+.ie .lede,
+.ie .tabs {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 790px) {

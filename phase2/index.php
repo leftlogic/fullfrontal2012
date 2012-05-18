@@ -38,20 +38,23 @@
   <![endif]-->
   
 </head>
-<body>
+
+<!--[if IE 8]><body class="ie"><![endif]-->
+<!--[if gt IE 8]><body><![endif]-->
+<!--[if !IE]><!--><body><!--<![endif]-->
 
   <header>
     <div class="ponch"></div><div class="chips"></div>
     <div class="wrapper">
       <img class="logo" src="/images/logo.png" width="140" height="130" alt="Full Frontal">
       <p>tickets go live&hellip;</p>
-      <time id="countdown" datetime="2012-05-17T17:05:30+0100">
+      <time id="countdown" datetime="2012-07-02T10:00:00+01:00">
         <div class="days">
-          <span class="value">13</span>
+          <span class="value">02</span>
           <span class="label">days</span>
         </div>
         <div class="hour">
-          <span class="value">TH</span>
+          <span class="value">ND</span>
           <span class="label">hour</span>
         </div>
         <div class="mins">
