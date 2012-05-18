@@ -1,22 +1,23 @@
-$('html').removeClass('noJS');
+document.documentElement.className = '';
 
+// tabbing without the click handlers
 var $tabContent = $('.tab-content .wrapper').addClass('tab-hidden'),
     $tabs = $('.tab');
 
 window.onhashchange = function () {
-    var $match = $tabs.filter('[href$="' + location.hash + '"]');
-    if ($match.length) {
-      $tabs.removeClass('tab-selected');
-      $match.addClass('tab-selected');
-      $tabContent.addClass('tab-hidden').filter(location.hash).removeClass('tab-hidden');
-    }
+  var $match = $tabs.filter('[href$="' + location.hash + '"]');
+  if ($match.length) {
+    $tabs.removeClass('tab-selected');
+    $match.addClass('tab-selected');
+    $tabContent.addClass('tab-hidden').filter(location.hash).removeClass('tab-hidden');
+  }
 };
 
 if (location.hash) window.onhashchange();
 
 (function () { 
   //https://github.com/csnover/js-iso8601/blob/master/iso8601.js
-  var ie8DateParse = function (date) {
+  var noIsoDateParse = function (date) {
     var timestamp, struct, minutesOffset = 0, numericKeys = [ 1, 4, 5, 6, 7, 10, 11 ];
     if ((struct = /^(\d{4}|[+\-]\d{6})(?:-(\d{2})(?:-(\d{2}))?)?(?:T(\d{2}):(\d{2})(?::(\d{2})(?:\.(\d{3}))?)?(?:(Z)|([+\-])(\d{2})(?::(\d{2}))?)?)?$/.exec(date))) {
         for (var i = 0, k; (k = numericKeys[i]); ++i) {
@@ -39,21 +40,22 @@ if (location.hash) window.onhashchange();
   };
 
   var countdown = document.getElementById('countdown'),
-      d = countdown.querySelector('.days .value'),
-      h = countdown.querySelector('.hour .value'),
-      m = countdown.querySelector('.mins .value'),
-      s = countdown.querySelector('.secs .value'),
-      time = new Date(countdown.getAttribute('datetime')),
+      d = countdown.querySelector('div.days span.value'),
+      h = countdown.querySelector('div.hour span.value'),
+      m = countdown.querySelector('div.mins span.value'),
+      s = countdown.querySelector('div.secs span.value'),
+      time = countdown.getAttribute('datetime'),
       cutoff = 5,
-      thefinalcountdown,
+      thefinalcountdown, // performed by europe
       r, // remaining time
       _s = 1000,
       _m = _s * 60,
       _h = _m * 60,
       _d = _h * 24;
 
+  time = new Date(time),
   if(time == 'NaN'){
-    time = ie8DateParse(countdown.getAttribute('datetime'));
+    time = noIsoDateParse(countdown.getAttribute('datetime'));
   }
 
   var pad = function (number) {
@@ -69,13 +71,18 @@ if (location.hash) window.onhashchange();
     h.innerHTML = "SA";
     m.innerHTML = "LE";
     s.innerHTML = "!!";
+  };
+
+  var timeRemaining = function () {
+    return time - new Date;
   }
-  
+
   setTimeout(function () {
-    r = time - new Date();
-    if (r > cutoff) {  
+    r = timeRemaining();
+
+    if (r > cutoff) {
       thefinalcountdown = setInterval(function () {
-        r = time - new Date();
+        r = timeRemaining();
         var rd = Math.floor(r / _d),
             rh = Math.floor((r % _d) / _h),
             rm = Math.floor((r % _h) / _m),

@@ -205,7 +205,11 @@ footer .previous {
 
 .tab h2 {
   font-family: Xenon;
-  font-size: 16px;
+  -webkit-font-smoothing: none;
+  -moz-font-smoothing: none;
+  -o-font-smoothing: none;
+  font-smoothing: none;
+  font-size: 20px;
   text-align: center;
   display: block;
   padding: 15px 10px;
@@ -261,6 +265,14 @@ footer .previous {
 }
 .tab-content p {
   margin: 0;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 200;
+}
+.tab-content p:first-of-type {
+  font-weight: 100;
+  margin-top: 0;
+  font-size: 25px;
 }
 .tab-content .error {
   margin-top: 30px;
