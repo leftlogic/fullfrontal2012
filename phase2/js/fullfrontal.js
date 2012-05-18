@@ -1,28 +1,29 @@
-$('html').removeClass('noJS');
+document.documentElement.className = '';
 
+// tabbing without the click handlers
 var $tabContent = $('.tab-content .wrapper').addClass('tab-hidden'),
     $tabs = $('.tab');
 
 window.onhashchange = function () {
-    var $match = $tabs.filter('[href$="' + location.hash + '"]');
-    if ($match.length) {
-      $tabs.removeClass('tab-selected');
-      $match.addClass('tab-selected');
-      $tabContent.addClass('tab-hidden').filter(location.hash).removeClass('tab-hidden');
-    }
+  var $match = $tabs.filter('[href$="' + location.hash + '"]');
+  if ($match.length) {
+    $tabs.removeClass('tab-selected');
+    $match.addClass('tab-selected');
+    $tabContent.addClass('tab-hidden').filter(location.hash).removeClass('tab-hidden');
+  }
 };
 
 if (location.hash) window.onhashchange();
 
 (function () { 
   var countdown = document.getElementById('countdown'),
-      d = countdown.querySelector('.days .value'),
-      h = countdown.querySelector('.hour .value'),
-      m = countdown.querySelector('.mins .value'),
-      s = countdown.querySelector('.secs .value'),
+      d = countdown.querySelector('div.days span.value'),
+      h = countdown.querySelector('div.hour span.value'),
+      m = countdown.querySelector('div.mins span.value'),
+      s = countdown.querySelector('div.secs span.value'),
       time = new Date(countdown.getAttribute('datetime')),
       cutoff = 5,
-      thefinalcountdown,
+      thefinalcountdown, // performed by europe
       r, // remaining time
       _s = 1000,
       _m = _s * 60,
@@ -42,13 +43,18 @@ if (location.hash) window.onhashchange();
     h.innerHTML = "SA";
     m.innerHTML = "LE";
     s.innerHTML = "!!";
+  };
+
+  var timeRemaining = function () {
+    return time.getTime() - +new Date;
   }
-  
+
   setTimeout(function () {
-    r = (time - new Date()) | 0;
-    if (r > cutoff) {  
+    r = timeRemaining();
+
+    if (r > cutoff) {
       thefinalcountdown = setInterval(function () {
-        r = (time - new Date()) | 0;
+        r = timeRemaining(); //(time - new Date()) | 0;
         var rd = Math.floor(r / _d),
             rh = Math.floor((r % _d) / _h),
             rm = Math.floor((r % _h) / _m),

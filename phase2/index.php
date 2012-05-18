@@ -17,9 +17,8 @@
     $error = true;
   } 
 ?>
-
 <!DOCTYPE html> 
-<html class="noJS<?= $thanks || $error ? ' submitted' : '' ?>">
+<html class="noJS">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -38,20 +37,19 @@
   <![endif]-->
   
 </head>
-<body>
-
+<body class="<?= $thanks || $error ? ' submitted' : '' ?>">
   <header>
-    <div class="ponch"></div><div class="chips"></div>
+    <div class="ponch"></div><div class="chips"></div><!-- know your TV cop characters -->
     <div class="wrapper">
       <img class="logo" src="/images/logo.png" width="140" height="130" alt="Full Frontal">
       <p>tickets go live&hellip;</p>
-      <time id="countdown" datetime="2012-05-17T17:05:30+0100">
+      <time id="countdown" datetime="2012-07-02T10:00:00+01:00"><!-- colon in TZ to allow Opera to parse the date -->
         <div class="days">
-          <span class="value">13</span>
+          <span class="value">02</span>
           <span class="label">days</span>
         </div>
         <div class="hour">
-          <span class="value">TH</span>
+          <span class="value">ND</span>
           <span class="label">hour</span>
         </div>
         <div class="mins">
@@ -69,9 +67,9 @@
   <div class="main"><div class="wrapper">
     <p class="lede vevent">
       <strong class="summary">Full Frontal 2012</strong> is a one day <strong>JavaScript Conference</strong> 
-      <br>at the <span class="location">Duke of York’s Picturehouse in Brighton, UK </span>
+      <br>at the <span class="location">Duke of York&rsquo;s Picturehouse in Brighton, UK </span>
       <br>on the <time class="dtstart" title="2012-11-09T09:00" datetime="2012-11-09T09:00">
-        <strong>9th of November 2012</strong>
+        <strong>9th November 2012</strong>
       </time>
     </p>
 
@@ -85,14 +83,14 @@
             <p>Thank you for registering your interest in Full Frontal 2012</p>
           <?php else: ?>
             <p>
-              Give us your email address* and we’ll keep you up to date with all of
-              the latest news about Full Frontal, including speakers, tickets and more.
+              Give us your email address* and we&rsquo;ll keep you up to date with all of
+              the latest news about Full Frontal, including ticket release, speakers and more.
             </p>
             <?php if ($error) : ?>
               <p class="error">There was an error collecting your email address, please try again.</p>
             <?php endif; ?>
             <form class="register-interest" action="/" method="post">
-                <input type="email" name="email" placeholder="joe@bloggs.com" required <?php echo isset($_POST['email']) ? 'value="' . $_POST['email'] . '"' : ''; ?>>
+                <input type="email" name="email" placeholder="ecm@script.com" required <?php echo isset($_POST['email']) ? 'value="' . $_POST['email'] . '"' : ''; ?>>
                 <button type="submit">Register</button>
             </form>
             <small>* We wont share your email address with anyone. Promise.</small>
@@ -108,6 +106,14 @@
             to speak to hundreds of developers and designers, so what are you waiting for,
             <a href="mailto:events@leftlogic.com?subject=FF2012%20Speaking%20Proposal">get in touch!</a>
           </p>
+          <p>Here are some topics Remy would love to hear at this years conference - and if yours isn't one of these - that's cool too!</p>
+          <p><em>
+            Browser testing &amp; debugging for all browsers (and beyond inspector). 
+            Is HTML dead? 
+            What does the future hold for JavaScript outside of the Web? 
+            WebGL - what tha' hell! 
+            Maths is cool - we should have paid more attention in school.
+          </em></p>
         </div>
       </section>
 
@@ -135,9 +141,9 @@
   <footer>
     <p class="previous">
       Previous years<br>
-      <a href="http://2009.full-frontal.org/">2009</a>,
+      <a href="http://2011.full-frontal.org/">2011</a>,
       <a href="http://2010.full-frontal.org/">2010</a>,
-      <a href="http://2011.full-frontal.org/">2011</a>
+      <a href="http://2009.full-frontal.org/">2009</a>
     </p>
     <a class="left-logic" href="http://leftlogic.com">Left Logic</a>
   </footer>
