@@ -44,7 +44,7 @@ if (location.hash) window.onhashchange();
       h = countdown.querySelector('div.hour span.value'),
       m = countdown.querySelector('div.mins span.value'),
       s = countdown.querySelector('div.secs span.value'),
-      time = countdown.getAttribute('datetime'),
+      timeString = countdown.getAttribute('datetime'),
       cutoff = 5,
       thefinalcountdown, // performed by europe
       r, // remaining time
@@ -53,9 +53,9 @@ if (location.hash) window.onhashchange();
       _h = _m * 60,
       _d = _h * 24;
 
-  time = new Date(time),
+  var time = new Date(timeString);
   if(time == 'NaN'){
-    time = noIsoDateParse(countdown.getAttribute('datetime'));
+    time = noIsoDateParse(timeString);
   }
 
   var pad = function (number) {
