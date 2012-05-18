@@ -38,9 +38,9 @@
   
 </head>
 
-<!--[if IE 8]><body class="ie <?= $thanks || $error ? ' submitted' : '' ?>"><![endif]-->
-<!--[if gt IE 8]><body<?= $thanks || $error ? ' class="submitted"' : '' ?>><![endif]-->
-<!--[if !IE]><!--><body<?= $thanks || $error ? ' class="submitted"' : '' ?>><!--<![endif]-->
+<!--[if IE 8]><body class="ie"><![endif]-->
+<!--[if gt IE 8]><body><![endif]-->
+<!--[if !IE]><!--><body><!--<![endif]-->
 
   <header>
     <div class="ponch"></div><div class="chips"></div><!-- know your TV cop characters -->
@@ -79,7 +79,7 @@
 
     <div class="tabs">
       <section class="tab-content tab-register">
-        <a href="#register" class="tab <?= $thanks || $error ? ' tab-selected' : '' ?>">
+        <a href="#register" class="tab">
           <h2>Register your interest</h2>
         </a>
         <div id="register" class="wrapper">
@@ -93,7 +93,7 @@
             <?php if ($error) : ?>
               <p class="error">There was an error collecting your email address, please try again.</p>
             <?php endif; ?>
-            <form class="register-interest" action="/" method="post">
+            <form class="register-interest" action="/#register" method="post">
                 <input type="email" name="email" placeholder="ecm@script.com" required <?php echo isset($_POST['email']) ? 'value="' . $_POST['email'] . '"' : ''; ?>>
                 <button type="submit">Register</button>
             </form>

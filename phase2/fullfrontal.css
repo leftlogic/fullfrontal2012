@@ -15,7 +15,7 @@ body {
   font-size: 16px;
   margin: 0;
   background-color: #262626;
-  background-image: url(/images/bg.jpg);
+  background-image: url(/images/bg.png);
   color: #c0c0c0;
 }
 .ie {
@@ -260,9 +260,6 @@ footer .previous {
 .tab-content .tab-hidden {
   display: none;
 }
-.submitted .tab-register .wrapper {
-  display: block;
-}
 .tab-content p {
   margin: 0;
   margin-top: 10px;
@@ -277,6 +274,9 @@ footer .previous {
 .tab-content .error {
   margin-top: 30px;
   color: red;
+}
+.tab-content .wrapper a {
+  font-weight: normal;
 }
 .tab-content .wrapper a:hover {
   text-decoration: underline;
@@ -469,6 +469,13 @@ footer .previous {
     font-size: 16px;
     padding: 15px;
     margin-top: -2px;
+  }
+  .tab-content p {
+    font-size: 14px;
+    font-weight: 100;
+  }
+  .tab-content p:first-of-type {
+    font-size: 18px;
   }
   .tab-content .tab-hidden {
     display: block;
