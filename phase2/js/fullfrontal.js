@@ -1,4 +1,4 @@
-document.documentElement.className = '';
+// document.documentElement.className = '';
 
 // tabbing without the click handlers
 var $tabContent = $('.tab-content .wrapper').addClass('tab-hidden'),
@@ -15,7 +15,7 @@ window.onhashchange = function () {
 
 if (location.hash) window.onhashchange();
 
-(function () { 
+if (document.querySelector) (function () { 
   //https://github.com/csnover/js-iso8601/blob/master/iso8601.js
   var noIsoDateParse = function (date) {
     var timestamp, struct, minutesOffset = 0, numericKeys = [ 1, 4, 5, 6, 7, 10, 11 ];
@@ -111,4 +111,11 @@ if (location.hash) window.onhashchange();
       }, 1000);
     }
   }, 3000);
-})();
+}()); // because crockford prefers his balls on the inside: http://www.youtube.com/watch?v=eGArABpLy0k#t=1m10s
+
+
+
+
+
+
+
