@@ -106,7 +106,7 @@
         <a href="#talk" class="tab"><h2>Propose a talk/speaker</h2></a>
         <div id="talk" class="wrapper">
           <p>
-            Want to speak at Full Frontal 2011? We'd love to give you the platform
+            Want to speak at Full Frontal 2012? We'd love to give you the platform
             to speak to hundreds of developers and designers, so what are you waiting for,
             <a href="mailto:events@leftlogic.com?subject=FF2012%20Speaking%20Proposal">get in touch!</a>
           </p>
