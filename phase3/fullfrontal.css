@@ -10,15 +10,20 @@
   font-style: normal;
   /* 8, 16, 64, 128 */
 }
-
+html {
+  width: 320px;
+  margin: 0 auto;
+}
 body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 100;
   font-size: 16px;
   margin: 0;
   background-color: #262626;
-  background-image: url(/images/bg.png);
+  background-image: url(/images/bg-alt.png);
   color: #fff;
+
+  /* outline: 1px solid #333; */
 }
 .ie {
   min-width: 960px;
@@ -36,7 +41,7 @@ small {
 }
 hr {
   clear: both;
-  margin: 60px 20px 30px 20px;
+  margin: 60px 0 30px 0;
   border-top: 2px solid #fff;
 }
 
@@ -130,32 +135,35 @@ nav a:hover{
 
 footer {
   max-width: 960px;
-  margin: 50px auto;
+  margin: 60px auto;
   text-align: center;
   clear: both;
 }
 footer .previous {
    font-family: Xenon;
-   line-height: 19px;
-   margin-bottom: 75px; 
+   line-height: 19px; 
+   margin-bottom: 30px;
 }
 footer .date-twitter {
   font-family: Xenon;
-  font-size: 128px;
+  font-size: 64px;
   text-align: center;
   text-shadow: 4px 4px 0px #000;
-  margin-top: 80px;
+  margin-top: 40px;  
 }
 footer .date {
   display: block;
   color: #fff;
-  line-height: 89px;
+  line-height: 41px;
+}
+footer .date span {
+  color: #c0c0c0;
 }
 footer .twitter {
   display: block;
-  font-size: 64px;
+  font-size: 32px;
   line-height: 50px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 footer .left-logic {
   display: block;
@@ -172,31 +180,10 @@ footer .left-logic:active {
   background-position: bottom;
 }
 
-/** From original mobile style sheet **/
-  footer {
-    margin: 60px auto;
-  }
-  footer .previous {
-    margin-bottom: 30px;
-  }
-  footer .date-twitter {
-    margin-top: 40px;
-    font-size: 64px;
-  }
-  footer .date {
-    line-height: 41px;
-  }
-  footer .date span {
-    color: #c0c0c0;
-  }
-  footer .twitter {
-    font-size: 32px;
-    margin-top: 10px;
-  }
-
 .main {
   background-image: url(/images/grad.png);
   background-repeat: repeat-x;
+  padding: 0 20px;
   padding-top: 45px;
 }
 .main .wrapper {
@@ -207,7 +194,6 @@ footer .left-logic:active {
 .lede {
   margin: 0;
   margin-bottom: 60px;
-  padding: 0 20px;
   font-size: 20px;
   text-align: center;
   text-shadow: 1px 1px 0px #000;
@@ -216,9 +202,9 @@ footer .left-logic:active {
 .lede strong {
   color: #fff;
 }
+
 article {
   padding-top: 30px;
-  overflow: hidden;
 }
 h2 {
   margin: 0;
@@ -228,6 +214,14 @@ h2 {
   line-height: 42px;
   text-align: center;
   color: #fff;
+
+  /* heading aligment tweaks */
+  position: relative;
+  left: 4px;
+}
+#locations h2,
+#workshops h2 {
+  left: -4px;
 }
 
 /* Schedule */
@@ -290,7 +284,7 @@ h2 {
 }
 .workshop p,
 .fringe p {
-  margin: 20px;
+  margin: 20px 0;
   font-size: 15px;
   color: #c0c0c0;
   font-weight: normal;
@@ -337,83 +331,15 @@ h2 {
 /* Sponsors */
 .sponsor {
   display: block;
-  margin: 20px;
+  margin: 20px 0;
   background-color: #fff;
   text-align: center;
   padding: 25px;
 
-  max-width: 280px;
+/*  max-width: 280px;
   float: left;
-  box-sizing: border-box;
+  box-sizing: border-box;*/
 }
 .sponsor img {
-  width: 100%;
+/*  width: 100%;*/
 }
-
-
-/***
-@media screen and (max-width: 870px) {
-  .lede br {
-    display: none;
-  }
-}
-@media screen and (max-width: 970px) {
-  .lede,
-  .tabs {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
-.ie .lede,
-.ie .tabs {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-@media screen and (max-width: 790px) {
-  header .logo {
-    float: none;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 15px;
-  }
-}
-
-@media screen and (max-width: 580px) {
-  body {
-    font-weight: 200;
-  }
-  header {
-    padding-bottom: 34px;
-  }
-  header .logo {
-    float: none;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 15px;
-  }
-  .main {
-    padding-top: 55px;
-  }
-  .lede {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  footer {
-    margin: 25px auto;
-  }
-  footer .previous {
-    margin-bottom: 30px;
-  }
-  footer .date-twitter {
-    margin-top: 40px;
-    font-size: 64px;
-  }
-  footer .date {
-    line-height: 41px;
-  }
-  footer .twitter {
-    font-size: 32px;
-    margin-top: 10px;
-  }
-}
-***/
