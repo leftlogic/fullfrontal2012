@@ -10,7 +10,6 @@
   font-style: normal;
   /* 8, 16, 64, 128 */
 }
-
 body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 100;
@@ -18,13 +17,13 @@ body {
   margin: 0;
   background-color: #262626;
   background-image: url(/images/bg.png);
-  color: #fff;
+  color: #c0c0c0;
 }
 .ie {
   min-width: 960px;
 }
 a {
-  color: #0eaf16;
+  color: #00af3b;
   text-decoration: none;
 }
 a:hover {
@@ -34,17 +33,12 @@ small {
   size: 15px;
   color: #666;
 }
-hr {
-  clear: both;
-  margin: 60px 20px 30px 20px;
-  border-top: 2px solid #fff;
-}
 
 header {
   position: relative;
   font-family: Xenon;
   background: #fff;
-  padding: 34px 0;
+  padding: 25px 0;
   z-index: 1;
   color: #000;
 }
@@ -59,16 +53,16 @@ header .chips {
 }
 header .ponch {
   background-image: url(/images/ledge.png);
-  background-position: right bottom;
+  background-position: center bottom;
   background-repeat: repeat-x;
-  right: 10%;
+  left: 55%;
 
 }
 header .chips {
   background-image: url(/images/chip.png);
-  background-position: left bottom;
+  background-position: right bottom;
   background-repeat: no-repeat;
-  left: 90%;
+  right: 45%;
 }
 header .wrapper {
   max-width: 960px;
@@ -77,54 +71,8 @@ header .wrapper {
 }
 
 header .logo {
-  clear: both;
-  display: block;
-  margin: 0 auto;
-}
-
-header time,
-header h1 {
-  display: none;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-nav li {
-  display: block;
-  text-align: center;
-  list-style-type: none;
-  font-size: 32px;
-  line-height: 22px;
-  margin-bottom: 34px;
-/*  float: left;
-  min-width: 160px;
-  max-width: 280px;*/
-}
-nav a:hover{
-  color: #000;
-}
-
-.buy-tickets {
-  display: block;
-  margin: 34px;
-  padding: 12px 18px;
-  border: 2px solid #000;
-  background-color: #0eaf16;
-  color: #fff;
-  font-size: 36px;
-  text-align: center;
-
-  -webkit-box-shadow: 4px 6px 0px #000;
-  -moz-box-shadow: 4px 6px 0px #000;
-  -o-box-shadow: 4px 6px 0px #000;
-  -ms-box-shadow: 4px 6px 0px #000;
-  box-shadow: 4px 6px 0px #000;
-}
-.buy-tickets:hover {
-  background-color: #000;
-  border: 2px solid #fff;
+  float: left;
+  margin-right: 25px;
 }
 
 
@@ -132,7 +80,6 @@ footer {
   max-width: 960px;
   margin: 50px auto;
   text-align: center;
-  clear: both;
 }
 footer .previous {
    font-family: Xenon;
@@ -167,37 +114,14 @@ footer .left-logic {
   height: 47px;
   background-image: url(/images/leftlogic.png);
 }
-footer .left-logic:hover,
-footer .left-logic:active {
+footer .left-logic:hover {
   background-position: bottom;
 }
-
-/** From original mobile style sheet **/
-  footer {
-    margin: 60px auto;
-  }
-  footer .previous {
-    margin-bottom: 30px;
-  }
-  footer .date-twitter {
-    margin-top: 40px;
-    font-size: 64px;
-  }
-  footer .date {
-    line-height: 41px;
-  }
-  footer .date span {
-    color: #c0c0c0;
-  }
-  footer .twitter {
-    font-size: 32px;
-    margin-top: 10px;
-  }
 
 .main {
   background-image: url(/images/grad.png);
   background-repeat: repeat-x;
-  padding-top: 45px;
+  padding-top: 85px;
 }
 .main .wrapper {
   max-width: 960px;
@@ -206,77 +130,40 @@ footer .left-logic:active {
 
 .lede {
   margin: 0;
-  margin-bottom: 60px;
-  padding: 0 20px;
-  font-size: 20px;
+  margin-bottom: 80px;
+  font-size: 35px;
   text-align: center;
   text-shadow: 1px 1px 0px #000;
-  color: #c0c0c0;
 }
 .lede strong {
   color: #fff;
 }
-article {
-  padding-top: 30px;
-  overflow: hidden;
-}
 h2 {
-  margin: 0;
-  margin-bottom: 60px;
   font-family: Xenon;
-  font-size: 64px;
+  font-size: 65px;
   line-height: 42px;
   text-align: center;
   color: #fff;
-}
-
-/* Schedule */
-.schedule {
-  margin: 0;
-  padding: 0;
-}
-.schedule li {
-  list-style-type: none;
-  margin-bottom: 30px;
-  font-family: Xenon;
-  font-size: 32px;
-  text-align: center;
-}
-.schedule time {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 10px;
+  border-bottom: 10px solid #fff;
 }
 
 
-/* Speaker / Workshop */
-.speaker,
-.workshop,
-.fringe {
-  margin-bottom: 30px;
+
+.speaker {
+  width: 25%;
 }
-.speaker h3,
-.workshop h3,
-.fringe h3 {
+.speaker h3 {
   font-family: Xenon;
   font-size: 16px;
   text-align: center;
+  text-shadow: 4px 4px 0px #000;
 }
-.speaker h3 a,
-.workshop h3 a,
-.fringe h3 a {
+.speaker h3 a {
   display: block;
   margin-top: 10px;
   font-size: 32px;
 }
-.workshop h3 a,
-.fringe h3 a {
-  line-height: 30px;
-}
 .speaker img {
-  display: none;
-
-  /*
   width: 100%;
 
   border: 2px solid #000;
@@ -286,72 +173,16 @@ h2 {
   -o-box-shadow: 2px 2px 0px #000;
   -ms-box-shadow: 2px 2px 0px #000;
   box-shadow: 2px 2px 0px #000;
-  */
-}
-.workshop p,
-.fringe p {
-  margin: 20px;
-  font-size: 15px;
-  color: #c0c0c0;
-  font-weight: normal;
-  text-align: center;
 }
 
-/* Locations */
-.locations h3 {
-  font-size: 32px;
-  font-weight: 100;
-  color: #c0c0c0;
-  text-align: center;
-}
-.locations ul {
-  margin: 0;
-  padding: 0;
-}
-.venue {
-  list-style-type: none;
-  margin-bottom: 30px;
-  font-family: Xenon;
-  font-size: 32px;
-  text-align: center;
-}
-.venue span {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-.venue a {
-  line-height: 30px;
-}
 
 #map {
-  display: none;
-  /*
   background: #333;
   max-width: 960px;
   height: 520px;
   border: 2px solid #fff;
-  */
 }
 
-/* Sponsors */
-.sponsor {
-  display: block;
-  margin: 20px;
-  background-color: #fff;
-  text-align: center;
-  padding: 25px;
-
-  max-width: 280px;
-  float: left;
-  box-sizing: border-box;
-}
-.sponsor img {
-  width: 100%;
-}
-
-
-/***
 @media screen and (max-width: 870px) {
   .lede br {
     display: none;
@@ -369,6 +200,7 @@ h2 {
   margin-left: 10px;
   margin-right: 10px;
 }
+
 @media screen and (max-width: 790px) {
   header .logo {
     float: none;
@@ -416,4 +248,3 @@ h2 {
     margin-top: 10px;
   }
 }
-***/

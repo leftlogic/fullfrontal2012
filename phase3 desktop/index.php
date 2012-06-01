@@ -27,22 +27,8 @@
     <div class="ponch"></div><div class="chips"></div><!-- know your TV cop characters -->
     <div class="wrapper">
 
-      <nav>
-        <ul>
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#workshops">Workshops</a></li>
-          <li><a href="#locations">Locations</a></li>
-          <li><a href="#fringe">Fringe</a></li>
-          <li><a href="#sponsors">Sponsors</a></li>
-        </ul>
-      </nav>
-
       <img class="logo" src="/images/logo.png" width="140" height="130" alt="Full Frontal">
       
-      <a class="buy-tickets" href="#">Buy Tickets</a>
-
-
       <time datetime="2012-11-09T09:00">09/11/12</time>
       <h1>Full Frontal 2012</h1>
 
@@ -53,33 +39,13 @@
     
     <p class="lede vevent">
       <strong class="summary">Full Frontal 2012</strong> is a one day <strong>JavaScript Conference</strong> 
-      <br>at the <span class="location">Duke of York&rsquo;s Picturehouse
-      <br>in Brighton, UK </span>
+      <br>at the <span class="location">Duke of York&rsquo;s Picturehouse in Brighton, UK </span>
       <br>on the <time class="dtstart" title="2012-11-09T09:00" datetime="2012-11-09T09:00">
         <strong>9th November 2012</strong>
       </time>
     </p>
 
-    <hr>
-
-    <article id="schedule">
-      <h2>Schedule</h2>
-
-      <ol class="schedule">
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T09:00" datetime="2012-11-09T09:40">09:00 &mdash; 09:40</time>
-          <span class="summary">Registration</span>
-        </li>
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T09:40" datetime="2012-11-09T10:00">09:40 &mdash; 10:40</time>
-          <a href="#" class="summary">Phil Hawksworth</a>
-        </li>
-      </ol>
-    </article>
-
-    <hr>
-
-    <article id="speakers">
+    <section>
       <h2>Speakers</h2>
 
       <section class="speaker">
@@ -87,96 +53,30 @@
         <img src="/images/speakers/speaker.png">
       </section>
 
-      <section class="speaker">
-        <h3>Full Frontal <a href="#" class="twitter">@fullfrontalconf</a></h3>
-        <img src="/images/speakers/speaker.png">
-      </section>
+    </section>
 
-    </article>
+    <section>
+      <h2>Schedule</h2>
+    </section>
 
-    <hr>
+    <section>
+      <h2>Workshop</h2>
+    </section>
 
-    <article id="workshops">
-      <h2>Workshops</h2>
-
-      <section class="workshop">
-        <h3>Peter-Paul Koch <a href="#">Design To Communicate</a></h3>
-        <p>
-          Author of Eloquent JavaScript and main developer of <a href="#">CodeMirror</a>.
-          Currently working on Mozilla’s new programming language, Rust.
-        </p>
-      </section>
-
-      <section class="workshop">
-        <h3>Remy Sharp <a href="#">Node + HTML5 for a real time web</a></h3>
-        <p>
-          Author of Eloquent JavaScript and main developer of <a href="#">CodeMirror</a>.
-          Currently working on Mozilla’s new programming language, Rust.
-        </p>
-      </section>
-    </article>
-
-    <hr>
-
-    <article id="locations">
+    <section>
       <h2>Locations</h2>
-
-      <section class="locations">
-        <h3>Pre-Party</h3>
-        <ul>
-          <li class="venue">
-            <span class="address">Preston Circus, BN1 4BA</span>
-            <a href="#">Duke of York's Picturehouse</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="locations">
-        <h3>Hotels</h3>
-        <ul>
-          <li class="venue">
-            <span class="address">101 Stroundly Road, BN1 4DJ</span>
-            <a href="#">Jury’s Inn</a>
-          </li>
-          <li class="venue">
-            <span class="address">165-167 Preston Road, BN1 6AU</span>
-            <a href="#">Travelodge</a>
-          </li>
-        </ul>
-      </section>
-
       <div id="map"></div>
-    </article>
+    </section>
 
-    <hr>
-
-    <article id="fringe">
-      <h2>Fringe</h2>
-
-      <section class="fringe">
-        <h3>Async JS <a href="#">JavaScript Show n’ Tell 2011</a></h3>
-        <p>
-          Thurs, 24th May 2012 (arrive from 7.15pm for a 7.45pm start). Free entry.
-          @The Skiff, 6 Gloucester Street, Brighton, BN1 4EW.
-        </p>
-      </section>
-    </article>
-
-    <hr>
-
-    <article id="sponsors">
+    <section>
       <h2>Sponsors</h2>
-      <a class="sponsor" href="#"><img src="/images/sponsors/google.png" alt="Google"></a>
-      <a class="sponsor" href="#"><img src="/images/sponsors/google.png" alt="Google"></a>
-    </article>
-
-    <hr>
+    </section>
 
   </div></div>
 
   <footer>
     <div class="date-twitter">
-      <time class="date" datetime="2012-11-09T09:00"><strong>09<span>/</span>11<span>/</span>12</strong></time>
+      <time class="date" datetime="2012-11-09T09:00"><strong>09.11.12</strong></time>
       <a class="twitter" href="https://twitter.com/fullfrontalconf" title="Follow Full Frontal on Twitter">@fullfrontalconf</a>
     </div>
     <p class="previous">
