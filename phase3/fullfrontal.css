@@ -8,12 +8,18 @@
        url('/fonts/xenon2-webfont.svg#Xenon2Regular') format('svg');
   font-weight: normal;
   font-style: normal;
-  /* 8, 16, 64, 128 */
+  /* 8, 16, 64, 128 */                                                            
 }
-html {
+
+
+
+/*html {
   width: 320px;
   margin: 0 auto;
-}
+}*/
+
+
+
 body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 100;
@@ -22,8 +28,6 @@ body {
   background-color: #262626;
   background-image: url(/images/bg-alt.png);
   color: #fff;
-
-  /* outline: 1px solid #333; */
 }
 .ie {
   min-width: 960px;
@@ -53,6 +57,11 @@ header {
   padding: 34px 0;
   z-index: 1;
   color: #000;
+
+  -webkit-font-smoothing: none;                                                      
+  -moz-font-smoothing: none;                                                         
+  -o-font-smoothing: none;                                                           
+  font-smoothing: none;
 }
 header .ponch,
 header .chips {
@@ -112,6 +121,23 @@ nav a:hover,
 nav a:focus {
   color: #000;
 }
+.noJS #show-menu {
+  display: none;
+}
+#show-menu {
+  display: block;
+  margin: 34px 0;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: normal;
+  font-size: 15px;
+  color: #909090;
+
+  -webkit-font-smoothing: auto;                                                      
+  -moz-font-smoothing: auto;                                                         
+  -o-font-smoothing: auto;                                                           
+  font-smoothing: auto;
+}
 
 .button {
   display: block;
@@ -129,6 +155,11 @@ nav a:focus {
   -o-box-shadow: 4px 6px 0px #000;
   -ms-box-shadow: 4px 6px 0px #000;
   box-shadow: 4px 6px 0px #000;
+
+  -webkit-font-smoothing: none;                                                      
+  -moz-font-smoothing: none;                                                         
+  -o-font-smoothing: none;                                                           
+  font-smoothing: none;
 }
 .button:hover,
 .button:focus {
@@ -157,13 +188,23 @@ footer .previous {
    font-family: Xenon;
    line-height: 19px; 
    margin-bottom: 30px;
+
+  -webkit-font-smoothing: none;                                                      
+  -moz-font-smoothing: none;                                                         
+  -o-font-smoothing: none;                                                           
+  font-smoothing: none; 
 }
 footer .date-twitter {
   font-family: Xenon;
   font-size: 64px;
   text-align: center;
   text-shadow: 4px 4px 0px #000;
-  margin-top: 40px;  
+  margin-top: 40px;
+
+  -webkit-font-smoothing: none;                                                      
+  -moz-font-smoothing: none;                                                         
+  -o-font-smoothing: none;                                                           
+  font-smoothing: none;  
 }
 footer .date {
   display: block;
@@ -233,10 +274,23 @@ h2 {
   /* heading aligment tweaks */
   position: relative;
   left: 4px;
+
+  -webkit-font-smoothing: none;                                                      
+  -moz-font-smoothing: none;                                                         
+  -o-font-smoothing: none;                                                           
+  font-smoothing: none;
 }
 #locations h2,
 #workshops h2 {
-  left: -4px;
+  width: 307px;
+  overflow: hidden;
+  /* This is what it should be */
+  margin-left: -13px;
+  margin-right: -27px;
+
+  /* This is what it needs to be for iPhone */
+  margin-left: -18px;
+  margin-right: -22px;
 }
 
 /* Schedule */
@@ -250,11 +304,38 @@ h2 {
   font-family: Xenon;
   font-size: 32px;
   text-align: center;
+
+  -webkit-font-smoothing: none;                                                      
+  -moz-font-smoothing: none;                                                         
+  -o-font-smoothing: none;                                                           
+  font-smoothing: none;
 }
 .schedule time {
   display: block;
   font-size: 16px;
   margin-bottom: 10px;
+}
+
+.schedule .finished,
+.schedule .finished a {
+  color: #606060;
+}
+.schedule .finished a:hover,
+.schedule .finished a:focus {
+  color: #fff;
+}
+.schedule .current {
+  background: #0eaf16;
+  color: #fff;
+  margin: 20px -20px;
+  padding: 10px;
+}
+.schedule .current a {
+  color: #fff;
+}
+.schedule .current a:hover,
+.schedule .current a:focus {
+  color: #000;
 }
 
 
@@ -270,6 +351,11 @@ h2 {
   font-family: Xenon;
   font-size: 16px;
   text-align: center;
+
+  -webkit-font-smoothing: none;                                                      
+  -moz-font-smoothing: none;                                                         
+  -o-font-smoothing: none;                                                           
+  font-smoothing: none;
 }
 .speaker h3 a,
 .workshop h3 a,
@@ -323,6 +409,11 @@ h2 {
   font-family: Xenon;
   font-size: 32px;
   text-align: center;
+
+  -webkit-font-smoothing: none;                                                      
+  -moz-font-smoothing: none;                                                         
+  -o-font-smoothing: none;                                                           
+  font-smoothing: none;
 }
 .venue span {
   display: block;
@@ -384,6 +475,11 @@ body.pullout {
   font-size: 32px;
   line-height: 32px;
   color: #000;
+
+  -webkit-font-smoothing: none;                                                      
+  -moz-font-smoothing: none;                                                         
+  -o-font-smoothing: none;                                                           
+  font-smoothing: none;
 }
 #pullout hr {
   border: none;
@@ -400,6 +496,11 @@ body.pullout {
   font-size: 32px;
   text-align: left;
   color: #000;
+
+  -webkit-font-smoothing: auto;                                                      
+  -moz-font-smoothing: auto;                                                         
+  -o-font-smoothing: auto;                                                           
+  font-smoothing: auto;
 }
 #pullout h3,
 #pullout p {

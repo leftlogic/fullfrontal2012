@@ -6,14 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Full Frontal 2012 - JavaScript Conference</title>
   
-  <script>
-    document.documentElement.className = '';
-    if (!location.hash) document.getElementById('show-menu').scrollIntoView();
-  </script>
-
   <link rel="stylesheet" href="fullfrontal.css">
   <link rel="shortcut icon" href="/favicon.ico">
-  
   <!--[if lt IE 9]>
     <script>
       (function(g,b){function k(){var a=e.elements;return"string"==typeof a?a.split(" "):a}function l(a){var c={},f=a.createElement,b=a.createDocumentFragment,d=b();a.createElement=function(a){if(!e.shivMethods)return f(a);var b;b=c[a]?c[a].cloneNode():m.test(a)?(c[a]=f(a)).cloneNode():f(a);return b.canHaveChildren&&!n.test(a)?d.appendChild(b):b};a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+k().join().replace(/\w+/g,function(a){f(a);
@@ -22,7 +16,7 @@
       a})();var e={elements:d.elements||"abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video",shivCSS:!1!==d.shivCSS,shivMethods:!1!==d.shivMethods,type:"default",shivDocument:h};g.html5=e;h(b)})(this,document);
   </script>
   <![endif]-->
-
+  
 </head>
 
 <!--[if IE 8]><body class="ie"><![endif]-->
@@ -43,7 +37,7 @@
           <li><a href="#sponsors">Sponsors</a></li>
         </ul>
 
-        <span id="show-menu">Pull down to show menu&hellip;</span>
+        <span class="show-menu">Pull down to show menu&hellip;</span>
       </nav>
 
       <img class="logo" src="/images/logo.png" width="140" height="130" alt="Full Frontal">
@@ -187,12 +181,6 @@
         <img src="/images/speakers/speaker.png">
       </section>
 
-      Rebecca Murphy
-      Paul Kiln
-      Chris Willson
-      Steve Levin
-      Peter van der Zee
-
     </article>
 
     <hr>
@@ -274,6 +262,106 @@
     <hr>
 
   </div></div>
+
+  <article id="pullout">
+
+    <div class="pullout-controls">
+      <a class="button pullout-close" href="#">Close</a>
+
+      <div class="pullout-prev-next">
+        <a class="button button-white pullout-prev" href="#">Previous</a>
+        <a class="button button-white pullout-next" href="#">Next</a>
+      </div>
+    </div>
+    
+    <h1>Jon Linklater-Johnson</h1>
+
+    <img src="/images/speakers/speaker.png">
+
+    <hr>
+
+    <h2>Node & HTML5 for a real-time web</h2>
+
+    <p>
+      HTML5 has gained a lot of attention over the last 12 months. With browsers
+      increasingly supporting the features of the vast JavaScript APIs both in
+      and around the official HTML5 spec, it’s making the job of creating awesome
+      applications purely using these web technologies very easy indeed.
+    </p>
+
+    <p>This full day workshop will introduce you to HTML5 with a brief backstory,
+      before diving into the APIs one by one. As well as going through code and
+      showing practical demonstrations, where possible, we’ll also talk about the
+      alternatives for old browsers that don’t support “awesome” out of the box.
+    </p>
+
+    <h3>Who is this workshop for?</h3>
+
+    <p>
+      You’re not expected to have played with HTML5 just yet, but you will need
+      to have a reasonable understanding of HTML & JavaScript. A lot of the
+      individual APIs are being used in popular web sites today both in desktop
+      browsers and mobile, so rest assured that this applies to developers that
+      are working on the web today. 
+    </p>
+
+    <section>
+      <h2>You’ll Learn</h2>
+      <ul>
+        <li>
+          <strong>Canvas</strong><br>
+          Bring on the Mario games
+        </li>
+        <li>
+          <strong>Storage</strong><br>
+          Like cookies, but tastier
+        </li>
+        <li>
+          <strong>Offline</strong><br>
+          Forget the web
+        </li>
+        <li>
+          <strong>Geolocation</strong><br>
+          Finders keepers
+        </li>
+        <li>
+          <strong>Drag & Drop Files</strong><br>
+          The way drag and drop should work
+        </li>
+        <li>
+          <strong>Web Sockets</strong><br>
+          Pushing data was never so easy
+        <li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Details</h2>
+      <ul>
+        <li>
+          <strong>Date</strong><br>
+          9th & 10th November 2012
+        </li>
+        <li>
+          <strong>Time</strong><br>
+          09:30 to 17:00 (Both days)
+        </li>
+        <li>
+          <strong>Teacher</strong><br>
+          <a href="#">Remy Sharp</a>
+        </li>
+        <li>
+          <strong>Venue</strong><br>
+          <a href="#">The Lighthouse</a>
+        </li>
+      </ul>
+    </section>
+
+    <a class="button talk-listen" href="#">Listen to Jon's session</a>
+
+    <a class="button talk-download" href="#">Download Jon's slides</a>
+
+  </article>
 
   <footer>
     <div class="date-twitter">

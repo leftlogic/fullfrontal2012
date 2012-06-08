@@ -117,9 +117,9 @@
       </ul>
     </section>
 
-    <a class="button talk-listen" href="#">Listen to Elizabeth's session</a>
+    <a class="button talk-listen" href="#">Listen to Jon's session</a>
 
-    <a class="button talk-download" href="#">Download Elizabeth's slides</a>
+    <a class="button talk-download" href="#">Download Jon's slides</a>
 
   </article>
 
