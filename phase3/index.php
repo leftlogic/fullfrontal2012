@@ -40,7 +40,7 @@
 
       <img class="logo" src="/images/logo.png" width="140" height="130" alt="Full Frontal">
       
-      <a class="buy-tickets" href="#">Buy Tickets</a>
+      <a class="button buy-tickets" href="#">Buy Tickets</a>
 
 
       <time datetime="2012-11-09T09:00">09/11/12</time>
@@ -65,15 +65,85 @@
     <article id="schedule">
       <h2>Schedule</h2>
 
+
+
       <ol class="schedule">
+        
         <li class="vevent">
           <time class="dtstart" title="2012-11-09T09:00" datetime="2012-11-09T09:40">09:00 &mdash; 09:40</time>
           <span class="summary">Registration</span>
         </li>
+        
         <li class="vevent">
-          <time class="dtstart" title="2012-11-09T09:40" datetime="2012-11-09T10:00">09:40 &mdash; 10:40</time>
-          <a href="#" class="summary">Phil Hawksworth</a>
+          <time class="dtstart" title="2012-11-09T09:40" datetime="2012-11-09T09:50">09:40 &mdash; 09:50</time>
+          <span href="#" class="summary">Opening Remarks</span>
         </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T09:50" datetime="2012-11-09T10:30">09:50 &mdash; 10:30</time>
+          <a href="#" class="summary"><abbr title="to be announced">TBA</abbr></a>
+        </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T10:30" datetime="2012-11-09T11:10">10:30 &mdash; 11:10</time>
+          <a href="#" class="summary"><abbr>TBA</abbr></a>
+        </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T11:10" datetime="2012-11-09T11:40">11:10 &mdash; 11:40</time>
+          <span href="#" class="summary">Break (30mins)</span>
+        </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T11:40" datetime="2012-11-09T12:10">11:40 &mdash; 12:10</time>
+          <a href="#" class="summary"><abbr>TBA</abbr></a>
+        </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T12:10" datetime="2012-11-09T12:40">12:10 &mdash; 12:40</time>
+          <a href="#" class="summary"><abbr>TBA</abbr></a>
+        </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T12:40" datetime="2012-11-09T13:10">12:40 &mdash; 13:10</time>
+          <a href="#" class="summary">Panel <abbr>TBA</abbr></a>
+        </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T13:10" datetime="2012-11-09T14:40">13:10 &mdash; 14:40</time>
+          <span href="#" class="summary">Lunch (90mins)</span>
+        </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T14:40" datetime="2012-11-09T15:20">14:40 &mdash; 15:20</time>
+          <a href="#" class="summary"><abbr>TBA</abbr></a>
+        </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T15:20" datetime="2012-11-09T16:00">15:20 &mdash; 16:00</time>
+          <a href="#" class="summary"><abbr>TBA</abbr></a>
+        </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T16:00" datetime="2012-11-09T16:30">16:00 &mdash; 16:30</time>
+          <span href="#" class="summary">Break (30mins)</span>
+        </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T16:30" datetime="2012-11-09T17:10">16:30 &mdash; 17:10</time>
+          <a href="#" class="summary"><abbr>TBA</abbr></a>
+        </li>
+        
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T17:10" datetime="2012-11-09T17:50">17:10 &mdash; 17:50</time>
+          <a href="#" class="summary"><abbr>TBA</abbr></a>
+        </li>
+
+        <li class="vevent">
+          <time class="dtstart" title="2012-11-09T17:50" datetime="2012-11-09T18:00">17:50 &mdash; 18:00</time>
+          <span href="#" class="summary">Closing Remarks</span>
+        </li>
+
       </ol>
     </article>
 
@@ -173,6 +243,106 @@
     <hr>
 
   </div></div>
+
+  <article id="pullout">
+
+    <div class="pullout-controls">
+      <a class="button pullout-close" href="#">Close</a>
+
+      <div class="pullout-prev-next">
+        <a class="button button-white pullout-prev" href="#">Previous</a>
+        <a class="button button-white pullout-next" href="#">Next</a>
+      </div>
+    </div>
+    
+    <h1>Jon Linklater-Johnson</h1>
+
+    <img src="/images/speakers/speaker.png">
+
+    <hr>
+
+    <h2>Node & HTML5 for a real-time web</h2>
+
+    <p>
+      HTML5 has gained a lot of attention over the last 12 months. With browsers
+      increasingly supporting the features of the vast JavaScript APIs both in
+      and around the official HTML5 spec, it’s making the job of creating awesome
+      applications purely using these web technologies very easy indeed.
+    </p>
+
+    <p>This full day workshop will introduce you to HTML5 with a brief backstory,
+      before diving into the APIs one by one. As well as going through code and
+      showing practical demonstrations, where possible, we’ll also talk about the
+      alternatives for old browsers that don’t support “awesome” out of the box.
+    </p>
+
+    <h3>Who is this workshop for?</h3>
+
+    <p>
+      You’re not expected to have played with HTML5 just yet, but you will need
+      to have a reasonable understanding of HTML & JavaScript. A lot of the
+      individual APIs are being used in popular web sites today both in desktop
+      browsers and mobile, so rest assured that this applies to developers that
+      are working on the web today. 
+    </p>
+
+    <section>
+      <h2>You’ll Learn</h2>
+      <ul>
+        <li>
+          <strong>Canvas</strong><br>
+          Bring on the Mario games
+        </li>
+        <li>
+          <strong>Storage</strong><br>
+          Like cookies, but tastier
+        </li>
+        <li>
+          <strong>Offline</strong><br>
+          Forget the web
+        </li>
+        <li>
+          <strong>Geolocation</strong><br>
+          Finders keepers
+        </li>
+        <li>
+          <strong>Drag & Drop Files</strong><br>
+          The way drag and drop should work
+        </li>
+        <li>
+          <strong>Web Sockets</strong><br>
+          Pushing data was never so easy
+        <li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Details</h2>
+      <ul>
+        <li>
+          <strong>Date</strong><br>
+          9th & 10th November 2012
+        </li>
+        <li>
+          <strong>Time</strong><br>
+          09:30 to 17:00 (Both days)
+        </li>
+        <li>
+          <strong>Teacher</strong><br>
+          <a href="#">Remy Sharp</a>
+        </li>
+        <li>
+          <strong>Venue</strong><br>
+          <a href="#">The Lighthouse</a>
+        </li>
+      </ul>
+    </section>
+
+    <a class="button talk-listen" href="#">Listen to Jon's session</a>
+
+    <a class="button talk-download" href="#">Download Jon's slides</a>
+
+  </article>
 
   <footer>
     <div class="date-twitter">
