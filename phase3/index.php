@@ -187,11 +187,10 @@
         <img src="/images/speakers/speaker.png">
       </section>
 
-      Rebecca Murphy
       Paul Kiln
+      Rebecca Murphy
       Chris Willson
-      Steve Levin
-      Peter van der Zee
+      Steven Wittens
 
     </article>
 
