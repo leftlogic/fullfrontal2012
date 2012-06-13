@@ -8,7 +8,6 @@
   
   <script>
     document.documentElement.className = '';
-    if (!location.hash) document.getElementById('show-menu').scrollIntoView();
   </script>
 
   <link rel="stylesheet" href="fullfrontal.css">
@@ -48,11 +47,13 @@
 
       <img class="logo" src="/images/logo.png" width="140" height="130" alt="Full Frontal">
       
-      <a class="button buy-tickets" href="#">Buy Tickets</a>
-
-
       <time datetime="2012-11-09T09:00">09/11/12</time>
       <h1>Full Frontal 2012</h1>
+      
+      <a class="button buy-tickets" href="#">
+        <span class="buy">Buy</span> Tickets
+        <span class="price"><img src="/images/pound-symbol.gif" alt="&pound;">250</span>
+      </a>
 
     </div>
   </header>
@@ -62,7 +63,7 @@
     <p class="lede vevent">
       <strong class="summary">Full Frontal 2012</strong> is a one day <strong>JavaScript Conference</strong> 
       <br>at the <span class="location">Duke of York&rsquo;s Picturehouse
-      <br>in Brighton, UK </span>
+      <br class="extra-br">in Brighton, UK </span>
       <br>on the <time class="dtstart" title="2012-11-09T09:00" datetime="2012-11-09T09:00">
         <strong>9th November 2012</strong>
       </time>
@@ -70,205 +71,27 @@
 
     <hr>
 
-    <article id="schedule">
-      <h2>Schedule</h2>
-
-      <ol class="schedule">
-
-        <!-- Style Examples -->
-
-        <li class="vevent finished">
-          <time class="dtstart" title="2012-11-09T09:00" datetime="2012-11-09T09:40">Finished</time>
-          <span class="summary">Registration</span>
-        </li>
-        
-        <li class="vevent finished">
-          <time class="dtstart" title="2012-11-09T09:40" datetime="2012-11-09T09:50">Finished</time>
-          <a href="#" class="summary">Opening Remarks</a>
-        </li>
-        
-        <li class="vevent current">
-          <time class="dtstart" title="2012-11-09T09:50" datetime="2012-11-09T10:30">09:50 &mdash; 10:30</time>
-          <a href="#" class="summary">Master Chief</a>
-        </li>
-
-        <!-- Actual -->
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T09:00" datetime="2012-11-09T09:40">09:00 &mdash; 09:40</time>
-          <span class="summary">Registration</span>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T09:40" datetime="2012-11-09T09:50">09:40 &mdash; 09:50</time>
-          <span class="summary">Opening Remarks</span>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T09:50" datetime="2012-11-09T10:30">09:50 &mdash; 10:30</time>
-          <a href="#" class="summary"><abbr title="to be announced">TBA</abbr></a>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T10:30" datetime="2012-11-09T11:10">10:30 &mdash; 11:10</time>
-          <a href="#" class="summary"><abbr>TBA</abbr></a>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T11:10" datetime="2012-11-09T11:40">11:10 &mdash; 11:40</time>
-          <span class="summary">Break (30mins)</span>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T11:40" datetime="2012-11-09T12:10">11:40 &mdash; 12:10</time>
-          <a href="#" class="summary"><abbr>TBA</abbr></a>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T12:10" datetime="2012-11-09T12:40">12:10 &mdash; 12:40</time>
-          <a href="#" class="summary"><abbr>TBA</abbr></a>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T12:40" datetime="2012-11-09T13:10">12:40 &mdash; 13:10</time>
-          <a href="#" class="summary">Panel <abbr>TBA</abbr></a>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T13:10" datetime="2012-11-09T14:40">13:10 &mdash; 14:40</time>
-          <span class="summary">Lunch (90mins)</span>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T14:40" datetime="2012-11-09T15:20">14:40 &mdash; 15:20</time>
-          <a href="#" class="summary"><abbr>TBA</abbr></a>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T15:20" datetime="2012-11-09T16:00">15:20 &mdash; 16:00</time>
-          <a href="#" class="summary"><abbr>TBA</abbr></a>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T16:00" datetime="2012-11-09T16:30">16:00 &mdash; 16:30</time>
-          <span class="summary">Break (30mins)</span>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T16:30" datetime="2012-11-09T17:10">16:30 &mdash; 17:10</time>
-          <a href="#" class="summary"><abbr>TBA</abbr></a>
-        </li>
-        
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T17:10" datetime="2012-11-09T17:50">17:10 &mdash; 17:50</time>
-          <a href="#" class="summary"><abbr>TBA</abbr></a>
-        </li>
-
-        <li class="vevent">
-          <time class="dtstart" title="2012-11-09T17:50" datetime="2012-11-09T18:00">17:50 &mdash; 18:00</time>
-          <span class="summary">Closing Remarks</span>
-        </li>
-
-      </ol>
-    </article>
+    <?php require('includes/schedule.php'); ?>
 
     <hr>
 
-    <article id="speakers">
-      <h2>Speakers</h2>
-
-      <section class="speaker">
-        <h3>Full Frontal <a href="#" class="twitter">@fullfrontalconf</a></h3>
-        <img src="/images/speakers/speaker.png">
-      </section>
-
-      <section class="speaker">
-        <h3>Full Frontal <a href="#" class="twitter">@fullfrontalconf</a></h3>
-        <img src="/images/speakers/speaker.png">
-      </section>
-
-      Paul Kiln
-      Rebecca Murphy
-      Chris Willson
-      Steven Wittens
-
-    </article>
+    <?php require('includes/speakers.php'); ?>
 
     <hr>
 
-    <article id="workshops">
-      <h2>Workshops</h2>
-
-      <section class="workshop">
-        <h3>Peter-Paul Koch <a href="#">Design To Communicate</a></h3>
-        <p>
-          Author of Eloquent JavaScript and main developer of <a href="#">CodeMirror</a>.
-          Currently working on Mozilla’s new programming language, Rust.
-        </p>
-      </section>
-
-      <section class="workshop">
-        <h3>Remy Sharp <a href="#">Node + HTML5 for a real time web</a></h3>
-        <p>
-          Author of Eloquent JavaScript and main developer of <a href="#">CodeMirror</a>.
-          Currently working on Mozilla’s new programming language, Rust.
-        </p>
-      </section>
-    </article>
+    <?php require('includes/workshops.php'); ?>
 
     <hr>
 
-    <article id="locations">
-      <h2>Locations</h2>
-
-      <section class="locations">
-        <h3>Pre-Party</h3>
-        <ul>
-          <li class="venue">
-            <span class="address">Preston Circus, BN1 4BA</span>
-            <a href="#">Duke of York's Picturehouse</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="locations">
-        <h3>Hotels</h3>
-        <ul>
-          <li class="venue">
-            <span class="address">101 Stroundly Road, BN1 4DJ</span>
-            <a href="#">Jury’s Inn</a>
-          </li>
-          <li class="venue">
-            <span class="address">165-167 Preston Road, BN1 6AU</span>
-            <a href="#">Travelodge</a>
-          </li>
-        </ul>
-      </section>
-
-      <div id="map"></div>
-    </article>
+    <?php require('includes/locations.php'); ?>
 
     <hr>
 
-    <article id="fringe">
-      <h2>Fringe</h2>
-
-      <section class="fringe">
-        <h3>Async JS <a href="#">JavaScript Show n’ Tell 2011</a></h3>
-        <p>
-          Thurs, 24th May 2012 (arrive from 7.15pm for a 7.45pm start). Free entry.
-          @The Skiff, 6 Gloucester Street, Brighton, BN1 4EW.
-        </p>
-      </section>
-    </article>
+    <?php require('includes/fringe.php'); ?>
 
     <hr>
 
-    <article id="sponsors">
-      <h2>Sponsors</h2>
-      <a class="sponsor" href="#"><img src="/images/sponsors/google.png" alt="Google"></a>
-      <a class="sponsor" href="#"><img src="/images/sponsors/google.png" alt="Google"></a>
-    </article>
+    <?php require('includes/sponsors.php'); ?>
 
     <hr>
 
@@ -288,6 +111,9 @@
     <a class="left-logic" href="http://leftlogic.com">Left Logic</a>
   </footer>
 
+  <script>
+    //if (!location.hash) document.getElementById('show-menu').scrollIntoView();
+  </script>
   <script src="/js/jquery.js"></script>
   <!-- script src="http://maps.googleapis.com/maps/api/js?&amp;sensor=false"></script -->
   <!-- script src="http://maps.stamen.com/js/tile.stamen.js"></script -->

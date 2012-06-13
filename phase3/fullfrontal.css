@@ -11,14 +11,10 @@
   /* 8, 16, 64, 128 */
 }
 
-
-
 /*html {
   width: 320px;
   margin: 0 auto;
 }*/
-
-
 
 body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -86,7 +82,6 @@ header .chips {
   left: 90%;
 }
 header .wrapper {
-  max-width: 960px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -113,9 +108,6 @@ nav li {
   font-size: 32px;
   line-height: 22px;
   margin-bottom: 34px;
-/*  float: left;
-  min-width: 160px;
-  max-width: 280px;*/
 }
 nav a:hover,
 nav a:focus {
@@ -179,7 +171,6 @@ nav a:focus {
 }
 
 footer {
-  max-width: 960px;
   margin: 60px auto;
   text-align: center;
   clear: both;
@@ -243,7 +234,6 @@ footer .left-logic:active {
   padding-top: 45px;
 }
 .main .wrapper {
-  max-width: 960px;
   margin: 0 auto;  
 }
 
@@ -428,7 +418,6 @@ h2 {
   display: none;
   /*
   background: #333;
-  max-width: 960px;
   height: 520px;
   border: 2px solid #fff;
   */
@@ -610,4 +599,43 @@ body.pullout {
 #pullout .talk-download:hover,
 #pullout .talk-download:focus {
   background-image: url('/images/download-alt.gif');
+}
+
+@media screen and (min-width: 960px) {
+  #show-menu {
+    display: none;
+  }
+  header .logo {
+    float: left;
+  }
+  header time,
+  header h1 {
+    float: left;
+    display: block;
+  }
+  nav {
+    position: absolute;
+  }
+  nav li {
+    float: left;
+  }
+  .buy-tickets {
+    float: right;
+    margin-top: 0;
+  }
+  .buy {
+    display: none;
+  }
+  .price {
+    display: block;
+    margin-top: 20px;
+    font-size: 64px;
+  }
+  .lede {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .lede .extra-br {
+    display: none;
+  }
 }
