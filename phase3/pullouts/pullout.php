@@ -7,7 +7,7 @@
 
   // TODO validate the file exists - and error handle properly
   $data = json_decode(file_get_contents('../data/speakers/' . $speaker . '.json'), true);
-  $view = file_get_contents('speaker.html');
+  $view = file_get_contents('pullout.tmpl');
 
   $data['talk-description'] = Markdown($data['talk-description']);
   $data['talk-audience'] = Markdown($data['talk-audience']);
