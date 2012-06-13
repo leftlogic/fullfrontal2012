@@ -349,6 +349,7 @@ h2 {
   font-family: Xenon;
   font-size: 16px;
   text-align: center;
+  font-weight: normal;
 
   -webkit-font-smoothing: none;
   -moz-font-smoothing: none;
@@ -401,7 +402,7 @@ h2 {
   -o-font-smoothing: none;
   font-smoothing: none;
 }
-.venue span {
+.venue .address {
   display: block;
   font-size: 16px;
   margin-bottom: 10px;
@@ -409,14 +410,12 @@ h2 {
 .venue a {
   line-height: 30px;
 }
+.venue .details {
+  display: none;
+}
 
 #map {
   display: none;
-  /*
-  background: #333;
-  height: 520px;
-  border: 2px solid #fff;
-  */
 }
 
 /* Sponsors */
@@ -681,16 +680,19 @@ body.pullout {
     margin-bottom: 30px;
   }
 
-  .speaker {
+  .speaker,
+  .workshop {
     float: left;
     width: 25%;
     box-sizing: border-box;
   }
-  .speaker .details {
+  .speaker .details,
+  .workshop .details {
     position: relative;
     display: block;
   }
-  .speaker img {
+  .speaker img,
+  .workshop img {
     display: block;
     width: 100%;
     border: 2px solid #000;
@@ -702,7 +704,9 @@ body.pullout {
     -ms-box-shadow: 2px 2px 0px #000;
     box-shadow: 2px 2px 0px #000;
   }
-  .speaker .blurb {
+  .speaker .blurb,
+  .workshop .blurb,
+  .workshop .sold-out {
     display: none;
     position: absolute;
     top: 0;
@@ -711,13 +715,9 @@ body.pullout {
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  .speaker .details .blurb {
-    display: block;
-  }
-  .speaker .details .blurb p {
-    padding: 20px;
-    text-align: center;
-    
+  .speaker .details:hover .blurb,
+  .workshop .details:hover .blurb,
+  .workshop .sold-out {
     display: -webkit-box;
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
@@ -727,5 +727,55 @@ body.pullout {
     -moz-box-orient: horizontal;
     -moz-box-pack: center;
     -moz-box-align: center;
+  }
+  .speaker .details .blurb p,
+  .workshop .details .blurb p {
+    padding: 20px;
+    text-align: center;
+  }
+  .workshop .sold-out {
+    background-color: transparent;
+  }
+  .sold-out .button {
+    display: inline-block;
+    background-color: #c00;
+    font-size: 32px;
+  }
+  .workshop .details:hover .sold-out .button {
+    background-color: #000;
+  }
+
+  .locations {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+  }
+  .wrapper > article > .locations {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .venue .bullet {
+    color: #606060;
+  }
+  .venue .details {
+    display: block;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    color: #c0c0c0;
+
+    -webkit-font-smoothing: auto;
+    -moz-font-smoothing: auto;
+    -o-font-smoothing: auto;
+    font-smoothing: auto;
+  }
+    #map {
+    display: block;
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    background: #333;
+    height: 960px;
+    border: 2px solid #fff;
   }
 }

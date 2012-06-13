@@ -10,7 +10,7 @@
     document.documentElement.className = '';
   </script>
 
-  <link rel="stylesheet" href="fullfrontal.css">
+  <link rel="stylesheet" href="/fullfrontal.css">
   <link rel="shortcut icon" href="/favicon.ico">
   
   <!--[if lt IE 9]>
