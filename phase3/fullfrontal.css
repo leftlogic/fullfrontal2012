@@ -45,6 +45,9 @@ hr {
   margin: 60px 20px 30px 20px;
   border-top: 2px solid #fff;
 }
+[hidden] {
+  display: none !important; 
+}
 
 header {
   position: relative;
@@ -92,7 +95,6 @@ header .logo {
   margin: 0 auto;
 }
 
-header time,
 header h1 {
   display: none;
 }
@@ -168,6 +170,9 @@ nav a:focus {
   font-size: 36px;
   text-align: center;
   text-shadow: 2px 2px 0px #000;
+}
+.price {
+  display: none;
 }
 
 footer {
@@ -299,6 +304,9 @@ h2 {
   -o-font-smoothing: none;
   font-smoothing: none;
 }
+.schedule-heading {
+  display: none;
+}
 .schedule time {
   display: block;
   font-size: 16px;
@@ -358,20 +366,8 @@ h2 {
 .fringe h3 a {
   line-height: 30px;
 }
-.speaker img {
+.speaker .details {
   display: none;
-
-  /*
-  width: 100%;
-
-  border: 2px solid #000;
-
-  -webkit-box-shadow: 2px 2px 0px #000;
-  -moz-box-shadow: 2px 2px 0px #000;
-  -o-box-shadow: 2px 2px 0px #000;
-  -ms-box-shadow: 2px 2px 0px #000;
-  box-shadow: 2px 2px 0px #000;
-  */
 }
 .workshop p,
 .fringe p {
@@ -607,21 +603,43 @@ body.pullout {
   }
   header .logo {
     float: left;
+    margin-left: 33px;
+    margin-right: 33px;
   }
-  header time,
   header h1 {
     float: left;
     display: block;
+    margin: 0;
+    color: #bfbfbf;
+    font-weight: normal;
+    font-size: 64px;
+  }
+  header time {
+    display: block;
+    font-size: 128px;
+  }
+  header h1 span {
+    display: block;
+    width: 507px;
+    margin-top: 8px;
+    letter-spacing: -3px;
+    text-align: justify;
   }
   nav {
     position: absolute;
+    width: 400px;
+    right: 200px;
   }
   nav li {
     float: left;
+    width: 200px;
+    text-align: left;
   }
   .buy-tickets {
     float: right;
     margin-top: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
   .buy {
     display: none;
@@ -637,5 +655,77 @@ body.pullout {
   }
   .lede .extra-br {
     display: none;
+  }
+
+
+  .schedule {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+  }
+  .schedule .schedule-heading {
+    display: list-item;
+  }
+  .schedule .schedule-heading h3 {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 100;
+
+    -webkit-font-smoothing: auto;
+    -moz-font-smoothing: auto;
+    -o-font-smoothing: auto;
+    font-smoothing: auto;
+  }
+  .schedule .current {
+    width: auto;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .speaker {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+  }
+  .speaker .details {
+    position: relative;
+    display: block;
+  }
+  .speaker img {
+    display: block;
+    width: 100%;
+    border: 2px solid #000;
+    box-sizing: border-box;
+
+    -webkit-box-shadow: 2px 2px 0px #000;
+    -moz-box-shadow: 2px 2px 0px #000;
+    -o-box-shadow: 2px 2px 0px #000;
+    -ms-box-shadow: 2px 2px 0px #000;
+    box-shadow: 2px 2px 0px #000;
+  }
+  .speaker .blurb {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .speaker .details .blurb {
+    display: block;
+  }
+  .speaker .details .blurb p {
+    padding: 20px;
+    text-align: center;
+    
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-pack: center;
+    -moz-box-align: center;
   }
 }

@@ -2,6 +2,10 @@
   <h2>Schedule</h2>
 
   <ol class="schedule">
+    
+    <li class="schedule-heading">
+      <h3>Morning</h3>
+    <li>
 
     <!-- Style Examples -->
 
@@ -21,7 +25,7 @@
     </li>
 
     <!-- Actual -->
-    
+
     <li class="vevent">
       <time class="dtstart" title="2012-11-09T09:00" datetime="2012-11-09T09:40">09:00 &mdash; 09:40</time>
       <span class="summary">Registration</span>
@@ -46,7 +50,15 @@
       <time class="dtstart" title="2012-11-09T11:10" datetime="2012-11-09T11:40">11:10 &mdash; 11:40</time>
       <span class="summary">Break (30mins)</span>
     </li>
+
+  </ol>
     
+  <ol class="schedule">
+
+    <li class="schedule-heading">
+      <h3>Midday</h3>
+    <li>
+
     <li class="vevent">
       <time class="dtstart" title="2012-11-09T11:40" datetime="2012-11-09T12:10">11:40 &mdash; 12:10</time>
       <a href="#" class="summary"><abbr>TBA</abbr></a>
@@ -66,7 +78,15 @@
       <time class="dtstart" title="2012-11-09T13:10" datetime="2012-11-09T14:40">13:10 &mdash; 14:40</time>
       <span class="summary">Lunch (90mins)</span>
     </li>
-    
+
+  </ol>
+
+  <ol class="schedule">
+
+    <li class="schedule-heading">
+      <h3>Afternoon</h3>
+    <li>
+
     <li class="vevent">
       <time class="dtstart" title="2012-11-09T14:40" datetime="2012-11-09T15:20">14:40 &mdash; 15:20</time>
       <a href="#" class="summary"><abbr>TBA</abbr></a>
@@ -81,7 +101,15 @@
       <time class="dtstart" title="2012-11-09T16:00" datetime="2012-11-09T16:30">16:00 &mdash; 16:30</time>
       <span class="summary">Break (30mins)</span>
     </li>
+
+  </ol>
     
+  <ol class="schedule">
+
+    <li class="schedule-heading">
+      <h3>Evening</h3>
+    <li>
+
     <li class="vevent">
       <time class="dtstart" title="2012-11-09T16:30" datetime="2012-11-09T17:10">16:30 &mdash; 17:10</time>
       <a href="#" class="summary"><abbr>TBA</abbr></a>
@@ -98,4 +126,5 @@
     </li>
 
   </ol>
+
 </article>
