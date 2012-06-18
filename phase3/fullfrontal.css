@@ -707,17 +707,6 @@ body.pullout {
   .speaker .blurb,
   .workshop .blurb,
   .workshop .sold-out {
-    display: none;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .speaker .details:hover .blurb,
-  .workshop .details:hover .blurb,
-  .workshop .sold-out {
     display: -webkit-box;
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
@@ -727,6 +716,26 @@ body.pullout {
     -moz-box-orient: horizontal;
     -moz-box-pack: center;
     -moz-box-align: center;
+
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    -ms-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .speaker .details:hover .blurb,
+  .workshop .details:hover .blurb,
+  .workshop .sold-out {
+    opacity: 1;
   }
   .speaker .details .blurb p,
   .workshop .details .blurb p {
@@ -757,6 +766,9 @@ body.pullout {
   .venue .bullet {
     color: #606060;
   }
+/*  .venue.selected .bullet {
+    color: #0eaf16;
+  }*/
   .venue .details {
     display: block;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -775,7 +787,7 @@ body.pullout {
     width: 50%;
     box-sizing: border-box;
     background: #333;
-    height: 960px;
+    height: 80vh;
     border: 2px solid #fff;
   }
 }

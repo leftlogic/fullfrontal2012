@@ -1,3 +1,33 @@
+<?php
+  require('mustache.php');
+  require('markdown.php');
+  $mustache = new Mustache;
+
+  function convertMarkdown(&$array) {
+    // Credit: http://www.php.net/manual/en/function.array-walk.php#71901
+    foreach ($array as $key => $value) {
+      if (is_array($value)) {
+        $res[$key] = convertMarkdown(&$value);
+      } else {
+        if (array_pop(explode('_', $key)) == 'md') {
+          $res[$key] = Markdown($value);
+        } else {
+          $res[$key] = $value;
+        }
+      }
+    }
+    return $res;
+  }
+
+  function renderTemplate($data, $template, $markdown) {
+    global $mustache;
+    // TODO validate the file exists - and error handle properly
+    $data = convertMarkdown(json_decode(file_get_contents($data), true));
+    $view = file_get_contents($template);
+    $render = $mustache->render($view, $data);
+    return $render;
+  }
+?>
 <!DOCTYPE html> 
 <html class="noJS">
 <head>
@@ -123,8 +153,8 @@
     //if (!location.hash) document.getElementById('show-menu').scrollIntoView();
   </script>
   <script src="/js/jquery.js"></script>
-  <!-- script src="http://maps.googleapis.com/maps/api/js?&amp;sensor=false"></script -->
-  <!-- script src="http://maps.stamen.com/js/tile.stamen.js"></script -->
+  <script src="http://maps.googleapis.com/maps/api/js?&amp;sensor=false"></script>
+  <script src="http://maps.stamen.com/js/tile.stamen.js"></script>
   <script src="/js/fullfrontal.js"></script>
   <script>
     // // Google Analytics
