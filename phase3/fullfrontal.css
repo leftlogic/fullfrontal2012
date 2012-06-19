@@ -273,6 +273,10 @@ footer .left-logic:active {
 .lede strong {
   color: #fff;
 }
+.lede .extra-br,
+.lede .superflous-br {
+  display: none;
+}
 
 article {
   overflow: hidden;
@@ -612,9 +616,26 @@ body.pullout {
   background-image: url('/images/download-alt.gif');
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (max-width: 450px) {
+  .lede .extra-br {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 524px) {
+  .lede .superflous-br {
+    display: inline;
+  }
+}
+
+
+@media screen and (min-width: 640px) {
   #show-menu {
     display: none;
+  }
+
+  header .wrapper {
+    margin-bottom: 20px;
   }
   header .logo {
     float: left;
@@ -642,13 +663,14 @@ body.pullout {
   }
   nav {
     position: absolute;
-    width: 400px;
-    right: 200px;
+    width: 100%;
+    right: 0;
+    bottom: 0;
   }
   nav li {
     float: left;
-    width: 200px;
-    text-align: left;
+    width: 16.66667%;
+    text-align: center;
   }
   .buy-tickets {
     float: right;
@@ -664,14 +686,14 @@ body.pullout {
     margin-top: 20px;
     font-size: 64px;
   }
+  
   .lede {
     font-size: 32px;
     line-height: 40px;
   }
-  .lede .extra-br {
-    display: none;
+  .lede .superflous-br {
+    display: inline;
   }
-
 
   .schedule {
     float: left;
@@ -699,7 +721,7 @@ body.pullout {
   .speaker,
   .workshop {
     float: left;
-    width: 25%;
+    width: 50%;
     box-sizing: border-box;
   }
   .speaker .details,
@@ -811,5 +833,47 @@ body.pullout {
     background: #333;
     height: 80vh;
     border: 2px solid #fff;
+  }
+}
+
+@media screen and (min-width: 692px) {
+  .lede .extra-br {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .lede .superflous-br {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .speaker,
+  .workshop {
+    float: left;
+    width: 33.3333%;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  header .wrapper {
+    margin-bottom: 0;
+  }
+  nav {
+    position: absolute;
+    width: 400px;
+    right: 200px;
+    bottom: auto;
+  }
+  nav li {
+    float: left;
+    width: 200px;
+    text-align: left;
+  }
+  .speaker,
+  .workshop {
+    width: 25%;
   }
 }

@@ -99,7 +99,8 @@
   <div class="main"><div class="wrapper">
     
     <p class="lede vevent">
-      <strong class="summary">Full Frontal 2012</strong> is a one day <strong>JavaScript Conference</strong> 
+      <strong class="summary">Full Frontal 2012</strong> is a one day
+      <br class="superflous-br"><strong>JavaScript Conference</strong> 
       <br>at the <span class="location">Duke of York&rsquo;s Picturehouse
       <br class="extra-br">in Brighton, UK </span>
       <br>on the <time class="dtstart" title="2012-11-09T09:00" datetime="2012-11-09T09:00">
