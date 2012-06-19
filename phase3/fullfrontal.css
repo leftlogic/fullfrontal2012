@@ -154,6 +154,12 @@ nav a:focus {
   -moz-font-smoothing: none;
   -o-font-smoothing: none;
   font-smoothing: none;
+
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .button:hover,
 .button:focus {
@@ -225,11 +231,19 @@ footer .left-logic {
   width: 227px;
   height: 47px;
   background-image: url(/images/leftlogic.png);
+/*  background-image: -webkit-cross-fade(url(/images/leftlogic-1.png),  url(/images/leftlogic-2.png), 0%);
+
+  -webkit-transition: background-image 0.2s ease-in-out;
+  -moz-transition: background-image 0.2s ease-in-out;
+  -o-transition: background-image 0.2s ease-in-out;
+  -ms-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;*/
 }
 footer .left-logic:hover,
 footer .left-logic:focus,
 footer .left-logic:active {
   background-position: bottom;
+/*  background-image: -webkit-cross-fade(url(/images/leftlogic-1.png),  url(/images/leftlogic-2.png), 100%);*/
 }
 
 .main {
@@ -367,7 +381,9 @@ h2 {
 .fringe h3 a {
   line-height: 30px;
 }
-.speaker .details {
+.speaker .details,
+.workshop .details img,
+.workshop .details .sold-out {
   display: none;
 }
 .workshop p,
@@ -749,6 +765,12 @@ body.pullout {
     display: inline-block;
     background-color: #c00;
     font-size: 32px;
+
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
   }
   .workshop .details:hover .sold-out .button {
     background-color: #000;
