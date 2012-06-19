@@ -1,13 +1,28 @@
 {
   "speakers" : [{
-    "name" : "J.J. Abrams",
-    "twitter-handle" : "superman",
+    "name" : "Paul Kinlan"
+    "twitter-handle" : "Paul_Kinlan",
     "image" : "speaker.png",
     "blurb_md" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
   },{
-    "name" : "J.J. Abrams",
-    "twitter-handle" : "superman",
+    "name" : "Rebecca Murphey",
+    "twitter-handle" : "rmurphey",
     "image" : "speaker.png",
-    "blurb_md" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    "blurb_md" : "Senior JS dev at [Bocoup](http://bocoup.com/), client-side architecture fanatic, co-host of the long-lost [yayQuery](http://yayquery.com/) podcast"
+  },{
+    "name" : "Chris Wilson",
+    "twitter-handle" : "cwilso",
+    "image" : "speaker.png",
+    "blurb_md" : "Chris Wilson has worked on NCSA Mosaic, IE and now Chrome as an Open Web advocate.  He loves enabling awesome user experiences on the web."
+  },{
+    "name" : "Steven Wittens",
+    "twitter-handle" : "unconed",
+    "image" : "speaker.png",
+    "blurb_md" : "[Steven Wittens](Acko.net) is a wannabe demo scener, recreational mathematician and maker of webs front and back who desperately wants the browser to become a real boy already."
+  },{
+    "name" : "John Allsopp",
+    "twitter-handle" : "johnallsopp",
+    "image" : "speaker.png",
+    "blurb_md" : "[John] has been doing things to the web since before many of you were born. This is not necessarily a good thing."
   }]
 }
