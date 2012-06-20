@@ -813,3 +813,98 @@ body.pullout {
     border: 2px solid #fff;
   }
 }
+
+
+
+
+/*****
+  CSS needs cleaning and sorting properly
+  For now, it works.
+  PAD / 21:30, 19/6/12
+*****/
+
+#pullout h1 {
+  font-size: 64px;
+  line-height: 32px;
+  float: left;
+}
+#pullout h2 {
+  margin-bottom: 30px;
+}
+#pullout hr {
+  margin-top: 15px;
+  margin-bottom: -10px;
+  clear: both;
+}
+#pullout .speaker-image {
+  max-width: 156px;
+  float: right;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+#pullout .buy-box {
+  overflow: hidden;
+  width: 500px;
+  float: right;
+}
+#pullout .buy-box .text {
+  float: left;
+  text-align: right;
+  width: 280px;
+  padding-top: 18px;
+}
+#pullout .buy-box h4, #pullout .buy-box p {
+  margin: 0;
+}
+#pullout .buy-box p {
+  margin-top: -4px;
+}
+#pullout .buy-box h4 {
+  font-size: 32px;
+}
+#pullout .buy-box h4 span {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+#pullout .buy-box .button {
+  font-size: 32px;
+  font-weight: normal;
+  float: right;
+  margin-top: 22px;
+}
+
+@media screen and (min-width: 960px) {
+  #pullout .left {
+    width: 48%;
+    float: left;
+  }
+  #pullout .right {
+    width: 48%;
+    float: right;
+    overflow: hidden;
+  }
+  #pullout .right section {
+    width: 50%;
+    float: left;
+    margin-top: 47px;
+    box-sizing: border-box;
+  }
+  #pullout .right section:nth-child(1) {
+    border-right: 2px solid #fff;
+  } 
+}
+
+@media screen and (max-width: 550px) {
+  #pullout .buy-box, #pullout .buy-box .text, #pullout .buy-box .button {
+    width: auto;
+    clear: both;
+  }
+}
+
+
+
+
+
+
+
