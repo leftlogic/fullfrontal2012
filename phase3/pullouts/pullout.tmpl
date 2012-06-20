@@ -1,4 +1,4 @@
-<article id="pullout">
+<article id="pullout" {{#learn}}class="has-workshop"{{/learn}}>
 
   <div class="pullout-controls">
     <a class="button pullout-close" href="#">Close</a>
@@ -8,58 +8,83 @@
       <a class="button button-white pullout-next" href="#">Next</a>
     </div>
   </div>
+
+
   
   <h1>{{full-name}}</h1>
 
-  {{#image}}
-    <img src="/images/{{image}}">
-  {{/image}}
+  {{#details}}
+    <div class="buy-box">
+      <div class="text">
+        <h4>{{price}}{{#vat}}<span>+vat</span>{{/vat}}</h4>
+        <p>Includes <b>FREE</b> conference ticket</p>
+      </div>
+      <a href="#" class="button buy-button">Buy Tikets</a>
+      <div style="clear: both;"></div>
+    </div>
+  {{/details}}
+
+  <div style="clear: both;"></div>
 
   <hr>
 
-  <h2>{{talk-title}}</h2>
+  <div class="left">
 
-  {{{talk-description}}}
+    <h2>{{talk-title}}</h2>
 
-  <h3>Who is this workshop for?</h3>
+    {{#image}}
+      <img class="speaker-image" src="/images/{{image}}">
+    {{/image}}
 
-  {{{talk-audience}}}
+    {{{talk-description}}}
 
-  <section>
-    <h2>You’ll Learn</h2>
-    <ul>
-      {{#learn}}
-      <li>
-        <strong>{{topic}}</strong><br>
-        {{desc}}
-      </li>
-      {{/learn}}
-    </ul>
-  </section>
+    <h3>Who is this workshop for?</h3>
 
-  <section>
-    <h2>Details</h2>
-    <ul>
-      {{#details}}
-      <li>
-        <strong>Date</strong><br>
-        {{date}}
-      </li>
-      <li>
-        <strong>Time</strong><br>
-        {{time}}
-      </li>
-      <li>
-        <strong>Teacher</strong><br>
-        <a href="{{teacher-url}}">{{teacher}}</a>
-      </li>
-      <li>
-        <strong>Venue</strong><br>
-        <a href="{{venue-url}}">{{venue}}</a>
-      </li>
-      {{/details}}
-    </ul>
-  </section>
+    {{{talk-audience}}}
+
+  </div><!-- end .left -->
+
+  <div class="right">
+
+    <section>
+      <h2>You’ll Learn</h2>
+      <ul>
+        {{#learn}}
+        <li>
+          <strong>{{topic}}</strong><br>
+          {{desc}}
+        </li>
+        {{/learn}}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Details</h2>
+      <ul>
+        {{#details}}
+        <li>
+          <strong>Date</strong><br>
+          {{date}}
+        </li>
+        <li>
+          <strong>Time</strong><br>
+          {{time}}
+        </li>
+        <li>
+          <strong>Teacher</strong><br>
+          <a href="{{teacher-url}}">{{teacher}}</a>
+        </li>
+        <li>
+          <strong>Venue</strong><br>
+          <a href="{{venue-url}}">{{venue}}</a>
+        </li>
+        {{/details}}
+      </ul>
+    </section>
+
+  </div><!-- end .right -->
+
+  <div style="clear: both;"></div>
 
   {{#talk-audio-url}}
     <a class="button talk-listen" href="{{talk-audio-url}}">Listen to {{short-name}}'s session</a>
@@ -68,5 +93,9 @@
   {{#talk-slides-url}}
     <a class="button talk-download" href="{{talk-slides-url}}">Download {{short-name}}'s slides</a>
   {{/talk-slides-url}}
+
+
+
+
 
 </article>
