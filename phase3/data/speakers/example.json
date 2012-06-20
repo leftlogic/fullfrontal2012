@@ -29,7 +29,9 @@
       "teacher" : "Remy Sharp",
       "teaher-url" : "#",
       "venue" : "The Lighthouse",
-      "venue-url" : "#"
+      "venue-url" : "#",
+      "price" : "£345",
+      "vat" : true
   }],
   "talk-audio-url" : false,
   "talk-slides-url" : "/bar"

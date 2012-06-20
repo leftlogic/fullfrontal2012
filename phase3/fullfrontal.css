@@ -273,10 +273,6 @@ footer .left-logic:active {
 .lede strong {
   color: #fff;
 }
-.lede .extra-br,
-.lede .superflous-br {
-  display: none;
-}
 
 article {
   overflow: hidden;
@@ -616,26 +612,9 @@ body.pullout {
   background-image: url('/images/download-alt.gif');
 }
 
-@media screen and (max-width: 450px) {
-  .lede .extra-br {
-    display: inline;
-  }
-}
-
-@media screen and (max-width: 524px) {
-  .lede .superflous-br {
-    display: inline;
-  }
-}
-
-
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 960px) {
   #show-menu {
     display: none;
-  }
-
-  header .wrapper {
-    margin-bottom: 20px;
   }
   header .logo {
     float: left;
@@ -663,14 +642,13 @@ body.pullout {
   }
   nav {
     position: absolute;
-    width: 100%;
-    right: 0;
-    bottom: 0;
+    width: 400px;
+    right: 200px;
   }
   nav li {
     float: left;
-    width: 16.66667%;
-    text-align: center;
+    width: 200px;
+    text-align: left;
   }
   .buy-tickets {
     float: right;
@@ -686,14 +664,14 @@ body.pullout {
     margin-top: 20px;
     font-size: 64px;
   }
-  
   .lede {
     font-size: 32px;
     line-height: 40px;
   }
-  .lede .superflous-br {
-    display: inline;
+  .lede .extra-br {
+    display: none;
   }
+
 
   .schedule {
     float: left;
@@ -721,7 +699,7 @@ body.pullout {
   .speaker,
   .workshop {
     float: left;
-    width: 50%;
+    width: 25%;
     box-sizing: border-box;
   }
   .speaker .details,
@@ -836,44 +814,97 @@ body.pullout {
   }
 }
 
-@media screen and (min-width: 692px) {
-  .lede .extra-br {
-    display: none;
-  }
+
+
+
+/*****
+  CSS needs cleaning and sorting properly
+  For now, it works.
+  PAD / 21:30, 19/6/12
+*****/
+
+#pullout h1 {
+  font-size: 64px;
+  line-height: 32px;
+  float: left;
+}
+#pullout h2 {
+  margin-bottom: 30px;
+}
+#pullout hr {
+  margin-top: 15px;
+  margin-bottom: -10px;
+  clear: both;
+}
+#pullout .speaker-image {
+  max-width: 156px;
+  float: right;
+  margin-bottom: 30px;
+  margin-left: 30px;
 }
 
-@media screen and (min-width: 820px) {
-  .lede .superflous-br {
-    display: none;
-  }
+#pullout .buy-box {
+  overflow: hidden;
+  width: 500px;
+  float: right;
+}
+#pullout .buy-box .text {
+  float: left;
+  text-align: right;
+  width: 280px;
+  padding-top: 18px;
+}
+#pullout .buy-box h4, #pullout .buy-box p {
+  margin: 0;
+}
+#pullout .buy-box p {
+  margin-top: -4px;
+}
+#pullout .buy-box h4 {
+  font-size: 32px;
+}
+#pullout .buy-box h4 span {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+#pullout .buy-box .button {
+  font-size: 32px;
+  font-weight: normal;
+  float: right;
+  margin-top: 22px;
 }
 
 @media screen and (min-width: 960px) {
-  .speaker,
-  .workshop {
+  #pullout .left {
+    width: 48%;
     float: left;
-    width: 33.3333%;
+  }
+  #pullout .right {
+    width: 48%;
+    float: right;
+    overflow: hidden;
+  }
+  #pullout .right section {
+    width: 50%;
+    float: left;
+    margin-top: 47px;
     box-sizing: border-box;
+  }
+  #pullout .right section:nth-child(1) {
+    border-right: 2px solid #fff;
+  } 
+}
+
+@media screen and (max-width: 550px) {
+  #pullout .buy-box, #pullout .buy-box .text, #pullout .buy-box .button {
+    width: auto;
+    clear: both;
   }
 }
 
-@media screen and (min-width: 1340px) {
-  header .wrapper {
-    margin-bottom: 0;
-  }
-  nav {
-    position: absolute;
-    width: 400px;
-    right: 200px;
-    bottom: auto;
-  }
-  nav li {
-    float: left;
-    width: 200px;
-    text-align: left;
-  }
-  .speaker,
-  .workshop {
-    width: 25%;
-  }
-}
+
+
+
+
+
+
