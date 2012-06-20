@@ -28,6 +28,7 @@
     return $render;
   }
 ?>
+
 <!DOCTYPE html> 
 <html class="noJS">
 <head>
