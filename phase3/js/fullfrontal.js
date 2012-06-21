@@ -106,7 +106,7 @@ function newHoverIconAction(el, latlng, marker, standardIcon, hoverIcon) {
       marker.setIcon(hoverIcon);
       $el.addClass('selected');
       // don't use the pageX - just using it to determine that we hovered from the li, not a google hover
-      //if (event.clientX) map.panTo(latlng);
+      if (event.clientX) map.panTo(latlng);
     } else {
       marker.setIcon(standardIcon);
       $el.removeClass('selected');
