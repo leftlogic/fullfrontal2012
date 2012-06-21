@@ -881,6 +881,13 @@ body.pullout {
     box-sizing: border-box;
   }
 
+  .full-monty .blurb {
+    width: 50%;
+    background-color: #fff;
+    color: #303030;
+    float: right;
+  }
+
 
 
   #pullout { 
