@@ -1,25 +1,3 @@
-<?php
-  require('../mustache.php');
-  require('../markdown.php');
-  $mustache = new Mustache;
-
-  $id = $_GET['id']; // id=rebecca
-  $type = $_GET['type']; // id=rebecca
-
-
-
-  // TODO validate the file exists - and error handle properly
-  $data = json_decode(file_get_contents('../data/' . $type . 's/' . $id . '.json'), true);
-  $view = file_get_contents($type . '.tmpl');
-
-var_dump($data);
-
-  $data['talk-description'] = Markdown($data['talk-description']);
-  $data['talk-audience'] = Markdown($data['talk-audience']);
-
-  $render = $mustache->render($view, $data);
-
-?>
 <!DOCTYPE html> 
 <html class="noJS">
 <head>
@@ -45,7 +23,15 @@ var_dump($data);
 <!--[if gt IE 8]><body class="pullout"><![endif]-->
 <!--[if !IE]><!--><body class="pullout"><!--<![endif]-->
 
-  <?php echo $render ?>
+<?php
+  require_once('../utils.php');
+
+  $id = $_GET['id']; // id=html5
+  $type = $_GET['type']; // type=workshop
+
+  // TODO validate the file exists - and error handle properly
+  echo renderTemplate('/data/' . $type . 's/' . $id . '.json', '/pullouts/' . $type . '.tmpl');
+?>
 
   <script>
     // // Google Analytics
