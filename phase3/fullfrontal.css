@@ -448,6 +448,7 @@ h2 {
 }
 .venue a {
   line-height: 30px;
+  display: block;
 }
 .venue .details {
   display: none;
@@ -1034,10 +1035,21 @@ body.pullout {
   .lede .superflous-br {
     display: none;
   }
+
+  .sponsor img {
+    max-width: 100%;
+  }
 }
 
 @media screen and (min-width: 954px) {
 
+  .sponsor.half {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+    width: 30%;
+  }
+  
   header .wrapper {
     margin-bottom: 20px;
   }
@@ -1165,7 +1177,6 @@ body.pullout {
     width: 73.5%;
     margin: 0 auto;
   }
-
 
   .sponsor {
     width: 22%;
