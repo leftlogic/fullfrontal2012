@@ -17,10 +17,9 @@
     <div class="buy-box">
       <div class="text">
         <h4>{{price}}{{#vat}}<span>+vat</span>{{/vat}}</h4>
-        {{#ticket}}<p>Includes <b>FREE</b> conference ticket</p>{{/ticket}}
-        {{^ticket}}<p>Does not include conference ticket</p>{{/ticket}}
+        {{{note_md}}}
       </div>
-      <a href="/pullouts/tickets.php" class="button buy-button">Buy Tickets</a>
+      <a href="{{buylink}}" class="button buy-button">Buy Tickets</a>
       <div style="clear: both;"></div>
     </div>
   {{/details}}
