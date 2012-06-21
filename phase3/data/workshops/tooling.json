@@ -1,6 +1,8 @@
 {
+  "buylink": "https://leftlogic.stagehq.com/events/1518/booking/new",
   "full-name" : "Jake Archibald, Rebecca Murphey, Remy Sharp",
   "image" : "speakers/tutorials.png",
+  "url-slug": "tooling",
   "image-credit" : "",
   "talk-title" : "Developer's Tooling Tutorials",
   "talk-description" : "Did you ever want to go just beyond the 45 minute seminar on a particular technology? \"If only I had a bit of hands on time with such-and-such technology\".\n\nThis workshop is the pick and mix of workshops. Three trainers &mdash; Jake Archibald, Rebecca Murphey, Remy Sharp &mdash; will be running two hands on seminars each.\n\nEach session is 90 minutes and repeated in a format that will allow you to attend any four sessions throughout the day",
@@ -26,15 +28,15 @@
       "desc" : "Automating the final tasks before deploying"
     }
   ],
-  "details" : [{
+  "details" : {
       "date" : "9th & 10th November 2012",
       "time" : "09:30 to 17:00",
       "teacher" : "Jake Archibald, Rebecca Murphey, Remy Sharp",
-      "teaher-url" : "#",
       "venue" : "The Lighthouse",
       "venue-url" : "#",
       "price" : "£220",
       "ticket": false,
       "vat" : true
-  }]
+  },
+  "note_md": "Does not include a conference pass"
 }

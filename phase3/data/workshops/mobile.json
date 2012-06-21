@@ -1,7 +1,9 @@
 {
+  "buylink": "https://leftlogic.stagehq.com/events/1516/booking/new",
   "full-name" : "Remy Sharp",
   "image" : "speakers/remy.png",
   "image-credit" : "",
+  "url-slug": "tooling",
   "talk-title" : "Mobile Web Apps",
   "talk-description" : "Building rich interactive web sites&hellip; dare I say web apps &mdash; is a reality with the smart phone browsers shipping with all the latest JavaScript and CSS technologies.\n\nThis day long workshop will be a mix of introducing the latest technology &amp; tricks on the mobile device and hands on practical exercises where you'll get to play with what you're learning.\n\nAlthough this workshop will have an iOS focus, a lot of the technology we will look at applies to most new WebKit based devises (Android, Playbook, etc) and smartphones running Opera Mobile.",
   "talk-audience" : null,
@@ -26,7 +28,7 @@
       "desc" : "Getting your mobile app to your users"
     }
   ],
-  "details" : [{
+  "details" : {
       "date" : "9th & 10th November 2012",
       "time" : "09:30 to 17:00",
       "teacher" : "Remy Sharp",
@@ -36,5 +38,6 @@
       "price" : "£345",
       "ticket": true,
       "vat" : true
-  }]
+  },
+  "note_md": "Includes a *FREE* conference pass"
 }
