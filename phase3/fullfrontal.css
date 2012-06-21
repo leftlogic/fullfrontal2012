@@ -483,6 +483,8 @@ h2 {
   color: #303030;
   font-weight: normal;
   
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
 .wrapper > article > .full-monty {
@@ -566,7 +568,7 @@ body.pullout {
 #pullout section {
   background-color: #f2f2f2;
   padding: 20px;
-  margin-bottom: 5px;
+  /*margin-bottom: 5px;*/
 }
 #pullout section h2 {
   margin: 10px 0 30px 0;
@@ -762,6 +764,8 @@ body.pullout {
   .schedule {
     float: left;
     width: 25%;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
     box-sizing: border-box;
   }
   .schedule .schedule-heading {
@@ -786,6 +790,8 @@ body.pullout {
   .workshop {
     float: left;
     width: 50%;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
     box-sizing: border-box;
   }
   .speaker .details,
@@ -803,6 +809,8 @@ body.pullout {
     display: block;
     width: 100%;
     border: 2px solid #000;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
     box-sizing: border-box;
 
     -webkit-box-shadow: 2px 2px 0 #000;
@@ -871,6 +879,8 @@ body.pullout {
   .locations {
     float: left;
     width: 25%;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
     box-sizing: border-box;
   }
   .wrapper > article > .locations {
@@ -902,6 +912,8 @@ body.pullout {
     display: block;
     float: left;
     width: 50%;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
     box-sizing: border-box;
     background: #333;
     /*height: 80vh;*/
@@ -923,6 +935,8 @@ body.pullout {
     width: 47%;
     margin: 0 1.5% 60px 1.5%;
 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
     box-sizing: border-box;
   }
 
@@ -934,6 +948,8 @@ body.pullout {
     color: #303030;
     font-weight: normal;
     
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
     box-sizing: border-box;
   }
   .wrapper > article > .full-monty {
@@ -1045,6 +1061,8 @@ body.pullout {
     float: left;
     width: 47%;
     margin-right: 3%;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
     box-sizing: border-box;
   }
 }
@@ -1166,6 +1184,8 @@ body.pullout {
   .workshop {
     float: left;
     width: 33.3333%;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
     box-sizing: border-box;
   }
 
@@ -1182,11 +1202,15 @@ body.pullout {
     width: 48%;
     float: right;
     overflow: hidden;
+    background: #f2f2f2;
+    margin-top: 47px;
   }
   #pullout .right section {
     width: 50%;
     float: left;
-    margin-top: 47px;
+    /*margin-top: 47px;*/
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
     box-sizing: border-box;
   }
   #pullout .right section:nth-child(1) {
