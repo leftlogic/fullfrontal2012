@@ -1,0 +1,34 @@
+<article id="pullout" {{#learn}}class="has-workshop"{{/learn}}>
+
+  <div class="pullout-controls">
+    <a class="button pullout-close" href="/"><span>Close</span></a>
+
+    <div class="pullout-prev-next">
+      <a class="button button-white pullout-prev" href="#">Previous</a>
+      <a class="button button-white pullout-next" href="#">Next</a>
+    </div>
+  </div>
+  
+  <h1>{{full-name}}</h1>
+
+  <hr>
+
+  <h2>{{talk-title}}</h2>
+
+  {{#image}}
+    <img class="speaker-image" src="/images/{{image}}">
+  {{/image}}
+
+  {{{talk-description}}}
+
+  <div class="talk-buttons">
+  {{#talk-audio-url}}
+    <a class="button talk-listen" href="{{talk-audio-url}}">Listen to {{short-name}}'s session</a>
+  {{/talk-audio-url}}
+
+  {{#talk-slides-url}}
+    <a class="button talk-download" href="{{talk-slides-url}}">Download {{short-name}}'s slides</a>
+  {{/talk-slides-url}}
+  </div>
+
+</article>

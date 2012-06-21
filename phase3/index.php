@@ -58,6 +58,8 @@
 <!--[if gt IE 8]><body><![endif]-->
 <!--[if !IE]><!--><body><!--<![endif]-->
 
+<div id="dressing-gown">
+
   <header>
     <div class="ponch"></div><div class="chips"></div><!-- know your TV cop characters -->
     <div class="wrapper">
@@ -150,10 +152,15 @@
     <a class="left-logic" href="http://leftlogic.com">Left Logic</a>
   </footer>
 
+</div>
+
   <script>
     //if (!location.hash) document.getElementById('show-menu').scrollIntoView();
   </script>
+  
   <script src="/js/jquery.js"></script>
+  <script src="/js/jquery-ui.js"></script>
+
   <script src="http://maps.googleapis.com/maps/api/js?&amp;sensor=false"></script>
   <script src="http://maps.stamen.com/js/tile.stamen.js"></script>
   <script src="/js/fullfrontal.js"></script>

@@ -542,6 +542,9 @@ body.pullout {
 #pullout a:focus {
   color: #000;
 }
+#pullout .talk-buttons {
+  clear: both;
+}
 
 /** Pullout Buttons **/
 #pullout .button {
@@ -628,8 +631,18 @@ body.pullout {
   }
 }
 
+@media screen and (max-width: 550px) {
+  #pullout .buy-box, #pullout .buy-box .text, #pullout .buy-box .button {
+    width: auto;
+    clear: both;
+  }
+}
 
 @media screen and (min-width: 640px) {
+  #dressing-gown.blur {
+    -webkit-filter: blur(3px);
+  }
+
   #show-menu {
     display: none;
   }
@@ -825,7 +838,7 @@ body.pullout {
     -o-font-smoothing: auto;
     font-smoothing: auto;
   }
-    #map {
+  #map {
     display: block;
     float: left;
     width: 50%;
@@ -833,6 +846,88 @@ body.pullout {
     background: #333;
     height: 80vh;
     border: 2px solid #fff;
+  }
+
+  #pullout { 
+    width: 90%;
+    max-width: 780px;
+    z-index: 100;
+    overflow: visible;
+  }
+
+  /** Additional Pullout Style from Paul **/
+  #pullout h1 {
+    font-size: 64px;
+    line-height: 32px;
+    float: left;
+    margin-top: 10px;
+  }
+  #pullout h2 {
+    margin-bottom: 30px;
+  }
+  #pullout hr {
+    margin-top: 15px;
+    margin-bottom: -10px;
+    clear: both;
+  }
+  #pullout .speaker-image {
+    /*max-width: 156px;*/
+    max-width: 250px;
+    float: right;
+    margin-bottom: 30px;
+    margin-left: 30px;
+  }
+
+  #pullout .buy-box {
+    overflow: hidden;
+    width: 500px;
+    float: right;
+  }
+  #pullout .buy-box .text {
+    float: left;
+    text-align: right;
+    width: 280px;
+    padding-top: 18px;
+  }
+  #pullout .buy-box h4, #pullout .buy-box p {
+    margin: 0;
+  }
+  #pullout .buy-box p {
+    margin-top: -4px;
+  }
+  #pullout .buy-box h4 {
+    font-size: 32px;
+  }
+  #pullout .buy-box h4 span {
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  #pullout .buy-box .button {
+    font-size: 32px;
+    font-weight: normal;
+    float: right;
+    margin-top: 22px;
+  }
+
+  #pullout .pullout-close {
+    position: absolute;
+    right: -24px;
+    top: -32px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    padding: 0;
+    background-position: center;
+  }
+  #pullout .pullout-close span {
+    display: none;
+  }
+  #pullout .pullout-prev-next {
+    display: none;
+  }
+
+  #pullout .talk-download {
+    margin-left: 20px;
   }
 }
 
@@ -855,6 +950,25 @@ body.pullout {
     width: 33.3333%;
     box-sizing: border-box;
   }
+
+  #pullout .left {
+    width: 48%;
+    float: left;
+  }
+  #pullout .right {
+    width: 48%;
+    float: right;
+    overflow: hidden;
+  }
+  #pullout .right section {
+    width: 50%;
+    float: left;
+    margin-top: 47px;
+    box-sizing: border-box;
+  }
+  #pullout .right section:nth-child(1) {
+    border-right: 2px solid #fff;
+  } 
 }
 
 @media screen and (min-width: 1340px) {

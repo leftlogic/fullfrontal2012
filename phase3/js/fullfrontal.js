@@ -1,3 +1,48 @@
+$gown = $('#dressing-gown');
+$tint = $('<div>').css({
+  position: 'fixed',
+  top: '0',
+  bottom: '0',
+  left: '0',
+  right: '0',
+  'background-color': 'rgba(0,0,0,0.75)',
+  'z-index': 50
+})
+
+$('.schedule a.summary').click(function (e) {
+
+  if(window.innerWidth < 640) {
+    return true;
+  }
+
+  e.preventDefault();
+
+  $.get($(this)[0], function(data){
+    
+    //$gown.addClass('blur');
+
+    $('body').append(data);
+    $('body').append($tint);
+
+    $pullout = $('#pullout');
+    $pullout.position({
+        my: 'center',
+        at: 'center',
+        of: window
+    });
+    $('.pullout-close').click(function () {
+      $pullout.remove();
+      $tint.remove();
+      //$gown.removeClass('blur');
+      return false;
+    });
+  });
+  return false;
+})
+
+
+
+
 function addClass(el, c) {
   var className = el.className;
   
