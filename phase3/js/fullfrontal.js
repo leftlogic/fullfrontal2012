@@ -7,9 +7,12 @@ $tint = $('<div>').css({
   right: '0',
   'background-color': 'rgba(0,0,0,0.75)',
   'z-index': 50
-})
+});
+$body = $('body');
 
-$('.schedule a.summary').add('.workshop .title').click(function (e) {
+function displayPullout (e) {
+
+  // This function could be a lot smarter, caching pullouts instead of throwing them away for example
 
   if(window.innerWidth < 640) {
     return true;
@@ -17,14 +20,15 @@ $('.schedule a.summary').add('.workshop .title').click(function (e) {
 
   e.preventDefault();
 
-  $.get($(this)[0], function(data){
+  // Remove one if it's already open
+  $('#pullout').remove();
 
-    console.log(data);
+  $.get($(this)[0], function(data){
     
     //$gown.addClass('blur');
 
-    $('body').append($("<div>").append(data.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")).find('#pullout'));
-    $('body').append($tint);
+    $body.append($("<div>").append(data.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")).find('#pullout'));
+    $body.append($tint);
 
     $pullout = $('#pullout');
     $pullout.position({
@@ -42,10 +46,11 @@ $('.schedule a.summary').add('.workshop .title').click(function (e) {
     });
   });
   return false;
-})
+};
 
+$('.schedule a.summary').add('.workshop .title').add('.buy-tickets').click(displayPullout)
 
-
+$(document).on('click', '.buy-button', displayPullout);
 
 function addClass(el, c) {
   var className = el.className;

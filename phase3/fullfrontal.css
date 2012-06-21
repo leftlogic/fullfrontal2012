@@ -660,6 +660,67 @@ body.pullout {
 #pullout .talk-download:focus {
   background-image: url('/images/download-alt.gif');
 }
+#pullout .ticket {
+  margin-bottom: 20px;
+}
+#pullout.tickets h1 {
+  float: none;
+  font-size: 64px;
+  line-height: 43px;
+}
+#pullout.tickets .tickets-price {
+  white-space: nowrap;
+}
+#pullout.tickets .pound-alt {
+  width: auto;
+  padding-right: 10px
+}
+#pullout .ticket .buy-box {
+  width: 100%;
+  float: none;
+  text-align: center;
+}
+#pullout .ticket h2 {
+  margin: 10px 0;
+}
+#pullout .ticket .buy-box h4 {
+  font-size: 32px;
+  margin: 0;
+}
+#pullout .ticket .buy-box p {
+  margin: 0;
+}
+#pullout .ticket .buy-box .text {
+  width: 100%;
+  float: none;
+  text-align: center;
+}
+#pullout .ticket .button {
+  display: block;
+  text-align: center;
+  font-size: 32px;
+  font-weight: normal;
+  margin: 20px 0;
+}
+#pullout .ticket .sold-out {
+  background-color: #c00;
+}
+#pullout .ticket .sold-out:hover,
+#pullout .ticket .sold-out:focus, {
+  background-color: #c00;
+  border: 1px solid #000;
+}
+#pullout .ticket .more {
+  text-align: center;
+}
+#pullout.tickets small {
+  display: block;
+  clear: both;
+  font-size: 15px;
+  font-weight: normal;
+  color: #909090;
+}
+
 
 @media screen and (max-width: 450px) {
   .lede .extra-br {
@@ -972,6 +1033,13 @@ body.pullout {
 
   #pullout .talk-download {
     margin-left: 20px;
+  }
+
+  #pullout .ticket {
+    float: left;
+    width: 47%;
+    margin-right: 3%;
+    box-sizing: border-box;
   }
 }
 

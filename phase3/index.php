@@ -90,7 +90,7 @@
         <span>
       </h1>
       
-      <a class="button buy-tickets" href="#">
+      <a class="button buy-tickets" href="/pullouts/tickets.php">
         <span class="buy">Buy</span> Tickets
         <span class="price"><img src="/images/pound-symbol.gif" alt="&pound;">250</span>
       </a>
