@@ -433,9 +433,13 @@ h2 {
   -o-font-smoothing: none;
   font-smoothing: none;
 }
+.venue .name {
+  line-height: 28px;
+}
 .venue .address {
   display: block;
   font-size: 16px;
+  line-height: 16px;
   margin-bottom: 10px;
 }
 .venue a {
@@ -1099,6 +1103,24 @@ body.pullout {
   .sponsor {
     width: 30%;
     margin: 0 1.5% 60px 1.5%;
+  }
+}
+
+@media screen and (max-width: 1234px) and (min-width: 640px) {
+  .locations {
+    width: 33.3333%;
+  }
+  #map {
+    width: 33.3333%;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 640px) {
+  .locations {
+    width: 50%;
+  }
+  #map {
+    display: none;
   }
 }
 
