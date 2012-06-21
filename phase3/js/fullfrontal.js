@@ -1,20 +1,19 @@
-$gown = $('#dressing-gown');
-$tint = $('<div>').css({
-  position: 'fixed',
-  top: '0',
-  bottom: '0',
-  left: '0',
-  right: '0',
-  'background-color': 'rgba(0,0,0,0.75)',
-  'z-index': 50
-});
-$body = $('body');
+(function () {
+var $tint = $('<div>').css({
+      position: 'fixed',
+      top: '0',
+      bottom: '0',
+      left: '0',
+      right: '0',
+      'background-color': 'rgba(0,0,0,0.75)',
+      'z-index': 50
+    }),
+    $body = $('body'),
+    re = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
 
-function displayPullout (e) {
-
+function displayPullout(e) {
   // This function could be a lot smarter, caching pullouts instead of throwing them away for example
-
-  if(window.innerWidth < 640) {
+  if (window.innerWidth < 640) {
     return true;
   }
 
@@ -23,14 +22,12 @@ function displayPullout (e) {
   // Remove one if it's already open
   $('#pullout').remove();
 
-  $.get($(this)[0], function(data){
-    
-    //$gown.addClass('blur');
-
-    $body.append($("<div>").append(data.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")).find('#pullout'));
+  $.get(this.href, function(data){
+    //gown.addClass('blur');
+    var $pullout = $('<div>').append(data.replace(re, '')).find('#pullout');
+    $body.append($pullout);
     $body.append($tint);
 
-    $pullout = $('#pullout');
     $pullout.position({
         my: 'top',
         at: 'top',
@@ -38,97 +35,86 @@ function displayPullout (e) {
         offset: '0 50px',
         of: window
     });
-    $('.pullout-close').click(function () {
+
+    $div.find('.pullout-close').click(function () {
       $pullout.remove();
       $tint.remove();
-      //$gown.removeClass('blur');
       return false;
     });
   });
-  return false;
-};
-
-$('.schedule a.summary').add('.workshop .title').add('.buy-tickets').click(displayPullout)
-
-$(document).on('click', '.buy-button', displayPullout);
-
-function addClass(el, c) {
-  var className = el.className;
-  
-  if ((' ' + className + ' ').indexOf(' ' + c + ' ') !== false) {
-    // add
-    el.className = className + ' ' + c;
-  }
 }
 
-// thank you jQuery...
-var triml = /^\s+/,
-    trimr = /\s+$/;
-
-function removeClass(el, c) {
-  el.className = (' ' + el.className + ' ').replace(' ' + c + ' ', '').replace(triml, '').replace(trimr, '');
-}
 
 function genMarkers(venues, icon) {
-  var len = venues.length;
+  var len = venues.length,
+      el,
+      latlng,
+      venueLocation,
+      standardIcon,
+      hoverIcon,
+      marker,
+      hoverIconAction,
+      i;
 
-  for (var i = 0; i < len; i++) {
-    !function (i) {
-      var el = venues[i],
-          latlng = el.getAttribute('data-latlng').split(','),
-          venueLocation = new google.maps.LatLng(latlng[0], latlng[1]),
-          standardIcon = new google.maps.MarkerImage(
-            iconURL,
-            new google.maps.Size(icon.width, icon.height, 'px', 'px'),
-            new google.maps.Point(i * icon.width, icon.origin),
-            icon.point
-          ),
-          hoverIcon = new google.maps.MarkerImage(
-            iconURL,
-            new google.maps.Size(icon.width, icon.height, 'px', 'px'),
-            new google.maps.Point(i * icon.width, icon.origin + icon.height),
-            icon.point
-          ),
-          marker = new google.maps.Marker({
-            position: venueLocation,
-            flat: true,
-            icon: standardIcon
-          }),
-          hoverIconAction = newHoverIconAction(el, venueLocation, marker, standardIcon, hoverIcon);
+  for (i = 0; i < len; i++) {
+    el = venues[i];
+    latlng = el.getAttribute('data-latlng').split(',');
+    venueLocation = new google.maps.LatLng(latlng[0], latlng[1]);
+    standardIcon = new google.maps.MarkerImage(
+      iconURL,
+      new google.maps.Size(icon.width, icon.height, 'px', 'px'),
+      new google.maps.Point(i * icon.width, icon.origin),
+      icon.point
+    );
+    hoverIcon = new google.maps.MarkerImage(
+      iconURL,
+      new google.maps.Size(icon.width, icon.height, 'px', 'px'),
+      new google.maps.Point(i * icon.width, icon.origin + icon.height),
+      icon.point
+    );
+    marker = new google.maps.Marker({
+      position: venueLocation,
+      flat: true,
+      icon: standardIcon
+    });
 
-      bounds.extend(venueLocation);
-      
-      // event handlers - sweeeeeeet HAWT ::rasp::
-      google.maps.event.addListener(marker, 'mouseover', function () {
-        hoverIconAction({ type: 'mouseover' });
-      });
-      google.maps.event.addListener(marker, 'mouseout', function () {
-        hoverIconAction({ type: 'mouseout' });
-      });
+    hoverIconAction = newHoverIconAction(el, venueLocation, marker, standardIcon, hoverIcon);
+    bounds.extend(venueLocation);
 
-      el.onmouseover = hoverIconAction;
-      el.onmouseout = hoverIconAction;
-      
-      marker.setMap(map);
-    }(i);
+    // event handlers - sweeeeeeet HAWT ::rasp::
+    google.maps.event.addListener(marker, 'mouseover', function () {
+      hoverIconAction({ type: 'mouseover' });
+    });
+    google.maps.event.addListener(marker, 'mouseout', function () {
+      hoverIconAction({ type: 'mouseout' });
+    });
+
+    el.onmouseover = hoverIconAction;
+    el.onmouseout = hoverIconAction;
+
+    marker.setMap(map);
   }
 }
 
 function newHoverIconAction(el, latlng, marker, standardIcon, hoverIcon) {
+  var $el = $(el);
   return function (event) {
     event = event || window.event;
     if (event.type === 'mouseover') {
       marker.setZIndex(++zIndex);
       marker.setIcon(hoverIcon);
-      addClass(el, 'selected');
+      $el.addClass('selected');
       // don't use the pageX - just using it to determine that we hovered from the li, not a google hover
       //if (event.clientX) map.panTo(latlng);
     } else {
       marker.setIcon(standardIcon);
-      removeClass(el, 'selected');
+      $el.removeClass('selected');
     }
   };
 }
+
+$('.schedule a.summary').add('.workshop .title').add('.buy-tickets').click(displayPullout);
+$(document).on('click', '.buy-button', displayPullout);
 
 var iconURL = '/images/map-markers.png',
     smallIcon = {
@@ -142,7 +128,7 @@ var iconURL = '/images/map-markers.png',
       width: 55,
       height: 85,
       origin: 90
-    },   
+    },
     map = new google.maps.Map(document.getElementById('map'), {
       center: new google.maps.LatLng(50.8339238, -0.1385427),
       zoom: 14,
@@ -156,9 +142,11 @@ var iconURL = '/images/map-markers.png',
     bounds = new google.maps.LatLngBounds(),
     zIndex = google.maps.Marker.MAX_ZINDEX;
 
+
 map.mapTypes.set('Toner', new google.maps.StamenMapType('toner'));
 
 genMarkers(sV, smallIcon);
 genMarkers(pV, largeIcon);
 
 map.fitBounds(bounds);
+}()); // because crockford prefers his balls on the inside: http://www.youtube.com/watch?v=eGArABpLy0k#t=1m10s
