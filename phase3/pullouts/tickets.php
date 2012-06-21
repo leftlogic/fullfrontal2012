@@ -27,78 +27,33 @@
     <div class="pullout-controls">
       <a class="button pullout-close" href="/"><span>Close</span></a>
     </div>
-    
+
     <h1>Tickets from <span class="tickets-price"><img src="/images/pound-symbol-alt.gif" width="24" height="40" class="pound-alt">129</span></h1>
 
-    <section class="ticket">
-      <h2>Workshop Title</h2>
+<?php
+  require('../utils.php');
+  $conferenceData = array(
+    'talk-title' => 'Day Conference',
+    'details' => array('price' => '£150'),
+    'buylink' => 'https://leftlogic.stagehq.com/events/1505/booking/new'
+  );
 
-      <div class="buy-box">
-        <div class="text">
-          <h4>&pound;345<span>+vat</span></h4>
-          <p>Includes <b>FREE</b> conference ticket</p>
-        </div>
-      </div>
-      
-      <a href="#" class="button buy-button">Buy Tickets</a>
-      <!-- <div class="button sold-out">Sold Out</div> -->
+  echo renderTemplate($conferenceData, '/pullouts/tickets.tmpl');
 
-      <p class="more"><a href="#more">More information</a></p>
-    </section>
+  $workshopTickets = array('tooling', 'html5', 'mobile');
+  shuffle($workshopTickets);
 
-    <section class="ticket">
-      <h2>Workshop Title</h2>
+  foreach ($workshopTickets as $workshop) {
+    echo renderTemplate('/data/workshops/' . $workshop . '.json', '/pullouts/tickets.tmpl');
+  }
 
-      <div class="buy-box">
-        <div class="text">
-          <h4>&pound;345<span>+vat</span></h4>
-          <p>Includes <b>FREE</b> conference ticket</p>
-        </div>
-      </div>
-      
-      <a href="#" class="button buy-button">Buy Tickets</a>
-      <!-- <div class="button sold-out">Sold Out</div> -->
-
-      <p class="more"><a href="#more">More information</a></p>
-    </section>
-
-    <section class="ticket">
-      <h2>Workshop Title</h2>
-
-      <div class="buy-box">
-        <div class="text">
-          <h4>&pound;345<span>+vat</span></h4>
-          <p>Includes <b>FREE</b> conference ticket</p>
-        </div>
-      </div>
-      
-      <a href="#" class="button buy-button">Buy Tickets</a>
-      <!-- <div class="button sold-out">Sold Out</div> -->
-
-      <p class="more"><a href="#more">More information</a></p>
-    </section>
-
-    <section class="ticket">
-      <h2>Workshop Title</h2>
-
-      <div class="buy-box">
-        <div class="text">
-          <h4>&pound;345<span>+vat</span></h4>
-          <p>Includes <b>FREE</b> conference ticket</p>
-        </div>
-      </div>
-      
-      <a href="#" class="button buy-button">Buy Tickets</a>
-      <!-- <div class="button sold-out">Sold Out</div> -->
-
-      <p class="more"><a href="#more">More information</a></p>
-    </section>
+?>
 
     <small>
       Please note that due to the way StageHQ (our payment system) works,
       the VAT won't show up separately when buying the tickets (nor in PayPal).
       VAT has been separately added, and our VAT registration is: 993 1266 95.
-      A VAT invoice can be <a href="">provided on request</a>.
+      A VAT invoice can be <a href="mailto:events@leftlogic.com?subject=Add%20to%20node%20workshop%20waiting%20list">provided on request</a>.
     </small>
   </article>
 

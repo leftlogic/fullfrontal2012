@@ -1,0 +1,15 @@
+    <section class="ticket">
+      <h2>{{talk-title}}</h2>
+
+      <div class="buy-box">
+        <div class="text">
+          <h4>{{details.price}}<span>+vat</span></h4>
+          {{note}}
+        </div>
+      </div>
+
+      {{#soldout}}<div class="button sold-out">Sold Out</div>{{/soldout}}
+      {{^soldout}}<a href="{{buylink}}" class="button buy-button">Buy Tickets</a>{{/soldout}}
+
+      {{#slug}}<p class="pullout more"><a href="/workshop/{{slug}}#{{slug}}">More information</a></p>{{/slug}}
+    </section>
