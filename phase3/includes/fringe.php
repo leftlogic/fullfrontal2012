@@ -1,3 +1,5 @@
+<hr>
+
 <article id="fringe">
   <h2>Fringe</h2>
 
