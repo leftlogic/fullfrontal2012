@@ -16,7 +16,7 @@
     
     <li class="vevent finished">
       <time class="dtstart" title="2012-11-09T09:40" datetime="2012-11-09T09:50">Finished</time>
-      <a href="/pullouts/speaker.php?id=example" class="summary">Opening Remarks</a>
+      <a href="/pullouts/speaker.php?type=speaker&amp;id=example" class="summary">Opening Remarks</a>
     </li>
     
     <li class="vevent current">

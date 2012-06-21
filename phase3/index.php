@@ -19,7 +19,7 @@
     return $res;
   }
 
-  function renderTemplate($data, $template, $markdown) {
+  function renderTemplate($data, $template) {
     global $mustache;
     // TODO validate the file exists - and error handle properly
     $data = convertMarkdown(json_decode(file_get_contents($data), true));
@@ -66,7 +66,7 @@
 
       <nav>
         <ul>
-          <li><a href="#speakers">Speakers</a></li>
+          <!-- li><a href="#speakers">Speakers</a></li -->
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#workshops">Workshops</a></li>
           <li><a href="#locations">Locations</a></li>
@@ -112,9 +112,7 @@
 
     <hr>
 
-    <?php require('includes/schedule.php'); ?>
-
-    <hr>
+    <?php //require('includes/schedule.php'); <hr> ?>
 
     <?php require('includes/speakers.php'); ?>
 

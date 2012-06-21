@@ -87,6 +87,8 @@ header .chips {
 header .wrapper {
   margin: 0 auto;
   overflow: hidden;
+  max-width: 1400px;
+  position: relative;
 }
 
 header .logo {
@@ -155,11 +157,11 @@ nav a:focus {
   -o-font-smoothing: none;
   font-smoothing: none;
 
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .button:hover,
 .button:focus {
@@ -233,11 +235,11 @@ footer .left-logic {
   background-image: url(/images/leftlogic.png);
 /*  background-image: -webkit-cross-fade(url(/images/leftlogic-1.png),  url(/images/leftlogic-2.png), 0%);
 
-  -webkit-transition: background-image 0.2s ease-in-out;
-  -moz-transition: background-image 0.2s ease-in-out;
-  -o-transition: background-image 0.2s ease-in-out;
-  -ms-transition: background-image 0.2s ease-in-out;
-  transition: background-image 0.2s ease-in-out;*/
+  -webkit-transition: background-image 0.1s ease-in-out;
+  -moz-transition: background-image 0.1s ease-in-out;
+  -o-transition: background-image 0.1s ease-in-out;
+  -ms-transition: background-image 0.1s ease-in-out;
+  transition: background-image 0.1s ease-in-out;*/
 }
 footer .left-logic:hover,
 footer .left-logic:focus,
@@ -251,6 +253,8 @@ footer .left-logic:active {
   background-repeat: repeat-x;
   padding: 0;
   padding-top: 45px;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 .main .wrapper {
   margin: 0 auto;  
@@ -387,7 +391,7 @@ h2 {
 }
 .speaker .details,
 .workshop .details img,
-.workshop .details .sold-out {
+.workshop .sold-out {
   display: none;
 }
 .workshop p,
@@ -444,7 +448,7 @@ h2 {
   margin: 20px;
   background-color: #fff;
   text-align: center;
-  padding: 25px;
+  padding: 0;
 
 /*  max-width: 280px;
   float: left;
@@ -452,6 +456,9 @@ h2 {
 }
 .sponsor img {
 /*  width: 100%;*/
+}
+#sponsors h3 {
+  display: none;
 }
 
 /** Pullout **/
@@ -743,7 +750,7 @@ body.pullout {
     display: block;
   }
   .speaker img,
-  .workshop img {
+  .workshop .details img {
     display: block;
     width: 100%;
     border: 2px solid #000;
@@ -777,11 +784,11 @@ body.pullout {
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
 
-    -webkit-transition: opacity 0.2s ease-in-out;
-    -moz-transition: opacity 0.2s ease-in-out;
-    -o-transition: opacity 0.2s ease-in-out;
-    -ms-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    -moz-transition: opacity 0.1s ease-in-out;
+    -o-transition: opacity 0.1s ease-in-out;
+    -ms-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
   }
   .speaker .details:hover .blurb,
   .workshop .details:hover .blurb,
@@ -801,11 +808,11 @@ body.pullout {
     background-color: #c00;
     font-size: 32px;
 
-    -webkit-transition: background-color 0.2s ease-in-out;
-    -moz-transition: background-color 0.2s ease-in-out;
-    -o-transition: background-color 0.2s ease-in-out;
-    -ms-transition: background-color 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.1s ease-in-out;
+    -moz-transition: background-color 0.1s ease-in-out;
+    -o-transition: background-color 0.1s ease-in-out;
+    -ms-transition: background-color 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out;
   }
   .workshop .details:hover .sold-out .button {
     background-color: #000;
@@ -823,9 +830,9 @@ body.pullout {
   .venue .bullet {
     color: #606060;
   }
-/*  .venue.selected .bullet {
-    color: #0eaf16;
-  }*/
+  .venue.selected .bullet {
+    color: #fff;
+  }
   .venue .details {
     display: block;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -838,29 +845,57 @@ body.pullout {
     -o-font-smoothing: auto;
     font-smoothing: auto;
   }
+  .venue .details p:first-of-type {
+    margin-top: 5px;
+  }
   #map {
     display: block;
     float: left;
     width: 50%;
     box-sizing: border-box;
     background: #333;
-    height: 80vh;
+    /*height: 80vh;*/
+    height: 1040px;
     border: 2px solid #fff;
   }
 
+  #sponsors h3 {
+    display: block;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 100;
+    color: #c0c0c0;
+    margin-bottom: 60px;
+    clear: both;
+  }
+  .sponsor {
+    float: left;
+    width: 47%;
+    margin: 0 1.5% 60px 1.5%;
+
+    box-sizing: border-box;
+  }
+
+
+
   #pullout { 
-    width: 90%;
+    width: 80%;
     max-width: 780px;
     z-index: 100;
     overflow: visible;
+    padding: 40px;
   }
+  #pullout.is-workshop{ 
+    max-width: 1080px;
+  }
+
 
   /** Additional Pullout Style from Paul **/
   #pullout h1 {
     font-size: 64px;
-    line-height: 32px;
+    line-height: 43px;
     float: left;
-    margin-top: 10px;
+    margin: 10px 0 20px 0;
   }
   #pullout h2 {
     margin-bottom: 30px;
@@ -880,14 +915,14 @@ body.pullout {
 
   #pullout .buy-box {
     overflow: hidden;
-    width: 500px;
+    width: 520px;
     float: right;
   }
   #pullout .buy-box .text {
     float: left;
     text-align: right;
     width: 280px;
-    padding-top: 18px;
+    padding-top: 0;
   }
   #pullout .buy-box h4, #pullout .buy-box p {
     margin: 0;
@@ -906,7 +941,7 @@ body.pullout {
     font-size: 32px;
     font-weight: normal;
     float: right;
-    margin-top: 22px;
+    margin-top: 0;
   }
 
   #pullout .pullout-close {
@@ -971,6 +1006,13 @@ body.pullout {
   } 
 }
 
+@media screen and (min-width: 984px) {
+  .sponsor {
+    width: 30%;
+    margin: 0 1.5% 60px 1.5%;
+  }
+}
+
 @media screen and (min-width: 1340px) {
   header .wrapper {
     margin-bottom: 0;
@@ -989,5 +1031,9 @@ body.pullout {
   .speaker,
   .workshop {
     width: 25%;
+  }
+  .sponsor {
+    width: 22%;
+    margin: 0 1.5% 60px 1.5%;
   }
 }

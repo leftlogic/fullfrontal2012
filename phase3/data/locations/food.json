@@ -1,0 +1,48 @@
+{
+  "locations" : [{
+    "name" : "Mediterrane",
+    "address" : "Next to Duke of York's",
+    "number" : 5,
+    "url": "",
+    "type": "secondary",
+    "lat": 50.83406696411911,
+    "lng": -0.13850659132003784,
+    "details_md" : "Pub"
+  },{
+    "name" : "Mitre Tavern",
+    "address" : "Kings Road, BN1 2GS",
+    "number" : 6,
+    "url": "",
+    "type": "secondary",
+    "lat": 50.831874878557926,
+    "lng": -0.13535499572753906,
+    "details_md" : ""
+  },{
+    "name" : "Bardsley's",
+    "address" : "17 Jubilee Sreet, BN1 1GE",
+    "number" : 7,
+    "url": "",
+    "type": "secondary",
+    "lat": 50.831969746834076,
+    "lng": -0.13464689254760742,
+    "details_md" : "Pub"
+  },{
+    "name" : "The Open House",
+    "address" : "165-167 Preston Road, BN1 6AU",
+    "number" : 8,
+    "url": "",
+    "type": "secondary",
+    "lat": 50.83730916466705,
+    "lng": -0.13620257377624512,
+    "details_md" : "Pub"
+  },{
+    "name" : "Circus Circus",
+    "address" : "101 Stroundly Road, BN1 4DJ",
+    "number" : 9,
+    "url": "",
+    "type": "secondary",
+    "lat": 50.833900951968864,
+    "lng": -0.1390671730041504,
+    "details_md" : "Pub"
+  }]
+}

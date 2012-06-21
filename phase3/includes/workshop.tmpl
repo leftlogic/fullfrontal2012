@@ -1,0 +1,12 @@
+{{#workshops}}
+  <section class="workshop">
+    <h3>{{name}} <a class="title" href="/pullouts/pullout.php/?type=workshop&amp;id={{url-slug}}">{{title}}</a></h3>
+    <div class="details">
+      <img title="{{image-credit}}" src="/images/speakers/{{image}}">
+      {{#sold-out}}<div class="sold-out"><span class="button">Sold Out</span></div>{{/sold-out}}
+      <div class="blurb">
+        {{{blurb_md}}
+      </div>
+    </div>
+  </section>
+{{/workshops}}

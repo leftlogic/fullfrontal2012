@@ -1,0 +1,13 @@
+{{#locations}}
+  <li class="venue {{type}}-venue" data-latlng="{{lat}},{{lng}}">
+    <span class="address">{{address}}</span>
+    
+    {{#url}}<a href="{{url}}"><span class="bullet">{{number}}.</span>{{name}}</a>{{/url}}
+    
+    {{^url}}<span><span class="bullet">{{number}}.</span>{{name}}</span>{{/url}}
+    
+    <div class="details">
+      {{{details_md}}}
+    </div>
+  </li>
+{{/locations}}

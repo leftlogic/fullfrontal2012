@@ -1,0 +1,40 @@
+{
+  "full-name" : "Remy Sharp",
+  "image" : "speakers/remy.png",
+  "image-credit" : "",
+  "talk-title" : "Mobile Web Apps",
+  "talk-description" : "Building rich interactive web sites&hellip; dare I say web apps &mdash; is a reality with the smart phone browsers shipping with all the latest JavaScript and CSS technologies.\n\nThis day long workshop will be a mix of introducing the latest technology &amp; tricks on the mobile device and hands on practical exercises where you'll get to play with what you're learning.\n\nAlthough this workshop will have an iOS focus, a lot of the technology we will look at applies to most new WebKit based devises (Android, Playbook, etc) and smartphones running Opera Mobile.",
+  "talk-audience" : null,
+  "learn" : [
+    {
+      "topic" : "Mobile Device",
+      "desc" : "Take advantage using latest technology"
+    },{
+      "topic" : "Working with touch",
+      "desc" : "Handling mobile specific events"
+    },{
+      "topic" : "Debugging",
+      "desc" : "Way beyond the bad old alert"
+    },{
+      "topic" : "Offline",
+      "desc" : "Storing assets and data"
+    },{
+      "topic" : "Frameworks and libraries",
+      "desc" : "Speed up development and time"
+    },{
+      "topic" : "Deployment",
+      "desc" : "Getting your mobile app to your users"
+    }
+  ],
+  "details" : [{
+      "date" : "9th & 10th November 2012",
+      "time" : "09:30 to 17:00 (Both days)",
+      "teacher" : "Remy Sharp",
+      "teaher-url" : "#",
+      "venue" : "The Lighthouse",
+      "venue-url" : "#",
+      "price" : "£345",
+      "ticket": true,
+      "vat" : true
+  }]
+}

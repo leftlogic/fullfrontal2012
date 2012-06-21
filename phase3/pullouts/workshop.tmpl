@@ -1,0 +1,85 @@
+<article id="pullout" {{#learn}}class="is-workshop"{{/learn}}>
+
+  <div class="pullout-controls">
+    <a class="button pullout-close" href="/"><span>Close</span></a>
+
+    <div class="pullout-prev-next">
+      <a class="button button-white pullout-prev" href="#">Previous</a>
+      <a class="button button-white pullout-next" href="#">Next</a>
+    </div>
+  </div>
+  
+  <h1>{{full-name}}</h1>
+
+
+
+  {{#details}}
+    <div class="buy-box">
+      <div class="text">
+        <h4>{{price}}{{#vat}}<span>+vat</span>{{/vat}}</h4>
+        {{#ticket}}<p>Includes <b>FREE</b> conference ticket</p>{{/ticket}}
+        {{^ticket}}<p>Does not include conference ticket</p>{{/ticket}}
+      </div>
+      <a href="#" class="button buy-button">Buy Tickets</a>
+      <div style="clear: both;"></div>
+    </div>
+  {{/details}}
+  <div style="clear: both;"></div>
+
+  <hr>
+
+  <div class="left">
+    <h2>{{talk-title}}</h2>
+
+    {{#image}}
+      <img class="speaker-image" src="/images/{{image}}" title="{{image-credit">
+    {{/image}}
+
+    {{{talk-description}}}
+
+    <h3>Who is this workshop for?</h3>
+
+    {{{talk-audience}}}
+  </div>
+
+  <div class="right">
+    <section>
+      <h2>You’ll Learn</h2>
+      <ul>
+        {{#learn}}
+        <li>
+          <strong>{{topic}}</strong><br>
+          {{desc}}
+        </li>
+        {{/learn}}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Details</h2>
+      <ul>
+        {{#details}}
+        <li>
+          <strong>Date</strong><br>
+          {{date}}
+        </li>
+        <li>
+          <strong>Time</strong><br>
+          {{time}}
+        </li>
+        <li>
+          <strong>Teacher</strong><br>
+          <a href="{{teacher-url}}">{{teacher}}</a>
+        </li>
+        <li>
+          <strong>Venue</strong><br>
+          <a href="{{venue-url}}">{{venue}}</a>
+        </li>
+        {{/details}}
+      </ul>
+    </section>
+  </div>
+
+  <div style="clear: both;"></div>
+
+</article>

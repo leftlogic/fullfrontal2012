@@ -2,6 +2,7 @@
   "full-name" : "Peter Paul Koch",
   "short-name" : "PPK",
   "image" : "speakers/speaker.png",
+  "image-credit" : "",
   "talk-title" : "Node & HTML5 for a real-time web",
   "talk-description" : "HTML5 has gained a lot of attention over the last 12 months. With browsers increasingly supporting the features of the vast JavaScript APIs both in and around the official HTML5 spec, it’s making the job of creating awesome applications purely using these web technologies very easy indeed.\n\nThis full day workshop will introduce you to HTML5 with a brief backstory, before diving into the APIs one by one. As well as going through code and showing practical demonstrations, where possible, we’ll also talk about the alternatives for old browsers that don’t support “awesome” out of the box.",
   "talk-audio-url" : "/bar",

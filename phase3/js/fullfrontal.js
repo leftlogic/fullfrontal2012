@@ -9,7 +9,7 @@ $tint = $('<div>').css({
   'z-index': 50
 })
 
-$('.schedule a.summary').click(function (e) {
+$('.schedule a.summary').add('.workshop .title').click(function (e) {
 
   if(window.innerWidth < 640) {
     return true;
@@ -18,16 +18,20 @@ $('.schedule a.summary').click(function (e) {
   e.preventDefault();
 
   $.get($(this)[0], function(data){
+
+    console.log(data);
     
     //$gown.addClass('blur');
 
-    $('body').append(data);
+    $('body').append($("<div>").append(data.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")).find('#pullout'));
     $('body').append($tint);
 
     $pullout = $('#pullout');
     $pullout.position({
-        my: 'center',
-        at: 'center',
+        my: 'top',
+        at: 'top',
+        collision: 'none',
+        offset: '0 50px',
         of: window
     });
     $('.pullout-close').click(function () {
@@ -113,7 +117,7 @@ function newHoverIconAction(el, latlng, marker, standardIcon, hoverIcon) {
       marker.setIcon(hoverIcon);
       addClass(el, 'selected');
       // don't use the pageX - just using it to determine that we hovered from the li, not a google hover
-      if (event.clientX) map.panTo(latlng);
+      //if (event.clientX) map.panTo(latlng);
     } else {
       marker.setIcon(standardIcon);
       removeClass(el, 'selected');
@@ -139,7 +143,8 @@ var iconURL = '/images/map-markers.png',
       zoom: 14,
       mapTypeId: 'Toner',
       disableDefaultUI: true,
-      zoomControl: true
+      zoomControl: true,
+      scrollwheel: false
     }),
     pV = document.querySelectorAll('.primary-venue'),
     sV = document.querySelectorAll('.secondary-venue'),

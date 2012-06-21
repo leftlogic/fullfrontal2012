@@ -1,0 +1,42 @@
+{
+  "locations" : [{
+    "name" : "Jury's Inn",
+    "address" : "101 Stroundly Road, BN1 4DJ",
+    "number" : 1,
+    "url" : "http://brightonhotels.jurysinns.com",
+    "type" : "secondary",
+    "lat" : 50.831386981520524,
+    "lng": -0.14038681983947754,
+    "details_md" : "&pound;112 2 nights online special, &pound;129 including breakfast"
+  },
+  {
+    "name" : "Travelodge",
+    "address" : "165-167 Preston Road, BN1 6AU",
+    "number" : 2,
+    "url": "http://www.travelodge.co.uk/hotels/info?hotelId=18",
+    "type": "secondary",
+    "lat": 50.83632670343803,
+    "lng": -0.1439809799194336,
+    "details_md" : "&pound;38"
+  },{
+    "name" : "My Hotel",
+    "address" : "17 Jubilee St, BN1 1GE",
+    "number" : 3,
+    "url": "http://www.myhotels.com/my-hotel-brighton/index.html",
+    "type": "secondary",
+    "lat": 50.82469821215884,
+    "lng": -0.13905644416809082,
+    "details_md" : "&pound;95 for Thurs, &pound;99 for Fri"
+  },{
+    "name" : "Old Ship hotel",
+    "address" : "King's Road, BN1 1NR",
+    "number" : 4,
+    "url": "http://www.barcelo-hotels.co.uk/hotels/southern-england/barcelo-brighton-old-ship-hotel",
+    "type": "secondary",
+    "lat": 50.82025883414183,
+    "lng": -0.14247357845306396,
+    "details_md" : "&pound;63, &pound;73 including breakfast"
+  }]
+}
+
+

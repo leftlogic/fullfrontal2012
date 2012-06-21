@@ -3,11 +3,16 @@
   require('../markdown.php');
   $mustache = new Mustache;
 
-  $speaker = $_GET['id']; // id=rebecca
+  $id = $_GET['id']; // id=rebecca
+  $type = $_GET['type']; // id=rebecca
+
+
 
   // TODO validate the file exists - and error handle properly
-  $data = json_decode(file_get_contents('../data/speakers/' . $speaker . '.json'), true);
-  $view = file_get_contents('pullout.tmpl');
+  $data = json_decode(file_get_contents('../data/' . $type . 's/' . $id . '.json'), true);
+  $view = file_get_contents($type . '.tmpl');
+
+var_dump($data);
 
   $data['talk-description'] = Markdown($data['talk-description']);
   $data['talk-audience'] = Markdown($data['talk-audience']);
@@ -42,8 +47,6 @@
 
   <?php echo $render ?>
 
-  <script src="/js/jquery.js"></script>
-  <script src="/js/fullfrontal.js"></script>
   <script>
     // // Google Analytics
     // var _gaq = _gaq || [], d = document, n = 'className', g = 'getElementById', i = 'time';
