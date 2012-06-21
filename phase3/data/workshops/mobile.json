@@ -28,9 +28,9 @@
   ],
   "details" : [{
       "date" : "9th & 10th November 2012",
-      "time" : "09:30 to 17:00 (Both days)",
+      "time" : "09:30 to 17:00",
       "teacher" : "Remy Sharp",
-      "teaher-url" : "#",
+      "teaher-url" : "http://twitter.com/rem",
       "venue" : "The Lighthouse",
       "venue-url" : "#",
       "price" : "£345",
