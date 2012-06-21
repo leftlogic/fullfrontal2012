@@ -24,7 +24,8 @@ function displayPullout(e) {
 
   $.get(this.href, function(data){
     //gown.addClass('blur');
-    var $pullout = $('<div>').append(data.replace(re, '')).find('#pullout');
+    var $div = $('<div>').append(data.replace(re, '')),
+        $pullout = $div.find('#pullout');
     $body.append($pullout);
     $body.append($tint);
 
