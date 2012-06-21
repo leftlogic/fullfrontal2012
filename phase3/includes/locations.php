@@ -32,12 +32,12 @@
   <section class="locations">
     <h3>Hotels</h3>
     <ul>
-      <?php echo renderTemplate('data/locations/hotels.json', 'includes/location.tmpl'); ?>
+      <?php echo renderTemplate('/data/locations/hotels.json', '/includes/location.tmpl'); ?>
     </ul>
 
     <h3>Food &amp Drink</h3>
     <ul>
-      <?php echo renderTemplate('data/locations/food.json', 'includes/location.tmpl'); ?>
+      <?php echo renderTemplate('/data/locations/food.json', '/includes/location.tmpl'); ?>
     </ul>
   </section>
 
