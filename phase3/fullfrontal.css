@@ -410,6 +410,10 @@ h2 {
   text-align: center;
 }
 
+.workshop {
+  position: relative;
+}
+
 /* Locations */
 .locations h3 {
   font-size: 32px;
@@ -444,6 +448,7 @@ h2 {
 }
 .venue a {
   line-height: 30px;
+  display: block;
 }
 .venue .details {
   display: none;
@@ -1098,10 +1103,21 @@ body.pullout {
   .lede .superflous-br {
     display: none;
   }
+
+  .sponsor img {
+    max-width: 100%;
+  }
 }
 
 @media screen and (min-width: 954px) {
 
+  .sponsor.half {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+    width: 30%;
+  }
+  
   header .wrapper {
     margin-bottom: 20px;
   }
@@ -1150,6 +1166,11 @@ body.pullout {
     float: left;
     width: 33.3333%;
     box-sizing: border-box;
+  }
+
+  .workshop > h3,
+  .workshop > div {
+    width: 100%;
   }
 
   #pullout .left {
@@ -1212,10 +1233,19 @@ body.pullout {
     width: 200px;
     text-align: left;
   }
-  .speaker,
-  .workshop {
+  .speaker {
     width: 25%;
   }
+  .workshop {
+    width: 33%;
+  }
+
+  .workshop > h3, 
+  .workshop > div {
+    width: 73.5%;
+    margin: 0 auto;
+  }
+
   .sponsor {
     width: 22%;
     margin: 0 1.5% 60px 1.5%;

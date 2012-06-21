@@ -70,7 +70,7 @@
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#workshops">Workshops</a></li>
           <li><a href="#locations">Locations</a></li>
-          <li><a href="#fringe">Fringe</a></li>
+          <!-- <li><a href="#fringe">Fringe</a></li> -->
           <li><a href="#sponsors">Sponsors</a></li>
         </ul>
 
@@ -124,9 +124,7 @@
 
     <?php require('includes/locations.php'); ?>
 
-    <hr>
-
-    <?php require('includes/fringe.php'); ?>
+    <?php // require('includes/fringe.php'); ?>
 
     <hr>
 
@@ -153,7 +151,9 @@
 </div>
 
   <script>
-    if (!location.hash && document.getElementById('show-menu')) document.getElementById('show-menu').scrollIntoView();
+    setTimeout(function () {
+      if (!pageYOffset && !location.hash && document.getElementById('show-menu')) document.getElementById('show-menu').scrollIntoView();
+    }, 500);
   </script>
   
   <script src="/js/jquery.js"></script>
