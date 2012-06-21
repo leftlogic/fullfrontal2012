@@ -151,13 +151,13 @@ nav a:focus {
   font-family: Xenon;
   font-size: 16px;
   text-align: left;
-  text-shadow: 1px 1px 0px #000;
+  text-shadow: 1px 1px 0 #000;
 
-  -webkit-box-shadow: 4px 6px 0px #000;
-  -moz-box-shadow: 4px 6px 0px #000;
-  -o-box-shadow: 4px 6px 0px #000;
-  -ms-box-shadow: 4px 6px 0px #000;
-  box-shadow: 4px 6px 0px #000;
+  -webkit-box-shadow: 4px 6px 0 #000;
+  -moz-box-shadow: 4px 6px 0 #000;
+  -o-box-shadow: 4px 6px 0 #000;
+  -ms-box-shadow: 4px 6px 0 #000;
+  box-shadow: 4px 6px 0 #000;
 
   -webkit-font-smoothing: none;
   -moz-font-smoothing: none;
@@ -184,7 +184,7 @@ nav a:focus {
   margin: 34px;
   font-size: 36px;
   text-align: center;
-  text-shadow: 2px 2px 0px #000;
+  text-shadow: 2px 2px 0 #000;
 }
 .price {
   display: none;
@@ -209,7 +209,7 @@ footer .date-twitter {
   font-family: Xenon;
   font-size: 64px;
   text-align: center;
-  text-shadow: 4px 4px 0px #000;
+  text-shadow: 4px 4px 0 #000;
   margin-top: 40px;
 
   -webkit-font-smoothing: none;
@@ -278,7 +278,7 @@ footer .left-logic:active {
   margin-bottom: 60px;
   font-size: 20px;
   text-align: center;
-  text-shadow: 1px 1px 0px #000;
+  text-shadow: 1px 1px 0 #000;
   color: #c0c0c0;
 }
 .lede strong {
@@ -613,11 +613,11 @@ body.pullout {
   margin: 10px 0;
   float: right;
 
-  -webkit-box-shadow: 4px 6px 0px #000;
-  -moz-box-shadow: 4px 6px 0px #000;
-  -o-box-shadow: 4px 6px 0px #000;
-  -ms-box-shadow: 4px 6px 0px #000;
-  box-shadow: 4px 6px 0px #000;
+  -webkit-box-shadow: 4px 6px 0 #000;
+  -moz-box-shadow: 4px 6px 0 #000;
+  -o-box-shadow: 4px 6px 0 #000;
+  -ms-box-shadow: 4px 6px 0 #000;
+  box-shadow: 4px 6px 0 #000;
 }
 #pullout .pullout-prev,
 #pullout .pullout-next {
@@ -805,11 +805,11 @@ body.pullout {
     border: 2px solid #000;
     box-sizing: border-box;
 
-    -webkit-box-shadow: 2px 2px 0px #000;
-    -moz-box-shadow: 2px 2px 0px #000;
-    -o-box-shadow: 2px 2px 0px #000;
-    -ms-box-shadow: 2px 2px 0px #000;
-    box-shadow: 2px 2px 0px #000;
+    -webkit-box-shadow: 2px 2px 0 #000;
+    -moz-box-shadow: 2px 2px 0 #000;
+    -o-box-shadow: 2px 2px 0 #000;
+    -ms-box-shadow: 2px 2px 0 #000;
+    box-shadow: 2px 2px 0 #000;
   }
   .speaker .blurb,
   .workshop .blurb,
@@ -831,7 +831,8 @@ body.pullout {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: #000;
+    background-color: rgba(0, 0, 0, 0.8);
 
     -webkit-transition: opacity 100ms ease-in-out;
     -moz-transition: opacity 100ms ease-in-out;
