@@ -157,11 +157,11 @@ nav a:focus {
   -o-font-smoothing: none;
   font-smoothing: none;
 
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  -ms-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 .button:hover,
 .button:focus {
@@ -235,11 +235,11 @@ footer .left-logic {
   background-image: url(/images/leftlogic.png);
 /*  background-image: -webkit-cross-fade(url(/images/leftlogic-1.png),  url(/images/leftlogic-2.png), 0%);
 
-  -webkit-transition: background-image 0.1s ease-in-out;
-  -moz-transition: background-image 0.1s ease-in-out;
-  -o-transition: background-image 0.1s ease-in-out;
-  -ms-transition: background-image 0.1s ease-in-out;
-  transition: background-image 0.1s ease-in-out;*/
+  -webkit-transition: background-image 100ms ease-in-out;
+  -moz-transition: background-image 100ms ease-in-out;
+  -o-transition: background-image 100ms ease-in-out;
+  -ms-transition: background-image 100ms ease-in-out;
+  transition: background-image 100ms ease-in-out;*/
 }
 footer .left-logic:hover,
 footer .left-logic:focus,
@@ -751,6 +751,11 @@ body.pullout {
   }
   .speaker img,
   .workshop .details img {
+    image-rendering:-moz-crisp-edges; 
+    image-rendering: -o-crisp-edges; 
+    image-rendering:-webkit-optimize-contrast; 
+    -ms-interpolation-mode:nearest-neighbor;
+
     display: block;
     width: 100%;
     border: 2px solid #000;
@@ -784,11 +789,11 @@ body.pullout {
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
 
-    -webkit-transition: opacity 0.1s ease-in-out;
-    -moz-transition: opacity 0.1s ease-in-out;
-    -o-transition: opacity 0.1s ease-in-out;
-    -ms-transition: opacity 0.1s ease-in-out;
-    transition: opacity 0.1s ease-in-out;
+    -webkit-transition: opacity 100ms ease-in-out;
+    -moz-transition: opacity 100ms ease-in-out;
+    -o-transition: opacity 100ms ease-in-out;
+    -ms-transition: opacity 100ms ease-in-out;
+    transition: opacity 100ms ease-in-out;
   }
   .speaker .details:hover .blurb,
   .workshop .details:hover .blurb,
@@ -808,11 +813,11 @@ body.pullout {
     background-color: #c00;
     font-size: 32px;
 
-    -webkit-transition: background-color 0.1s ease-in-out;
-    -moz-transition: background-color 0.1s ease-in-out;
-    -o-transition: background-color 0.1s ease-in-out;
-    -ms-transition: background-color 0.1s ease-in-out;
-    transition: background-color 0.1s ease-in-out;
+    -webkit-transition: background-color 100ms ease-in-out;
+    -moz-transition: background-color 100ms ease-in-out;
+    -o-transition: background-color 100ms ease-in-out;
+    -ms-transition: background-color 100ms ease-in-out;
+    transition: background-color 100ms ease-in-out;
   }
   .workshop .details:hover .sold-out .button {
     background-color: #000;

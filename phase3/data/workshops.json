@@ -19,7 +19,7 @@
     "name" : "Archibald, Murphey, Sharp",
     "title" : "Tooling Tutorials",
     "url-slug": "tools",
-    "image" : "speaker.png",
+    "image" : "tutorials.png",
     "image-credit": "",
     "sold-out": false,
     "blurb_md" : "This workshop is the pick and mix of workshops. Three trainers will each be running two hands on seminars convering: Git, RequireJS, debugging, SASS, test and automation, build process"
