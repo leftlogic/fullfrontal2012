@@ -403,6 +403,10 @@ h2 {
   text-align: center;
 }
 
+.workshop {
+  position: relative;
+}
+
 /* Locations */
 .locations h3 {
   font-size: 32px;
@@ -998,6 +1002,11 @@ body.pullout {
     box-sizing: border-box;
   }
 
+  .workshop > h3,
+  .workshop > div {
+    width: 100%;
+  }
+
   #pullout .left {
     width: 48%;
     float: left;
@@ -1040,10 +1049,20 @@ body.pullout {
     width: 200px;
     text-align: left;
   }
-  .speaker,
-  .workshop {
+  .speaker {
     width: 25%;
   }
+  .workshop {
+    width: 33%;
+  }
+
+  .workshop > h3, 
+  .workshop > div {
+    width: 73.5%;
+    margin: 0 auto;
+  }
+
+
   .sponsor {
     width: 22%;
     margin: 0 1.5% 60px 1.5%;
