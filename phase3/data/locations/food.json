@@ -7,7 +7,7 @@
     "type": "secondary",
     "lat": 50.83406696411911,
     "lng": -0.13850659132003784,
-    "details_md" : "Pub"
+    "details_md" : ""
   },{
     "name" : "Mitre Tavern",
     "address" : "Kings Road, BN1 2GS",
@@ -25,7 +25,7 @@
     "type": "secondary",
     "lat": 50.831969746834076,
     "lng": -0.13464689254760742,
-    "details_md" : "Pub"
+    "details_md" : ""
   },{
     "name" : "The Open House",
     "address" : "165-167 Preston Road, BN1 6AU",
@@ -34,7 +34,7 @@
     "type": "secondary",
     "lat": 50.83730916466705,
     "lng": -0.13620257377624512,
-    "details_md" : "Pub"
+    "details_md" : ""
   },{
     "name" : "Circus Circus",
     "address" : "101 Stroundly Road, BN1 4DJ",
@@ -43,6 +43,6 @@
     "type": "secondary",
     "lat": 50.833900951968864,
     "lng": -0.1390671730041504,
-    "details_md" : "Pub"
+    "details_md" : ""
   }]
 }
