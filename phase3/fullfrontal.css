@@ -86,9 +86,16 @@ header .chips {
 }
 header .wrapper {
   margin: 0 auto;
-  overflow: hidden;
   max-width: 1400px;
   position: relative;
+}
+header .wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 header .logo {
@@ -430,9 +437,13 @@ h2 {
   -o-font-smoothing: none;
   font-smoothing: none;
 }
+.venue .name {
+  line-height: 28px;
+}
 .venue .address {
   display: block;
   font-size: 16px;
+  line-height: 16px;
   margin-bottom: 10px;
 }
 .venue a {
@@ -462,6 +473,30 @@ h2 {
 /*  width: 100%;*/
 }
 #sponsors h3 {
+  display: none;
+}
+
+.full-monty {
+  margin: 0 20px 30px 20px;
+  background-color: #fff;
+  color: #303030;
+  font-weight: normal;
+  
+  box-sizing: border-box;
+}
+.wrapper > article > .full-monty {
+  padding: 40px;
+}
+.full-monty .sponsor {
+  float: none;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+.full-monty .sponsor img {
+  width: 100%;
+}
+.full-monty .blurb {
   display: none;
 }
 
@@ -653,63 +688,6 @@ body.pullout {
   #dressing-gown.blur {
     -webkit-filter: blur(3px);
   }
-
-  #show-menu {
-    display: none;
-  }
-
-  header .wrapper {
-    margin-bottom: 20px;
-  }
-  header .logo {
-    float: left;
-    margin-left: 33px;
-    margin-right: 33px;
-  }
-  header h1 {
-    float: left;
-    display: block;
-    margin: 0;
-    color: #bfbfbf;
-    font-weight: normal;
-    font-size: 64px;
-  }
-  header time {
-    display: block;
-    font-size: 128px;
-  }
-  header h1 span {
-    display: block;
-    width: 507px;
-    margin-top: 8px;
-    letter-spacing: -3px;
-    text-align: justify;
-  }
-  nav {
-    position: absolute;
-    width: 100%;
-    right: 0;
-    bottom: 0;
-  }
-  nav li {
-    float: left;
-    width: 16.66667%;
-    text-align: center;
-  }
-  .buy-tickets {
-    float: right;
-    margin-top: 0;
-    padding-top: 18px;
-    padding-bottom: 18px;
-  }
-  .buy {
-    display: none;
-  }
-  .price {
-    display: block;
-    margin-top: 20px;
-    font-size: 64px;
-  }
   
   .lede {
     font-size: 32px;
@@ -885,13 +863,32 @@ body.pullout {
     box-sizing: border-box;
   }
 
-  .full-monty .blurb {
-    width: 50%;
+  .full-monty {
+    float: left;
+    width: 47%;
+    margin: 0 1.5% 60px 1.5%;
     background-color: #fff;
     color: #303030;
-    float: right;
+    font-weight: normal;
+    
+    box-sizing: border-box;
   }
-
+  .wrapper > article > .full-monty {
+    padding: 40px;
+  }
+  .full-monty .sponsor {
+    float: none;
+    width: 100%;
+    max-width: 360px;
+    display: block;
+    margin: 0 auto;
+  }
+  .full-monty .sponsor img {
+    width: 100%;
+  }
+  .full-monty .blurb {
+    display: block;
+  }
 
 
   #pullout { 
@@ -989,9 +986,98 @@ body.pullout {
 }
 
 @media screen and (min-width: 820px) {
+  
+  #show-menu {
+    display: none;
+  }
+
+  header .logo {
+    float: left;
+    margin-left: 33px;
+    margin-right: 33px;
+  }
+  
+  header h1 {
+    display: none;
+  }
+
+  header .wrapper {
+    margin-bottom: 0;
+  }
+  nav {
+    position: absolute;
+    width: 400px;
+    right: 200px;
+    bottom: auto;
+  }
+  nav li {
+    float: left;
+    width: 200px;
+    text-align: left;
+  }
+
+  .buy-tickets {
+    float: right;
+    margin-top: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .buy {
+    display: none;
+  }
+  .price {
+    display: block;
+    margin-top: 20px;
+    font-size: 64px;
+  }
+
   .lede .superflous-br {
     display: none;
   }
+}
+
+@media screen and (min-width: 954px) {
+
+  header .wrapper {
+    margin-bottom: 20px;
+  }
+  header .logo {
+    float: left;
+    margin-left: 33px;
+    margin-right: 33px;
+  }
+  header h1 {
+    float: left;
+    display: block;
+    margin: 0;
+    color: #bfbfbf;
+    font-weight: normal;
+    font-size: 64px;
+  }
+  header time {
+    display: block;
+    font-size: 128px;
+  }
+  header h1 span {
+    display: block;
+    width: 507px;
+    margin-top: 8px;
+    letter-spacing: -3px;
+    text-align: justify;
+  }
+  nav {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: -53px;
+  }
+  nav li {
+    float: left;
+    /*width: 16.66667%; TODO: When Schedule Present */
+    width: 20%;
+    text-align: center;
+  }
+
 }
 
 @media screen and (min-width: 960px) {
@@ -1031,6 +1117,24 @@ body.pullout {
   .sponsor {
     width: 30%;
     margin: 0 1.5% 60px 1.5%;
+  }
+}
+
+@media screen and (max-width: 1234px) and (min-width: 640px) {
+  .locations {
+    width: 33.3333%;
+  }
+  #map {
+    width: 33.3333%;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 640px) {
+  .locations {
+    width: 50%;
+  }
+  #map {
+    display: none;
   }
 }
 

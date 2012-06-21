@@ -153,7 +153,7 @@
 </div>
 
   <script>
-    //if (!location.hash) document.getElementById('show-menu').scrollIntoView();
+    if (!location.hash && document.getElementById('show-menu')) document.getElementById('show-menu').scrollIntoView();
   </script>
   
   <script src="/js/jquery.js"></script>

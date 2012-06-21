@@ -3,8 +3,19 @@
 
   <h3>Full Monty Sponsors</h3>
 
-  <article class="full-monty">
-    <a class="sponsor" href="#"><img src="/images/sponsors/google.png" alt="Google"></a>
+  <section class="full-monty">
+    <a class="sponsor" href="#"><img src="/images/sponsors/web-apps-uk.png" alt="Web Applications UK"></a>
+    <div class="blurb">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris.
+      </p>
+    </div>
+  </section>
+
+    <section class="full-monty">
+    <a class="sponsor" href="#"><img src="" alt="Adobe"></a>
     <div class="blurb">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -18,7 +29,9 @@
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
     </div>
-  </article>
+  </section>
+
+
 
   <h3>Half Monty Sponsors &mdash; <a href="#">Add Yourself</a></h3>
 
