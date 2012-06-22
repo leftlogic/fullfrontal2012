@@ -396,9 +396,11 @@ h2 {
   line-height: 30px;
 }
 .speaker .details,
-.workshop .details img,
 .workshop .sold-out {
   /*display: none;*/
+}
+.details img {
+  display: none;
 }
 .workshop p,
 .fringe p {
@@ -411,6 +413,10 @@ h2 {
 
 .workshop {
   position: relative;
+}
+
+.workshop h3 {
+  white-space: nowrap;
 }
 
 /* Locations */
