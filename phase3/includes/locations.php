@@ -8,7 +8,7 @@
         <span class="address">Preston Circus, BN1 4BA</span>
         <a href="#"><span class="bullet">A.</span>Duke of York's Picturehouse</a>
         <p class="details">
-          Full Frontal Javascript Conference is being held at the historic
+          Full Frontal JavaScript Conference is being held at the historic
           Duke of York's Picturehouse in Brighton. It is centrally located on Preston Circus.
         </p>
       </li>
@@ -26,7 +26,7 @@
     </ul>
 
 
-    <h3>(Unoffical) Pre Party</h3>
+    <h3>(Unofficial) Pre Party</h3>
     <ul>
       <li class="venue primary-venue" data-latlng="50.8254504924097, -0.13727009296417236">
         <span class="address">101 North Road, BN1 1YE</span>
