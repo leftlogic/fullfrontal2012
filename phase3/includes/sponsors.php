@@ -3,40 +3,36 @@
 
   <h3>Full Monty Sponsors</h3>
 
-  <section class="full-monty">
-    <a class="sponsor" href="#"><img src="/images/sponsors/web-apps-uk.png" alt="Web Applications UK"></a>
-    <div class="blurb">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris.
-      </p>
-    </div>
-  </section>
-
+  <div class="full-monty-wrapper">
     <section class="full-monty">
-    <a class="sponsor" href="#"><img src="" alt="Adobe"></a>
-    <div class="blurb">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris.
-      </p>
-      <p>
-        Mnisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </div>
-  </section>
+      <a class="sponsor" href="http://www.webapplicationsuk.com/"><img src="/images/sponsors/web-apps-uk.png" alt="Web Applications UK"></a>
+      <div class="blurb">
+        <p>Web Applications UK is a successful I.T. company based in Manchester, specialising in software for
+  the travel industry. As a Microsoft Gold Partner we provide reservation systems for leading travel
+  companies and are well equipped to handle a full range of IT requirements.</p>
 
+  <p>Our main focus is providing a great place to work. Presenting our I.T. professionals with continuous
+  development and a generous training budget means they’re constantly improving towards their full
+  potential. We’re always on the lookout for talented Software Engineers to join our expanding team,
+  so apply now at <a href="mailto:recruitment@webappuk.com">recruitment@webappuk.com</a></p>
+      </div>
+    </section>
+
+      <section class="full-monty">
+      <a class="sponsor" href="http://html.adobe.com/"><img src="/images/sponsors/adobe.png" alt="Adobe"></a>
+      <div class="blurb">
+        <p>Whether it's a smartphone or tablet app, a game, a video, a digital magazine, a website, or an online experience, chances are that it was touched by Adobe technology.</p>
+        <p>Our tools and services enable our customers to create groundbreaking digital content, deploy it across media and devices, and then continually measure and optimize it based on user data.</p>
+      </div>
+    </section>
+  </div>
 
 
   <h3>Half Monty Sponsors &mdash; <a href="/sponsorship.html">Join our sponsors</a></h3>
 
-  <a class="sponsor half" href="#"><img src="/images/sponsors/google.png" alt="Google"></a>
-  <a class="sponsor half" href="#"><img src="/images/sponsors/mozilla.png" alt="Mozilla Developer Network"></a>
+  <a class="sponsor half" href="http://google.com"><img src="/images/sponsors/google.png" alt="Google"></a>
+  <a class="sponsor half" href="http://mozilla.org"><img src="/images/sponsors/mozilla.png" alt="Mozilla Developer Network"></a>
+  <a class="sponsor half" href="http://www.brandwatch.com/2012/06/brandwatch-is-looking-for-a-senior-javascript-developer/"><img src="/images/sponsors/brandwatch.png" alt="Brandwatch"></a>
 
 
   <h3>Small Monty Sponsors &mdash; <a href="/sponsorship.html">Join our sponsors</a></h3>

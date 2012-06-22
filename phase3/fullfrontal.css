@@ -398,7 +398,7 @@ h2 {
 .speaker .details,
 .workshop .details img,
 .workshop .sold-out {
-  display: none;
+  /*display: none;*/
 }
 .workshop p,
 .fringe p {
@@ -470,14 +470,14 @@ h2 {
   box-sizing: border-box;*/
 }
 .sponsor img {
-/*  width: 100%;*/
+  width: 100%;
 }
 #sponsors h3 {
   display: none;
 }
 
 .full-monty {
-  margin: 0 20px 30px 20px;
+  /*margin: 0 20px 30px 20px;*/
   background-color: #fff;
   color: #303030;
   font-weight: normal;
@@ -486,7 +486,7 @@ h2 {
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
-.wrapper > article > .full-monty {
+.wrapper > article .full-monty {
   padding: 40px;
 }
 .full-monty .sponsor {
@@ -500,6 +500,16 @@ h2 {
 }
 .full-monty .blurb {
   display: none;
+}
+
+.full-monty-wrapper {
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.full-monty {
+  padding-bottom: 999999px !important;
+  margin-bottom: -999999px !important;
 }
 
 /** Pullout **/
@@ -946,7 +956,7 @@ body.pullout {
   .full-monty {
     float: left;
     width: 47%;
-    margin: 0 1.5% 60px 1.5%;
+    margin: 0 1.5% 0px 1.5%;
     background-color: #fff;
     color: #303030;
     font-weight: normal;
