@@ -34,6 +34,12 @@
     "twitter-handle": "triblondon",
     "image": "andrew.png",
     "image-credit": "",
-    "blurb_md": ""
-  }]
+    "blurb_md": "Founder of [Assanka](http://assanka.net), the company acquired earlier this year by the FT, Andrew now heads up FT Labs and the team that builds some of the world's finest HTML5 web apps"
+  },{
+      "name": "James Pearce",
+      "twitter-handle": "jamespearce",
+      "image": "james.png",
+      "image-credit": "Robert Nyman",
+      "blurb_md": ""
+      }]
 }
