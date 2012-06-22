@@ -13,6 +13,8 @@
 - Font fucked on workshop stand alone below 640
 - Optimise images
 - Correct links for all sponsors (confirmed: brandwatch, adobe)
+- Workshop location links
+- Cross browser testing
 
 # Done
 
