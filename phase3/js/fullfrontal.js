@@ -123,7 +123,10 @@ if (location.hash) window.onhashchange();
 
 $(document)
   .delegate('.pullout', 'click', displayPullout)
-  .delegate('.pullout-close', 'click', function (e) { window.location.hash = ''; e.preventDefault(); });
+  .delegate('.pullout-close', 'click', function (e) {
+    window.location.hash = '';
+    e.preventDefault();
+  });
 
 var iconURL = '/images/map-markers.png',
     smallIcon = {
