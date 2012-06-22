@@ -1,7 +1,7 @@
 {
   "workshops" : [{
     "name" : "John Allsopp",
-    "title" : "HTML5, beyond the markup",
+    "title" : "HTML5, beyond markup",
     "url-slug": "html5",
     "image" : "john.png",
     "image-credit": "",
