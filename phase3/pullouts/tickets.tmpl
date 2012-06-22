@@ -11,5 +11,5 @@
       {{#soldout}}<div class="button sold-out">Sold Out</div>{{/soldout}}
       {{^soldout}}<a href="{{buylink}}" class="button buy-button">Buy Tickets</a>{{/soldout}}
 
-      {{#slug}}<p class="pullout more"><a href="/workshop/{{slug}}#{{slug}}">More information</a></p>{{/slug}}
+      {{#url-slug}}<p class="more"><a class="pullout" href="/workshop/{{url-slug}}#{{url-slug}}">More information</a></p>{{/url-slug}}
     </section>

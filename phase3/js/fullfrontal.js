@@ -69,7 +69,6 @@ function newHoverIconAction(el, latlng, marker, standardIcon, hoverIcon) {
 }
 
 function displayPullout(e) {
-  console.log('clicked', this);
   // This function could be a lot smarter, caching pullouts instead of throwing them away for example
   if (window.innerWidth < 640) {
     return true;
