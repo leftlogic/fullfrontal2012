@@ -284,8 +284,7 @@ footer .left-logic:active {
 .lede strong {
   color: #fff;
 }
-.lede .extra-br,
-.lede .superflous-br {
+.lede br {
   display: none;
 }
 
@@ -731,16 +730,20 @@ body.pullout {
 
 @media screen and (max-width: 450px) {
   .lede .extra-br {
-    display: inline;
+    /*display: inline;*/
   }
 }
 
-@media screen and (max-width: 524px) {
+/*@media screen and (min-width: 691px) {
   .lede .superflous-br {
     display: inline;
   }
-}
 
+  .lede br { 
+    display: inline; 
+  }
+}
+*/
 @media screen and (max-width: 550px) {
   #pullout .buy-box, #pullout .buy-box .text, #pullout .buy-box .button {
     width: auto;
@@ -1074,7 +1077,14 @@ body.pullout {
 }
 
 @media screen and (min-width: 820px) {
-  
+  .lede .superflous-br {
+    display: inline;
+  }
+
+  .lede br { 
+    display: inline; 
+  }
+
   #show-menu {
     display: none;
   }
