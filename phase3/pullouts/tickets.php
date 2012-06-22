@@ -28,7 +28,7 @@
       <a class="button pullout-close" href="/#"><span>Close</span></a>
     </div>
 
-    <h1>Tickets from <span class="tickets-price"><img src="/images/pound-symbol-alt.gif" width="24" height="40" class="pound-alt">129</span></h1>
+    <h1>Tickets from <span class="tickets-price"><img src="/images/pound-symbol-alt.gif" width="24" height="40" class="pound-alt">150</span>+vat</h1>
 
 <?php
   require('../utils.php');
