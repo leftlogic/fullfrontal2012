@@ -1,50 +1,4 @@
 (function () {
-var $tint = $('<div>').css({
-      position: 'fixed',
-      top: '0',
-      bottom: '0',
-      left: '0',
-      right: '0',
-      'background-color': 'rgba(0,0,0,0.75)',
-      'z-index': 50
-    }),
-    $body = $('body'),
-    re = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
-
-function displayPullout(e) {
-  // This function could be a lot smarter, caching pullouts instead of throwing them away for example
-  if (window.innerWidth < 640) {
-    return true;
-  }
-
-  e.preventDefault();
-
-  // Remove one if it's already open
-  $('#pullout').remove();
-
-  $.get(this.href, function(data){
-    //gown.addClass('blur');
-    var $div = $('<div>').append(data.replace(re, '')),
-        $pullout = $div.find('#pullout');
-    $body.append($pullout);
-    $body.append($tint);
-
-    $pullout.position({
-        my: 'top',
-        at: 'top',
-        collision: 'none',
-        offset: '0 50px',
-        of: window
-    });
-
-    $div.find('.pullout-close').click(function () {
-      $pullout.remove();
-      $tint.remove();
-      return false;
-    });
-  });
-}
-
 
 function genMarkers(venues, icon) {
   var len = venues.length,
@@ -114,8 +68,62 @@ function newHoverIconAction(el, latlng, marker, standardIcon, hoverIcon) {
   };
 }
 
-$('.schedule a.summary').add('.workshop .title').add('.buy-tickets').click(displayPullout);
-$(document).on('click', '.buy-button', displayPullout);
+function displayPullout(e) {
+  console.log('clicked', this);
+  // This function could be a lot smarter, caching pullouts instead of throwing them away for example
+  if (window.innerWidth < 640) {
+    return true;
+  } else {
+    window.location.hash = this.hash;
+    return false;
+  }
+}
+
+var $tint = $('<div>').css({
+      position: 'fixed',
+      top: '0',
+      bottom: '0',
+      left: '0',
+      right: '0',
+      'background-color': 'rgba(0,0,0,0.75)',
+      'z-index': 50
+    }).click(function () { window.location.hash = ''; return false; }),
+    $body = $('body'),
+    re = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
+
+// router
+window.onhashchange = function () {
+  // make sure this is a pullout
+  $('#pullout').remove();
+  $tint.remove();
+  var $link = $('a[href$="' + window.location.hash + '"]');
+  if ($link.hasClass('pullout')) {
+    // Remove one if it's already open
+
+    $.get($link.attr('href'), function(data){
+      //gown.addClass('blur');
+      var $div = $('<div>').append(data.replace(re, '')),
+          $pullout = $div.find('#pullout');
+      $body.append($pullout);
+      $body.append($tint);
+
+      $pullout.position({
+          my: 'top',
+          at: 'top',
+          collision: 'none',
+          offset: '0 50px',
+          of: window
+      });
+    });
+  }
+};
+
+if (location.hash) window.onhashchange();
+
+
+$(document)
+  .delegate('.pullout', 'click', displayPullout)
+  .delegate('.pullout-close', 'click', function (e) { window.location.hash = ''; e.preventDefault(); });
 
 var iconURL = '/images/map-markers.png',
     smallIcon = {
@@ -150,4 +158,6 @@ genMarkers(sV, smallIcon);
 genMarkers(pV, largeIcon);
 
 map.fitBounds(bounds);
+
+
 }()); // because crockford prefers his balls on the inside: http://www.youtube.com/watch?v=eGArABpLy0k#t=1m10s

@@ -63,7 +63,7 @@ include('utils.php');
         <span>
       </h1>
       
-      <a class="button buy-tickets" href="/pullouts/tickets.php">
+      <a class="pullout button buy-tickets" href="/tickets#tickets">
         <span class="buy">Buy</span> Tickets
         <span class="price"><img src="data:image/gif;base64,R0lGODlhIAApAJECAIfXiwAAAAZWnQAAACH5BAEAAAIALAAAAAAgACkAAAJ0lG+gyw0Io3B0BYlrvThqynXI54RiQjLmmarn2CqruAX2bb/HptNg3+EBJcIhpGjc/ZKwEjD2yUCRyqnTY70es43ZhOvCgmXEMVmCu9XSuR41+TbGh/PnkonS4uvisdTsZXa2BVhW2AcWKKh4GMH2CHkjUQAAOw==" alt="&pound;">150</span>
       </a>
@@ -123,12 +123,6 @@ include('utils.php');
 
 </div>
 
-  <script>
-    setTimeout(function () {
-      if (!pageYOffset && !location.hash && document.getElementById('show-menu')) document.getElementById('show-menu').scrollIntoView();
-    }, 500);
-  </script>
-  
   <script src="/js/jquery.js"></script>
   <script src="/js/jquery-ui.js"></script>
 
@@ -136,16 +130,22 @@ include('utils.php');
   <script src="http://maps.stamen.com/js/tile.stamen.js"></script>
   <script src="/js/fullfrontal.js"></script>
   <script>
-    // // Google Analytics
-    // var _gaq = _gaq || [], d = document, n = 'className', g = 'getElementById', i = 'time';
-    // _gaq.push(['_setAccount', 'UA-1656750-25']);
-    // _gaq.push(['_trackPageview']);
-    // (function() {
-    //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    // })();
+    // Google Analytics
+    var _gaq = _gaq || [], d = document, n = 'className', g = 'getElementById', i = 'time';
+    _gaq.push(['_setAccount', 'UA-1656750-25']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
   </script>
-
+<script>
+setTimeout(function () {
+  if (!pageYOffset && !location.hash && document.getElementById('show-menu')) {
+    document.getElementById('show-menu').scrollIntoView();
+    console.log('scrolled');
+  }
+}, 100);</script>
 </body> 
 </html>
