@@ -33,7 +33,7 @@
       "time" : "09:30 to 17:00",
       "teacher" : "Jake Archibald, Rebecca Murphey, Remy Sharp",
       "venue" : "The Lighthouse",
-      "venue-url" : "#",
+      "venue-url" : "https://maps.google.co.uk/?ll=50.82647,-0.137951&spn=0.001196,0.002819&t=m&z=19&iwloc=lyrftr:m,1375416526688458247,50.826238,-0.138209",
       "price" : "£220",
       "ticket": false,
       "vat" : true

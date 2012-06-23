@@ -266,7 +266,7 @@
   <article id="pullout">
 
     <div class="pullout-controls">
-      <a class="button pullout-close" href="#">Close</a>
+      <a class="button pullout-close" href="#?">Close</a>
 
       <div class="pullout-prev-next">
         <a class="button button-white pullout-prev" href="#">Previous</a>

@@ -49,6 +49,10 @@ hr {
   display: none !important; 
 }
 
+a img {
+  border-color: black;
+}
+
 header {
   position: relative;
   font-family: Xenon;
@@ -523,10 +527,17 @@ body.pullout {
   background-image: none;
   background-color: #fff;
 }
+#pullout-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 55;
+}
 #pullout {
   padding: 20px;
   background: #fff;
   color: #606060;
+  margin: 0 auto;
+  position: relative;
 }
 #pullout .pullout-controls:after {
   content: ".";
@@ -598,6 +609,9 @@ body.pullout {
   text-align: center;
   margin-bottom: 30px;
   line-height: 20px;
+}
+#pullout li:last-child {
+  margin-bottom: 0;
 }
 #pullout a {
   font-weight: bold;
@@ -827,7 +841,7 @@ body.pullout {
 
     display: block;
     width: 100%;
-    border: 2px solid #000;
+    border: 2px solid #000 !important; /* oddly the link wrapping this img is putting a green border on the image */  
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
     box-sizing: border-box;
@@ -1065,12 +1079,20 @@ body.pullout {
     padding: 0;
     background-position: center;
   }
+
+  .pullout #pullout .pullout-close {
+    top: 0;
+    right: 0;
+  }
+
   #pullout .pullout-close span {
     display: none;
   }
   #pullout .pullout-prev-next {
     display: none;
   }
+
+  #pullout.is-workshop
 
   #pullout .talk-download {
     margin-left: 20px;
@@ -1083,6 +1105,25 @@ body.pullout {
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
     box-sizing: border-box;
+  }
+
+  /* mass reverse out for tickets on workshop wide */
+   #pullout.is-workshop .ticket {
+    background: none;
+    float: none;
+    width: auto;
+    margin-right: 0;
+  }
+
+  #pullout.is-workshop .ticket .buy-box {
+    width: 520px;
+    float: right;
+  }
+
+  #pullout.is-workshop .ticket .buy-box .text {
+    width: 280px;
+    float: left;
+    text-align: right;
   }
 }
 

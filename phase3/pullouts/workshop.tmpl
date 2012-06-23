@@ -1,7 +1,7 @@
 <article id="pullout" {{#learn}}class="is-workshop"{{/learn}}>
 
   <div class="pullout-controls">
-    <a class="button pullout-close" href="/"><span>Close</span></a>
+    <a class="button pullout-close" href="/#?"><span>Close</span></a>
 
     <div class="pullout-prev-next">
       <a class="button button-white pullout-prev" href="#">Previous</a>
@@ -14,6 +14,7 @@
 
 
   {{#details}}
+  <section class="ticket">
     <div class="buy-box">
       <div class="text">
         <h4>{{price}}{{#vat}}<span>+vat</span>{{/vat}}</h4>
@@ -22,6 +23,7 @@
       <a href="{{buylink}}" class="button buy-button">Buy Tickets</a>
       <div style="clear: both;"></div>
     </div>
+  </section>
   {{/details}}
   <div style="clear: both;"></div>
 

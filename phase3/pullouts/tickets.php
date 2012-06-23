@@ -25,7 +25,7 @@
 
   <article id="pullout" class="tickets">
     <div class="pullout-controls">
-      <a class="button pullout-close" href="/#"><span>Close</span></a>
+      <a class="button pullout-close" href="/#?"><span>Close</span></a>
     </div>
 
     <h1>Tickets from <span class="tickets-price"><img src="/images/pound-symbol-alt.gif" width="24" height="40" class="pound-alt">150</span>+vat</h1>
@@ -35,7 +35,8 @@
   $conferenceData = array(
     'talk-title' => 'Day Conference',
     'details' => array('price' => '£150'),
-    'buylink' => 'https://leftlogic.stagehq.com/events/1505/booking/new'
+    'buylink' => 'https://leftlogic.stagehq.com/events/1505/booking/new',
+    'note_md' => "<p>Conference ticket only</p>"
   );
 
   echo renderTemplate($conferenceData, '/pullouts/tickets.tmpl');

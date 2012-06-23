@@ -88,12 +88,14 @@ var $tint = $('<div>').css({
       'z-index': 50
     }).click(function () { window.location.hash = ''; return false; }),
     $body = $('body'),
-    re = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
+    re = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
+    // globals for the map
+    iconURL, smallIcon, largeIcon, map, pV, sV, bounds, zIndex;
 
 // router
 window.onhashchange = function () {
   // make sure this is a pullout
-  $('#pullout').remove();
+  $('#pullout-wrapper').remove();
   $tint.remove();
   var $link = $('a[href$="' + window.location.hash + '"]');
   if ($link.hasClass('pullout')) {
@@ -102,64 +104,57 @@ window.onhashchange = function () {
     $.get($link.attr('href'), function(data){
       //gown.addClass('blur');
       var $div = $('<div>').append(data.replace(re, '')),
-          $pullout = $div.find('#pullout');
-      $body.append($pullout);
+          $pullout = $div.find('#pullout').wrapAll('<div id="pullout-wrapper">').parent();
       $body.append($tint);
+      $body.append($pullout);
 
-      $pullout.position({
-          my: 'top',
-          at: 'top',
-          collision: 'none',
-          offset: '0 50px',
-          of: window
+      $pullout.css({
+        top: document.body.scrollTop + 50
       });
     });
   }
 };
 
-if (location.hash) window.onhashchange();
+$(document).delegate('.pullout', 'click', displayPullout);
 
+// do the map after the page has loaded
+$(window).load(function () {
+  // allow the window to scroll before loading the popup
+  if (location.hash) window.onhashchange();
 
-$(document)
-  .delegate('.pullout', 'click', displayPullout)
-  .delegate('.pullout-close', 'click', function (e) {
-    window.location.hash = '';
-    e.preventDefault();
+  iconURL = '/images/map-markers.png';
+  smallIcon = {
+    point: new google.maps.Point(11, 43),
+    width: 29,
+    height: 45,
+    origin: 0
+  };
+  largeIcon = {
+    point: new google.maps.Point(21, 83),
+    width: 55,
+    height: 85,
+    origin: 90
+  };
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: new google.maps.LatLng(50.8339238, -0.1385427),
+    zoom: 14,
+    mapTypeId: 'Toner',
+    disableDefaultUI: true,
+    zoomControl: true,
+    scrollwheel: false
   });
-
-var iconURL = '/images/map-markers.png',
-    smallIcon = {
-      point: new google.maps.Point(11, 43),
-      width: 29,
-      height: 45,
-      origin: 0
-    },
-    largeIcon = {
-      point: new google.maps.Point(21, 83),
-      width: 55,
-      height: 85,
-      origin: 90
-    },
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: new google.maps.LatLng(50.8339238, -0.1385427),
-      zoom: 14,
-      mapTypeId: 'Toner',
-      disableDefaultUI: true,
-      zoomControl: true,
-      scrollwheel: false
-    }),
-    pV = document.querySelectorAll('.primary-venue'),
-    sV = document.querySelectorAll('.secondary-venue'),
-    bounds = new google.maps.LatLngBounds(),
-    zIndex = google.maps.Marker.MAX_ZINDEX;
+  pV = document.querySelectorAll('.primary-venue');
+  sV = document.querySelectorAll('.secondary-venue');
+  bounds = new google.maps.LatLngBounds();
+  zIndex = google.maps.Marker.MAX_ZINDEX;
 
 
-map.mapTypes.set('Toner', new google.maps.StamenMapType('toner'));
+  map.mapTypes.set('Toner', new google.maps.StamenMapType('toner'));
 
-genMarkers(sV, smallIcon);
-genMarkers(pV, largeIcon);
+  genMarkers(sV, smallIcon);
+  genMarkers(pV, largeIcon);
 
-map.fitBounds(bounds);
-
+  map.fitBounds(bounds);
+});
 
 }()); // because crockford prefers his balls on the inside: http://www.youtube.com/watch?v=eGArABpLy0k#t=1m10s

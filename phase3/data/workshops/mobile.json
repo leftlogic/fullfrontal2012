@@ -34,10 +34,10 @@
       "teacher" : "Remy Sharp",
       "teaher-url" : "http://twitter.com/rem",
       "venue" : "The Lighthouse",
-      "venue-url" : "#",
-      "price" : "£345",
+      "venue-url" : "https://maps.google.co.uk/?ll=50.82647,-0.137951&spn=0.001196,0.002819&t=m&z=19&iwloc=lyrftr:m,1375416526688458247,50.826238,-0.138209",
+      "price" : "£400",
       "ticket": true,
       "vat" : true
   },
-  "note_md": "Includes a *FREE* conference pass"
+  "note_md": "Includes a **FREE** conference pass"
 }

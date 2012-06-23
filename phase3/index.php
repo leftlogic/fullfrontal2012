@@ -123,12 +123,12 @@ include('utils.php');
 
 </div>
 
-  <script src="/js/jquery.js"></script>
-  <script src="/js/jquery-ui.js"></script>
+  <!-- // <script src="/js/jquery.js"></script> -->
+  <script src="http://code.jquery.com/jquery.js"></script>
 
+  <script src="/js/fullfrontal.js"></script>
   <script src="http://maps.googleapis.com/maps/api/js?&amp;sensor=false"></script>
   <script src="http://maps.stamen.com/js/tile.stamen.js"></script>
-  <script src="/js/fullfrontal.js"></script>
   <script>
     // Google Analytics
     var _gaq = _gaq || [], d = document, n = 'className', g = 'getElementById', i = 'time';
@@ -144,7 +144,6 @@ include('utils.php');
 setTimeout(function () {
   if (!pageYOffset && !location.hash && document.getElementById('show-menu')) {
     document.getElementById('show-menu').scrollIntoView();
-    console.log('scrolled');
   }
 }, 100);</script>
 </body> 
