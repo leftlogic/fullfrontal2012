@@ -123,9 +123,7 @@ include('utils.php');
 
 </div>
 
-  <!-- // <script src="/js/jquery.js"></script> -->
-  <script src="http://code.jquery.com/jquery.js"></script>
-
+  <script src="/js/jquery.js"></script>
   <script src="/js/fullfrontal.js"></script>
   <script src="http://maps.googleapis.com/maps/api/js?&amp;sensor=false"></script>
   <script src="http://maps.stamen.com/js/tile.stamen.js"></script>

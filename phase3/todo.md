@@ -2,13 +2,13 @@
 
 - Next / prev buttons on mobile popup
 - Scaling of sponsor logos
-- Heading bars (from Chris' version)
 - Update background image
 - If there's time, add a topics section
-- Shift + click should open popups in a new window
 - Optimise images
 - Correct links for all sponsors (confirmed: brandwatch, adobe)
 - Cross browser testing
+- Heading bars (from Chris' version) --- not sure this is possible
+
 
 # Done
 
@@ -22,3 +22,4 @@
 - Closing popup shouldn't jump to top
 - Sponsorship page included in repo
 - Font fucked on workshop stand alone below 640
+- Shift + click should open popups in a new window

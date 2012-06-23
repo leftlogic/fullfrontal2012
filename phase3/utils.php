@@ -5,6 +5,10 @@ require_once(ROOT . '/mustache.php');
 require_once(ROOT . '/markdown.php');
 $mustache = new Mustache;
 
+// $mustache->addHelper('_markdown', function($text) {
+//     return Markdown($text);
+// });
+
 $cache = array();
 
 function convertMarkdown(&$array) {
