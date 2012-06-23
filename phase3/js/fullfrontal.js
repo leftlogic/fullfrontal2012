@@ -70,7 +70,7 @@ function newHoverIconAction(el, latlng, marker, standardIcon, hoverIcon) {
 
 function displayPullout(e) {
   // This function could be a lot smarter, caching pullouts instead of throwing them away for example
-  if (window.innerWidth < 640) {
+  if (window.innerWidth < 640 || e.metaKey || e.ctrlKey || e.shiftKey) {
     return true;
   } else {
     window.location.hash = this.hash;
