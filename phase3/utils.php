@@ -12,9 +12,10 @@ function convertMarkdown(&$array) {
   // var_dump($array);
   foreach ($array as $key => $value) {
     if (is_array($value)) {
-      $res[$key] = convertMarkdown(&$value);
+      $res[$key] = convertMarkdown($value);
     } else {
-      if (array_pop(explode('_', $key)) == 'md') {
+      $a = explode('_', $key);
+      if (array_pop($a) == 'md') {
         $res[$key] = Markdown($value);
       } else {
         $res[$key] = $value;
