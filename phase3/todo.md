@@ -5,8 +5,6 @@
 
 - Update background image
 - Optimise images
-- Heading bars (from Chris' version) --- not sure this is possible
-- Animated gif for tutorials
 - Smaller image for mobile speakers
 - If there's time, add a topics section
 
@@ -27,3 +25,5 @@
 - Shift + click should open popups in a new window
 - Scaling of sponsor logos
 - Test sold out
+- Animated gif for tutorials
+- Heading bars (from Chris' version) --- not sure this is possible
