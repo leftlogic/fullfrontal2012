@@ -30,8 +30,7 @@ include('utils.php');
 
 <!--[if IE 8]><body class="ie"><![endif]-->
 <!--[if gt IE 8]><body><![endif]-->
-<!--[if !IE]><!--><body><!--<![endif]-->
-
+<!--[if !IE]><!--><body class="dummy"><!--<![endif]-->
 <div id="dressing-gown">
 
   <header>
@@ -124,7 +123,6 @@ include('utils.php');
   </footer>
 
 </div>
-
   <script src="/js/jquery.js"></script>
   <script src="/js/fullfrontal.js"></script>
   <script src="http://maps.googleapis.com/maps/api/js?&amp;sensor=false"></script>
@@ -144,8 +142,14 @@ include('utils.php');
 setTimeout(function () {
   var pageYOffset = window.pageYOffset === undefined ? document.body.scrollTop : window.pageYOffset;
   if (!pageYOffset && (!location.hash || location.hash === '#?') && document.getElementById('show-menu')) {
-    document.getElementById('show-menu').scrollIntoView();
+    if (!matchMedia('@media screen and (min-width: 820px)')) {
+      document.getElementById('show-menu').scrollIntoView();
+    } else {
+    }
   }
 }, 100);</script>
+<?php
+include('dummy.html');
+?>
 </body> 
 </html>
