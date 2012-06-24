@@ -16,7 +16,6 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 
 #Firefox
 
-- workshop sold out button is incorrectly positioned
 - "HTML5, beyond markup" heading overflows too much at smaller widths
 
 #Opera
@@ -32,14 +31,12 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 #Safari
 
 - Standard font's are not always being anti-aliased
-- Standard font's are not always being anti-aliased
 
 
 
 # Ignore
 
 - Sold out button incorrectly positioned
-- JS Error: 'pageYOffset' is undefined
 - Overlay on speakers shows by default (without hover) and background is solid black so pictures don't show through
 - semi-transparent overlay does not appear behind pullout
 - bios not accessible - hover only
@@ -50,3 +47,4 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 - workshop pullout appears at top of page not at the current page position
 - Areas with custom font need line-height setting to appropiate values
 - Images have black border that should £ symbol in buy tickets button and sponsor logos
+- JS Error: 'pageYOffset' is undefined

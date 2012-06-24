@@ -142,7 +142,7 @@ include('utils.php');
   </script>
 <script>
 setTimeout(function () {
-  if (!pageYOffset && !location.hash && document.getElementById('show-menu')) {
+  if (!$(window).scrollTop() && !location.hash && document.getElementById('show-menu')) {
     document.getElementById('show-menu').scrollIntoView();
   }
 }, 100);</script>
