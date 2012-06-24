@@ -1,7 +1,6 @@
 #IE8
 
 - Buy Tickets pullout appears with left edge centered insead of center centered
-- workshop price and buy tickets button in workshop pullout has incorrecting vertial algnment compared with name heading
 
 #Opera
 
