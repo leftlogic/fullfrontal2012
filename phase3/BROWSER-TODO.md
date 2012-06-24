@@ -14,7 +14,6 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 #IE9
 
 - Images have black border that should £ symbol in buy tickets button and sponsor logos
-- workshop sold out button is incorrectly positioned
 - workshop price and buy tickets button in workshop pullout has incorrecting vertial algnment compared with name heading
 
 #Firefox
@@ -25,7 +24,6 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 
 #Opera
 
-- Sold out button incorrectly positioned
 - Map loads at italy and zoomed out too far
 
 
@@ -43,6 +41,7 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 
 # Ignore
 
+- Sold out button incorrectly positioned
 - JS Error: 'pageYOffset' is undefined
 - Overlay on speakers shows by default (without hover) and background is solid black so pictures don't show through
 - semi-transparent overlay does not appear behind pullout
