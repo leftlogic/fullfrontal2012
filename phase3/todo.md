@@ -4,7 +4,6 @@
 - Cross browser testing
 
 - Update background image
-- Optimise images
 - Smaller image for mobile speakers
 - If there's time, add a topics section
 

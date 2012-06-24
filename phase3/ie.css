@@ -1,14 +1,53 @@
-/* from min-width: 640px */
-
 body {
   min-width: 960px;
   margin: 0 auto;
 }
-
-#dressing-gown.blur {
-  -webkit-filter: blur(3px);
+.yeahpointlessiknow {
+  display: block;
 }
-
+footer .date {
+  font-size: 128px;
+  line-height: 80px;
+}
+footer .date-twitter a {
+  font-size: 64px;
+}
+.wrapper > hr {
+  display: none;
+}
+.wrapper > article > h2 {
+  margin: 60px 50px 60px 40px;
+  font-size: 64px;
+  line-height: 0;
+  position: relative;
+  border-top: 10px solid #fff;
+}
+.wrapper > article > h2 span {
+  z-index: 2;
+  color: #fff;
+  background: url(/images/bg-heading.png) repeat-x 0 0;
+  padding: 0 50px 0 60px;
+}
+.wrapper > article > h2 span:before,
+.wrapper > article > h2 span:after {
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  display: block;
+  background: url(/images/head-box.png) no-repeat center;
+  top: 0;
+  left: 0;
+  margin: -20px 0 0 0;
+  width: 30px;
+  height: 30px;
+  margin-left: -30px;
+}
+.wrapper > article > h2 span:after {
+  left: auto;
+  right: 0;
+  margin-left: 0;
+  margin-right: -30px;
+}
 .lede {
   font-size: 32px;
   line-height: 40px;
@@ -16,12 +55,9 @@ body {
 .lede .superflous-br {
   display: inline;
 }
-
 .schedule {
   float: left;
   width: 25%;
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
 .schedule .schedule-heading {
@@ -30,24 +66,16 @@ body {
 .schedule .schedule-heading h3 {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 100;
-
-  -webkit-font-smoothing: auto;
-  -moz-font-smoothing: auto;
-  -o-font-smoothing: auto;
-  font-smoothing: auto;
 }
 .schedule .current {
   width: auto;
   margin: 0;
   margin-bottom: 30px;
 }
-
 .speaker,
 .workshop {
   float: left;
-  width: 50%;
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
+  width: 50%; 
   box-sizing: border-box;
 }
 .speaker .details,
@@ -57,39 +85,16 @@ body {
 }
 .speaker img,
 .workshop .details img {
-  image-rendering:-moz-crisp-edges; 
-  image-rendering: -o-crisp-edges; 
-  image-rendering:-webkit-optimize-contrast; 
   -ms-interpolation-mode:nearest-neighbor;
-
   display: block;
   width: 100%;
-  border: 2px solid #000 !important; /* oddly the link wrapping this img is putting a green border on the image */  
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
+  border: 2px solid #000 !important;
   box-sizing: border-box;
-
-  -webkit-box-shadow: 2px 2px 0 #000;
-  -moz-box-shadow: 2px 2px 0 #000;
-  -o-box-shadow: 2px 2px 0 #000;
-  -ms-box-shadow: 2px 2px 0 #000;
-  box-shadow: 2px 2px 0 #000;
 }
 .speaker .blurb,
 .workshop .blurb,
 .workshop .sold-out {
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-
-  display: -moz-box;
-  -moz-box-orient: horizontal;
-  -moz-box-pack: center;
-  -moz-box-align: center;
-
-  opacity: 0;
-
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -97,17 +102,11 @@ body {
   right: 0;
   background: #000;
   background-color: rgba(0, 0, 0, 0.8);
-
-  -webkit-transition: opacity 100ms ease-in-out;
-  -moz-transition: opacity 100ms ease-in-out;
-  -o-transition: opacity 100ms ease-in-out;
-  -ms-transition: opacity 100ms ease-in-out;
-  transition: opacity 100ms ease-in-out;
 }
 .speaker .details:hover .blurb,
 .workshop .details:hover .blurb,
 .workshop .sold-out {
-  opacity: 1;
+  display: block;
 }
 .speaker .details .blurb p,
 .workshop .details .blurb p {
@@ -124,22 +123,13 @@ body {
   display: inline-block;
   background-color: #c00;
   font-size: 32px;
-
-  -webkit-transition: background-color 100ms ease-in-out;
-  -moz-transition: background-color 100ms ease-in-out;
-  -o-transition: background-color 100ms ease-in-out;
-  -ms-transition: background-color 100ms ease-in-out;
-  transition: background-color 100ms ease-in-out;
 }
 .workshop .details:hover .sold-out .button {
   background-color: #000;
 }
-
 .locations {
   float: left;
   width: 33.3333%;
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
 .wrapper > article > .locations {
@@ -158,11 +148,6 @@ body {
   font-weight: normal;
   font-size: 15px;
   color: #c0c0c0;
-
-  -webkit-font-smoothing: auto;
-  -moz-font-smoothing: auto;
-  -o-font-smoothing: auto;
-  font-smoothing: auto;
 }
 .venue .details p:first-of-type {
   margin-top: 5px;
@@ -171,14 +156,11 @@ body {
   display: block;
   float: left;
   width: 33.333%;
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
   box-sizing: border-box;
   background: #333;
   height: 1240px;
   border: 2px solid #fff;
 }
-
 #sponsors h3 {
   display: block;
   font-size: 32px;
@@ -191,13 +173,9 @@ body {
 .sponsor {
   float: left;
   width: 22%;
-  margin: 0 1.5% 60px 1.5%;
-
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
+  margin: 0 1.5% 60px 1.5%; 
   box-sizing: border-box;
 }
-
 .full-monty {
   float: left;
   width: 47%;
@@ -205,8 +183,6 @@ body {
   background-color: #fff;
   color: #303030;
   font-weight: normal;
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
 .wrapper > article > .full-monty {
@@ -226,18 +202,14 @@ body {
   display: block;
   padding-bottom: 16px;
 }
-
 .full-monty-wrapper {
   overflow: hidden;
   margin-bottom: 60px;
 }
-
 .full-monty {
   padding-bottom: 999999px !important;
   margin-bottom: -999999px !important;
 }
-
-
 #pullout { 
   width: 80%;
   max-width: 780px;
@@ -248,9 +220,6 @@ body {
 #pullout.is-workshop{ 
   max-width: 1080px;
 }
-
-
-/** Additional Pullout Style from Paul **/
 #pullout h1 {
   font-size: 64px;
   line-height: 43px;
@@ -266,14 +235,12 @@ body {
   clear: both;
 }
 #pullout .speaker-image {
-  /*max-width: 156px;*/
   max-width: 250px;
   max-height: 194px;
   float: right;
   margin-bottom: 30px;
   margin-left: 30px;
 }
-
 #pullout .buy-box {
   overflow: hidden;
   width: 520px;
@@ -307,7 +274,6 @@ body {
   float: right;
   margin-top: 0;
 }
-
 #pullout .pullout-close {
   position: absolute;
   right: -24px;
@@ -318,91 +284,67 @@ body {
   padding: 0;
   background-position: center;
 }
-
 .pullout #pullout .pullout-close {
   top: 0;
   right: 0;
 }
-
 #pullout .pullout-close span {
   display: none;
 }
 #pullout .pullout-prev-next {
   display: none;
 }
-
 #pullout.is-workshop
-
 #pullout .talk-download {
   margin-left: 20px;
 }
-
 #pullout .ticket {
   float: left;
   width: 47%;
   margin-right: 3%;
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
-
-/* mass reverse out for tickets on workshop wide */
  #pullout.is-workshop .ticket {
   background: none;
   float: none;
   width: auto;
   margin-right: 0;
 }
-
 #pullout.is-workshop .ticket .buy-box {
   width: 520px;
   float: right;
 }
-
 #pullout.is-workshop .ticket .buy-box .text {
   width: 280px;
   float: left;
   text-align: right;
 }
-
 .is-workshop hr {
   display: block;
 }
-
-/* from min-width: 692px */
 .lede .extra-br {
   display: none;
 }
-
-
-/* from min-width: 820px */
 header nav li.tickets {
   display: none;
 }
-
-
 .lede .superflous-br {
   display: inline;
 }
-
 .lede br { 
   display: inline; 
 }
-
 #show-menu {
   display: none;
 }
-
 header .logo {
   float: left;
   margin-left: 33px;
   margin-right: 33px;
 }
-
 header h1 {
   display: none;
 }
-
 header .wrapper {
   margin-bottom: 0;
 }
@@ -417,12 +359,14 @@ nav li {
   width: 200px;
   text-align: left;
 }
-
 .buy-tickets {
   float: right;
   margin-top: 0;
   padding-top: 18px;
   padding-bottom: 18px;
+}
+header .buy-tickets {
+  font-size: 40px;
   line-height: 40px;
 }
 .buy {
@@ -433,24 +377,16 @@ nav li {
   margin-top: 20px;
   font-size: 64px;
 }
-
 .lede .superflous-br {
   display: none;
 }
-
 .sponsor img {
   max-width: 100%;
 }
-
-
-/* from min-width: 954px */
 .sponsor.half {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
   box-sizing: border-box; 
   width: 30%;
 }
-
 header .wrapper {
   margin-bottom: 20px;
 }
@@ -466,6 +402,7 @@ header h1 {
   color: #bfbfbf;
   font-weight: normal;
   font-size: 64px;
+  line-height: 82px;
 }
 header time {
   display: block;
@@ -477,6 +414,7 @@ header h1 span {
   margin-top: 8px;
   letter-spacing: -3px;
   text-align: justify;
+  line-height: 40px;
 }
 nav {
   position: absolute;
@@ -486,27 +424,22 @@ nav {
 }
 nav li {
   float: left;
-  /*width: 16.66667%; TODO: When Schedule Present */
   width: 20%;
   text-align: center;
 }
-
-
-/* froom min-width: 960px */
 .speaker,
 .workshop {
   float: left;
   width: 33.3333%;
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
-
+#locations span.bullet {
+  display: inline;
+}
 .workshop > h3,
 .workshop > div {
   width: 100%;
 }
-
 #pullout .left {
   width: 48%;
   float: left;
@@ -521,9 +454,6 @@ nav li {
 #pullout .right section {
   width: 50%;
   float: left;
-  /*margin-top: 47px;*/
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
 #pullout .right section:first-child {

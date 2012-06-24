@@ -272,10 +272,10 @@ footer .left-logic:active {
   padding: 0;
   padding-top: 45px;
   margin: 0 auto;
-  max-width: 1400px;
 }
 .main .wrapper {
   margin: 0 auto;  
+  max-width: 1400px;
 }
 
 .wrapper > article > *,
@@ -1322,7 +1322,7 @@ body.pullout {
     color: #bfbfbf;
     font-weight: normal;
     font-size: 64px;
-    line-height: 64px;
+    line-height: 82px;
   }
   header time {
     display: block;
@@ -1334,6 +1334,7 @@ body.pullout {
     margin-top: 8px;
     letter-spacing: -3px;
     text-align: justify;
+    line-height: 40px;
   }
   nav {
     position: absolute;
