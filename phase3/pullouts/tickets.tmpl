@@ -8,8 +8,8 @@
         </div>
       </div>
 
-      {{#soldout}}<div class="button sold-out">Sold Out</div>{{/soldout}}
-      {{^soldout}}<a href="{{buylink}}" class="button buy-button">Buy Tickets</a>{{/soldout}}
+      {{#sold-out}}<div class="button sold-out">Sold Out</div>{{/sold-out}}
+      {{^sold-out}}<a href="{{buylink}}" class="button buy-button">Buy Tickets</a>{{/sold-out}}
 
       {{#url-slug}}<p class="more"><a class="pullout" href="/workshop/{{url-slug}}#{{url-slug}}">More information</a></p>{{/url-slug}}
     </section>

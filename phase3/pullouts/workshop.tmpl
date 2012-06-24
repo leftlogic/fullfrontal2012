@@ -20,7 +20,9 @@
         <h4>{{price}}{{#vat}}<span>+vat</span>{{/vat}}</h4>
         {{{note_md}}}
       </div>
-      <a href="{{buylink}}" class="button buy-button">Buy Tickets</a>
+
+      {{#sold-out}}<div class="button sold-out">Sold Out</div>{{/sold-out}}
+      {{^sold-out}}<a href="{{buylink}}" class="button buy-button">Buy Tickets</a>{{/sold-out}}
       <div style="clear: both;"></div>
     </div>
   </section>
