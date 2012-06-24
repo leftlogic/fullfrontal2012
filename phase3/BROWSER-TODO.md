@@ -18,7 +18,6 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 
 #Firefox
 
-- Areas with custom font need line-height setting to appropiate values
 - workshop sold out button is incorrectly positioned
 - "HTML5, beyond markup" heading overflows too much at smaller widths
 
@@ -51,3 +50,4 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 # Done
 
 - workshop pullout appears at top of page not at the current page position
+- Areas with custom font need line-height setting to appropiate values
