@@ -67,7 +67,7 @@ include('utils.php');
       
       <a class="pullout button buy-tickets" href="/tickets#tickets">
         <span class="buy">Buy</span> Tickets
-        <span class="price"><img src="data:image/gif;base64,R0lGODlhIAApAJECAIfXiwAAAAZWnQAAACH5BAEAAAIALAAAAAAgACkAAAJ0lG+gyw0Io3B0BYlrvThqynXI54RiQjLmmarn2CqruAX2bb/HptNg3+EBJcIhpGjc/ZKwEjD2yUCRyqnTY70es43ZhOvCgmXEMVmCu9XSuR41+TbGh/PnkonS4uvisdTsZXa2BVhW2AcWKKh4GMH2CHkjUQAAOw==" alt="&pound;">150</span>
+        <!-- <span class="price"><img src="data:image/gif;base64,R0lGODlhIAApAJECAIfXiwAAAAZWnQAAACH5BAEAAAIALAAAAAAgACkAAAJ0lG+gyw0Io3B0BYlrvThqynXI54RiQjLmmarn2CqruAX2bb/HptNg3+EBJcIhpGjc/ZKwEjD2yUCRyqnTY70es43ZhOvCgmXEMVmCu9XSuR41+TbGh/PnkonS4uvisdTsZXa2BVhW2AcWKKh4GMH2CHkjUQAAOw==" alt="&pound;">150</span> -->
       </a>
 
     </div>

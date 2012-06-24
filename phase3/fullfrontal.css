@@ -377,6 +377,7 @@ h2 {
   font-size: 16px;
   text-align: center;
   font-weight: normal;
+  line-height: 14px;
 
   -webkit-font-smoothing: none;
   -moz-font-smoothing: none;
@@ -1192,8 +1193,13 @@ body.pullout {
     padding-top: 18px;
     padding-bottom: 18px;
   }
+  header .buy-tickets {
+    font-size: 40px;
+    line-height: 40px;
+  }
   .buy {
-    display: none;
+    /*display: none;*/
+    display: block;
   }
   .price {
     display: block;
@@ -1349,7 +1355,8 @@ body.pullout {
 
   .workshop > h3, 
   .workshop > div {
-    width: 73.5%;
+    /*width: 73.5%;*/
+    width: 100%;
     margin: 0 auto;
   }
 
