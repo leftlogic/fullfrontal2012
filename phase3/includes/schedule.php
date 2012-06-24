@@ -1,5 +1,5 @@
 <article id="schedule">
-  <h2>Schedule</h2>
+  <h2><span>Schedule</span></h2>
 
   <ol class="schedule">
     

@@ -779,6 +779,47 @@ body.pullout {
     -webkit-filter: blur(3px);
   }
 
+  .wrapper > hr {
+    display: none;
+  }
+
+  .wrapper > article > h2 {
+    margin: 60px 50px 60px 40px;
+    font-size: 64px;
+    line-height: 0;
+    position: relative;
+    border-top: 10px solid #fff;
+  }
+
+  .wrapper > article > h2 span {
+    z-index: 2;
+    color: #fff;
+    background: url(/images/bg-heading.png) repeat-x 0 0;
+    padding: 0 50px 0 60px; /* because the font actually has 10px of blank space on the side */
+  }
+
+  .wrapper > article > h2 span:before,
+  .wrapper > article > h2 span:after {
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    display: block;
+    background: url(/images/head-box.png) no-repeat center;
+    top: 0;
+    left: 0;
+    margin: -20px 0 0 0;
+    width: 30px;
+    height: 30px;
+    margin-left: -30px;
+  }
+
+  .wrapper > article > h2 span:after {
+    left: auto;
+    right: 0;
+    margin-left: 0;
+    margin-right: -30px;
+  }
+
   .lede {
     font-size: 32px;
     line-height: 40px;

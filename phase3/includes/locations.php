@@ -1,5 +1,5 @@
 <article id="locations">
-  <h2>Locations</h2>
+  <h2><span>Locations</span></h2>
 
   <section class="locations">
     <h3>Conference</h3>

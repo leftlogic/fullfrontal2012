@@ -1,5 +1,5 @@
 <article id="workshops">
-  <h2>Workshops</h2>
+  <h2><span>Workshops</span></h2>
 
   <?php 
   $workshopData = array();

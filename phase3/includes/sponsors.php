@@ -1,5 +1,5 @@
 <article id="sponsors">
-  <h2>Sponsors</h2>
+  <h2><span>Sponsors</span></h2>
 
   <h3>Full Monty Sponsors</h3>
 

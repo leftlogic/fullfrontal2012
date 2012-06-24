@@ -1,7 +1,7 @@
 <hr>
 
 <article id="fringe">
-  <h2>Fringe</h2>
+  <h2><span>Fringe</span></h2>
 
   <section class="fringe">
     <h3>Async JS <a href="#">JavaScript Show n’ Tell 2011</a></h3>
