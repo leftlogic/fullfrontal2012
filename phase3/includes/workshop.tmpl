@@ -1,6 +1,6 @@
 {{#workshops}}
   <section class="workshop">
-    <h3>{{name}} <a class="title pullout" href="/workshop/{{url-slug}}#{{url-slug}}">{{title}}</a></h3>
+    <h3>{{#short-name}}{{short-name}}{{/short-name}}{{^short-name}}{{name}}{{/short-name}} <a class="title pullout" href="/workshop/{{url-slug}}#{{url-slug}}">{{title}}</a></h3>
     <a class="title pullout" href="/workshop/{{url-slug}}#{{url-slug}}"><div class="details">
       <img title="{{image-credit}}" src="/images/{{image}}">
       {{#sold-out}}<div class="sold-out"><span class="button">Sold Out</span></div>{{/sold-out}}

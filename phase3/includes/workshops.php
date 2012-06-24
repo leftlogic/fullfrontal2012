@@ -3,15 +3,10 @@
 
   <?php 
   $workshopData = array();
-  if ($handle = opendir(ROOT . '/data/workshops/')) {
-    /* This is the correct way to loop over the directory. */
-    while (false !== ($entry = readdir($handle))) {
-      if (stripos($entry, '.json') !== false) {
-        array_push($workshopData, json_decode(file_get_contents(ROOT . '/data/workshops/' . $entry), true));
-      }
-    }
+  $files = array('tooling', 'html5', 'mobile');
 
-    closedir($handle);
+  foreach ($files as $file) {
+    array_push($workshopData, json_decode(file_get_contents(ROOT . '/data/workshops/' . $file . '.json'), true));
   }
 
   echo renderTemplate(array('workshops' => $workshopData), '/includes/workshop.tmpl'); 
