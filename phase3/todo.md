@@ -1,13 +1,15 @@
-# TODO
+# TODO - in priority
 
-- Next / prev buttons on mobile popup
-- Scaling of sponsor logos
-- Update background image
-- If there's time, add a topics section
-- Optimise images
 - Correct links for all sponsors (confirmed: brandwatch, adobe)
+- Next / prev buttons on mobile popup
 - Cross browser testing
+
+- Update background image
+- Optimise images
 - Heading bars (from Chris' version) --- not sure this is possible
+- Animated gif for tutorials
+- Smaller image for mobile speakers
+- If there's time, add a topics section
 
 
 # Done
@@ -23,3 +25,4 @@
 - Sponsorship page included in repo
 - Font fucked on workshop stand alone below 640
 - Shift + click should open popups in a new window
+- Scaling of sponsor logos
