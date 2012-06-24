@@ -1,24 +1,21 @@
-#IE8
-
-- Buy Tickets pullout appears with left edge centered insead of center centered
-
 #Opera
 
 - Map loads at italy and zoomed out too far
 
+
 #Other
 
--sponsor logos too small, being scaled up and showing jaggies at largest "mobile" layout.
 -sold out button shows as green at "mobile size"
+
 
 #Safari
 
 - Standard font's are not always being anti-aliased
 
 
-
 # Ignore
 
+- sponsor logos too small, being scaled up and showing jaggies at largest "mobile" layout.
 - Sold out button incorrectly positioned
 - Overlay on speakers shows by default (without hover) and background is solid black so pictures don't show through
 - semi-transparent overlay does not appear behind pullout
