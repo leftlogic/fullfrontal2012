@@ -41,7 +41,7 @@
     <ul>
       <li class="venue primary-venue" data-latlng="50.82181097001707,-0.14180302619934082">
         <span class="address">Preston Circus, BN1 4BA</span>
-        <a href="#"><span class="bullet">B.</span>The Loft</a>
+        <a href="http://goo.gl/maps/xe61"><span class="bullet">D.</span>The Loft</a>
         <p class="details">
           Please join us at the Full Frontal After Party at The Loft from 7pm until late
         </p>

@@ -4,7 +4,7 @@
   "name" : "Remy Sharp",
   "image" : "speakers/remy.png",
   "image-credit" : "",
-  "url-slug": "tooling",
+  "url-slug": "mobile",
   "prev": "html5",
   "next": "tooling",
   "title" : "Mobile Web Apps",
@@ -33,7 +33,7 @@
     }
   ],
   "details" : {
-      "date" : "9th & 10th November 2012",
+      "date" : "8th November 2012",
       "time" : "09:30 to 17:00",
       "teacher" : "Remy Sharp",
       "teaher-url" : "http://twitter.com/rem",
