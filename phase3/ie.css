@@ -285,6 +285,9 @@ body {
   width: 280px;
   padding-top: 0;
 }
+#pullout.is-workshop .ticket .buy-box .text {
+  padding-top: 0;
+}
 #pullout .buy-box h4, #pullout .buy-box p {
   margin: 0;
 }

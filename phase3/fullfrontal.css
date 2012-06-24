@@ -690,6 +690,9 @@ body.pullout {
 #pullout .ticket {
   margin-bottom: 20px;
 }
+#pullout.is-workshop .ticket {
+  padding-top: 0;
+}
 #pullout.tickets h1 {
   float: none;
   font-size: 64px;
@@ -721,6 +724,7 @@ body.pullout {
   width: 100%;
   float: none;
   text-align: center;
+  padding-top: 20px;
 }
 #pullout .ticket .button {
   display: block;
@@ -1112,6 +1116,9 @@ body.pullout {
     float: left;
     text-align: right;
     width: 280px;
+    padding-top: 0;
+  }
+  #pullout.is-workshop .ticket .buy-box .text {
     padding-top: 0;
   }
   #pullout .buy-box h4, #pullout .buy-box p {
