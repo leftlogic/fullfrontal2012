@@ -12,10 +12,6 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 
 - workshop price and buy tickets button in workshop pullout has incorrecting vertial algnment compared with name heading
 
-#Firefox
-
-- "HTML5, beyond markup" heading overflows too much at smaller widths
-
 #Opera
 
 - Map loads at italy and zoomed out too far
@@ -49,3 +45,4 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 - IE8: map is too wide causing info columns to be too narrow wrapping plans names awkwardly
 - IE8: image in workshops pullout stretched vertically
 - IE8: margin between you'll learn and details boxes in workshop pullout missing
+- "HTML5, beyond markup" heading overflows too much at smaller widths
