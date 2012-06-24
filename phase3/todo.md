@@ -27,3 +27,4 @@
 - Test sold out
 - Animated gif for tutorials
 - Heading bars (from Chris' version) --- not sure this is possible
+- Links to venues
