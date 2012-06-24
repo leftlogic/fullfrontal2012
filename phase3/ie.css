@@ -1,0 +1,527 @@
+/* from min-width: 640px */
+
+body {
+  min-width: 960px;
+  margin: 0 auto;
+}
+
+#dressing-gown.blur {
+  -webkit-filter: blur(3px);
+}
+
+.lede {
+  font-size: 32px;
+  line-height: 40px;
+}
+.lede .superflous-br {
+  display: inline;
+}
+
+.schedule {
+  float: left;
+  width: 25%;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+.schedule .schedule-heading {
+  display: list-item;
+}
+.schedule .schedule-heading h3 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+
+  -webkit-font-smoothing: auto;
+  -moz-font-smoothing: auto;
+  -o-font-smoothing: auto;
+  font-smoothing: auto;
+}
+.schedule .current {
+  width: auto;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.speaker,
+.workshop {
+  float: left;
+  width: 50%;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+.speaker .details,
+.workshop .details {
+  position: relative;
+  display: block;
+}
+.speaker img,
+.workshop .details img {
+  image-rendering:-moz-crisp-edges; 
+  image-rendering: -o-crisp-edges; 
+  image-rendering:-webkit-optimize-contrast; 
+  -ms-interpolation-mode:nearest-neighbor;
+
+  display: block;
+  width: 100%;
+  border: 2px solid #000 !important; /* oddly the link wrapping this img is putting a green border on the image */  
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+
+  -webkit-box-shadow: 2px 2px 0 #000;
+  -moz-box-shadow: 2px 2px 0 #000;
+  -o-box-shadow: 2px 2px 0 #000;
+  -ms-box-shadow: 2px 2px 0 #000;
+  box-shadow: 2px 2px 0 #000;
+}
+.speaker .blurb,
+.workshop .blurb,
+.workshop .sold-out {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  -webkit-transition: opacity 100ms ease-in-out;
+  -moz-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  -ms-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
+}
+.speaker .details:hover .blurb,
+.workshop .details:hover .blurb,
+.workshop .sold-out {
+  opacity: 1;
+}
+.speaker .details .blurb p,
+.workshop .details .blurb p {
+  padding: 20px;
+  text-align: center;
+}
+.workshop h3 {
+  white-space: nowrap;
+}
+.workshop .sold-out {
+  background-color: transparent;
+}
+.sold-out .button {
+  display: inline-block;
+  background-color: #c00;
+  font-size: 32px;
+
+  -webkit-transition: background-color 100ms ease-in-out;
+  -moz-transition: background-color 100ms ease-in-out;
+  -o-transition: background-color 100ms ease-in-out;
+  -ms-transition: background-color 100ms ease-in-out;
+  transition: background-color 100ms ease-in-out;
+}
+.workshop .details:hover .sold-out .button {
+  background-color: #000;
+}
+
+.locations {
+  float: left;
+  width: 25%;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+.wrapper > article > .locations {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.venue .bullet {
+  color: #606060;
+}
+.venue.selected .bullet {
+  color: #fff;
+}
+.venue .details {
+  display: block;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: #c0c0c0;
+
+  -webkit-font-smoothing: auto;
+  -moz-font-smoothing: auto;
+  -o-font-smoothing: auto;
+  font-smoothing: auto;
+}
+.venue .details p:first-of-type {
+  margin-top: 5px;
+}
+#map {
+  display: block;
+  float: left;
+  width: 50%;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+  background: #333;
+  /*height: 80vh;*/
+  height: 1040px;
+  border: 2px solid #fff;
+}
+
+#sponsors h3 {
+  display: block;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 100;
+  color: #c0c0c0;
+  margin-bottom: 60px;
+  clear: both;
+}
+.sponsor {
+  float: left;
+  width: 47%;
+  margin: 0 1.5% 60px 1.5%;
+
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+.full-monty {
+  float: left;
+  width: 47%;
+  margin: 0 1.5% 0px 1.5%;
+  background-color: #fff;
+  color: #303030;
+  font-weight: normal;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+.wrapper > article > .full-monty {
+  padding: 40px;
+}
+.full-monty .sponsor {
+  float: none;
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  margin: 0 auto;
+}
+.full-monty .sponsor img {
+  width: 100%;
+}
+.full-monty .blurb {
+  display: block;
+  padding-bottom: 16px;
+}
+
+.full-monty-wrapper {
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.full-monty {
+  padding-bottom: 999999px !important;
+  margin-bottom: -999999px !important;
+}
+
+
+#pullout { 
+  width: 80%;
+  max-width: 780px;
+  z-index: 100;
+  overflow: visible;
+  padding: 40px;
+}
+#pullout.is-workshop{ 
+  max-width: 1080px;
+}
+
+
+/** Additional Pullout Style from Paul **/
+#pullout h1 {
+  font-size: 64px;
+  line-height: 43px;
+  float: left;
+  margin: 10px 0 20px 0;
+}
+#pullout h2 {
+  margin-bottom: 30px;
+}
+#pullout hr {
+  margin-top: 15px;
+  margin-bottom: -10px;
+  clear: both;
+}
+#pullout .speaker-image {
+  /*max-width: 156px;*/
+  max-width: 250px;
+  float: right;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+#pullout .buy-box {
+  overflow: hidden;
+  width: 520px;
+  float: right;
+}
+#pullout .buy-box .text {
+  float: left;
+  text-align: right;
+  width: 280px;
+  padding-top: 0;
+}
+#pullout .buy-box h4, #pullout .buy-box p {
+  margin: 0;
+}
+#pullout .buy-box p {
+  margin-top: -4px;
+}
+#pullout .buy-box h4 {
+  font-size: 32px;
+}
+#pullout .buy-box h4 span {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+#pullout .buy-box .button {
+  font-size: 32px;
+  font-weight: normal;
+  float: right;
+  margin-top: 0;
+}
+
+#pullout .pullout-close {
+  position: absolute;
+  right: -24px;
+  top: -32px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  padding: 0;
+  background-position: center;
+}
+
+.pullout #pullout .pullout-close {
+  top: 0;
+  right: 0;
+}
+
+#pullout .pullout-close span {
+  display: none;
+}
+#pullout .pullout-prev-next {
+  display: none;
+}
+
+#pullout.is-workshop
+
+#pullout .talk-download {
+  margin-left: 20px;
+}
+
+#pullout .ticket {
+  float: left;
+  width: 47%;
+  margin-right: 3%;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+/* mass reverse out for tickets on workshop wide */
+ #pullout.is-workshop .ticket {
+  background: none;
+  float: none;
+  width: auto;
+  margin-right: 0;
+}
+
+#pullout.is-workshop .ticket .buy-box {
+  width: 520px;
+  float: right;
+}
+
+#pullout.is-workshop .ticket .buy-box .text {
+  width: 280px;
+  float: left;
+  text-align: right;
+}
+
+.is-workshop hr {
+  display: block;
+}
+
+/* from min-width: 692px */
+.lede .extra-br {
+  display: none;
+}
+
+
+/* from min-width: 820px */
+header nav li.tickets {
+  display: none;
+}
+
+
+.lede .superflous-br {
+  display: inline;
+}
+
+.lede br { 
+  display: inline; 
+}
+
+#show-menu {
+  display: none;
+}
+
+header .logo {
+  float: left;
+  margin-left: 33px;
+  margin-right: 33px;
+}
+
+header h1 {
+  display: none;
+}
+
+header .wrapper {
+  margin-bottom: 0;
+}
+nav {
+  position: absolute;
+  width: 400px;
+  right: 200px;
+  bottom: auto;
+}
+nav li {
+  float: left;
+  width: 200px;
+  text-align: left;
+}
+
+.buy-tickets {
+  float: right;
+  margin-top: 0;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.buy {
+  display: none;
+}
+.price {
+  display: block;
+  margin-top: 20px;
+  font-size: 64px;
+}
+
+.lede .superflous-br {
+  display: none;
+}
+
+.sponsor img {
+  max-width: 100%;
+}
+
+
+/* from min-width: 954px */
+.sponsor.half {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+  width: 30%;
+}
+
+header .wrapper {
+  margin-bottom: 20px;
+}
+header .logo {
+  float: left;
+  margin-left: 33px;
+  margin-right: 33px;
+}
+header h1 {
+  float: left;
+  display: block;
+  margin: 0;
+  color: #bfbfbf;
+  font-weight: normal;
+  font-size: 64px;
+}
+header time {
+  display: block;
+  font-size: 128px;
+}
+header h1 span {
+  display: block;
+  width: 507px;
+  margin-top: 8px;
+  letter-spacing: -3px;
+  text-align: justify;
+}
+nav {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: -53px;
+}
+nav li {
+  float: left;
+  /*width: 16.66667%; TODO: When Schedule Present */
+  width: 20%;
+  text-align: center;
+}
+
+
+/* froom min-width: 960px */
+.speaker,
+.workshop {
+  float: left;
+  width: 33.3333%;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+.workshop > h3,
+.workshop > div {
+  width: 100%;
+}
+
+#pullout .left {
+  width: 48%;
+  float: left;
+}
+#pullout .right {
+  width: 48%;
+  float: right;
+  overflow: hidden;
+  background: #f2f2f2;
+  margin-top: 47px;
+}
+#pullout .right section {
+  width: 50%;
+  float: left;
+  /*margin-top: 47px;*/
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+#pullout .right section:nth-child(1) {
+  border-right: 2px solid #fff;
+} 
