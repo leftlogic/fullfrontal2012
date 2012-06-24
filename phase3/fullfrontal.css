@@ -467,7 +467,8 @@ h2 {
   display: none;
 }
 
-#map {
+#map,
+#locations span.bullet {
   display: none;
 }
 
@@ -1348,6 +1349,11 @@ body.pullout {
     -webkit-box-sizing: border-box; 
     box-sizing: border-box;
   }
+
+  #locations span.bullet {
+    display: inline;
+  }
+
 
   .workshop > h3,
   .workshop > div {

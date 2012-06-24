@@ -7,7 +7,7 @@
     "type" : "secondary",
     "lat" : 50.831386981520524,
     "lng": -0.14038681983947754,
-    "details_md" : "&pound;112 2 nights online special, &pound;129 including breakfast"
+    "details_md" : "£79 single, £85 double B&B - quote \"Left Logic\""
   },
   {
     "name" : "Travelodge",
@@ -17,7 +17,7 @@
     "type": "secondary",
     "lat": 50.83632670343803,
     "lng": -0.1439809799194336,
-    "details_md" : "&pound;38"
+    "details_md" : "£22.80 Thurs, £26.75 Friday"
   },{
     "name" : "My Hotel",
     "address" : "17 Jubilee St, BN1 1GE",
@@ -26,7 +26,7 @@
     "type": "secondary",
     "lat": 50.82469821215884,
     "lng": -0.13905644416809082,
-    "details_md" : "&pound;95 for Thurs, &pound;99 for Fri"
+    "details_md" : "£69/£89 Thursday double standard/superior, £149/£169 Friday double standard/superior"
   },{
     "name" : "Old Ship hotel",
     "address" : "King's Road, BN1 1NR",
@@ -35,7 +35,7 @@
     "type": "secondary",
     "lat": 50.82025883414183,
     "lng": -0.14247357845306396,
-    "details_md" : "&pound;63, &pound;73 including breakfast"
+    "details_md" : "£77 single, £87 double (breakfast at extra cost)"
   }]
 }
 
