@@ -3,7 +3,7 @@
 Based on very quickly put together IE stylesheet with a min-width of 960px
 
 - "HTML5, beyond markup" heading overflows too much
-- map is too wide causing info columns to be too narrow wrapping plans names awkwardly
+
 - Buy Tickets pullout appears with left edge centered insead of center centered
 - image in workshops pullout stretched vertically
 - workshop price and buy tickets button in workshop pullout has incorrecting vertial algnment compared with name heading
@@ -48,3 +48,4 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 - Areas with custom font need line-height setting to appropiate values
 - Images have black border that should £ symbol in buy tickets button and sponsor logos
 - JS Error: 'pageYOffset' is undefined
+- IE8: map is too wide causing info columns to be too narrow wrapping plans names awkwardly

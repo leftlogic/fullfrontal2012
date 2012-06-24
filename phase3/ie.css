@@ -137,7 +137,7 @@ body {
 
 .locations {
   float: left;
-  width: 25%;
+  width: 33.3333%;
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
@@ -170,13 +170,12 @@ body {
 #map {
   display: block;
   float: left;
-  width: 50%;
+  width: 33.333%;
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
   background: #333;
-  /*height: 80vh;*/
-  height: 1040px;
+  height: 1240px;
   border: 2px solid #fff;
 }
 
@@ -420,9 +419,10 @@ nav li {
   margin-top: 0;
   padding-top: 18px;
   padding-bottom: 18px;
+  line-height: 40px;
 }
 .buy {
-  display: none;
+  display: block;
 }
 .price {
   display: block;
