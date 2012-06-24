@@ -25,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Full Frontal 2012 - JavaScript Conference</title>
   <script>document.documentElement.className=''</script>
-  <link rel="stylesheet" href="fullfrontal.css">
+  <link rel="stylesheet" href="2-fullfrontal.css">
   <link rel="shortcut icon" href="/favicon.ico">
   <!--[if lt IE 9]>
     <script>
@@ -153,7 +153,7 @@
   </footer>
 
   <script src="/js/jquery.js"></script>
-  <script src="/js/fullfrontal.js"></script>
+  <script src="/js/2-fullfrontal.js"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-1656750-30']);

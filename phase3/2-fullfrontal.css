@@ -1,0 +1,533 @@
+@font-face {
+  /* massive props to Patty Poos @patrick_h_lauke for his awesome old school fonts */
+  font-family: 'Xenon';
+  src: url('/fonts/xenon2-webfont.eot');
+  src: url('/fonts/xenon2-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/xenon2-webfont.woff') format('woff'),
+       url('/fonts/xenon2-webfont.ttf') format('truetype'),
+       url('/fonts/xenon2-webfont.svg#Xenon2Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  /* 8, 16, 64, 128 */
+}
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  margin: 0;
+  background-color: #262626;
+  background-image: url(/images/bg.png);
+  color: #c0c0c0;
+}
+.ie {
+  min-width: 960px;
+}
+a {
+  color: #00af3b;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+}
+small {
+  size: 15px;
+  color: #666;
+}
+
+header {
+  position: relative;
+  font-family: Xenon;
+  background: #fff;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  z-index: 1;
+  color: #000;
+}
+header .ponch,
+header .chips {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+header .ponch {
+  background-image: url(/images/ledge.png);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  left: 55%;
+
+}
+header .chips {
+  background-image: url(/images/chip.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  right: 45%;
+}
+header .wrapper {
+  max-width: 778px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+header p {
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 10px;
+}
+header .logo {
+  float: left;
+  margin-top: 35px;
+}
+#countdown {
+  display: block;
+  float: right;
+  position: relative;
+  overflow: hidden;
+  color: #bfbfbf;
+}
+#countdown div {
+  float: left;
+  max-width: 120px;
+  margin-right: 40px;
+}
+#countdown .secs{
+  margin-right: 0;
+}
+#countdown .value {
+  display: block;
+  margin-bottom: 7px; /* Should be 10px - logo a little too small */
+  padding-left: 4px;
+  font-size: 128px;
+  line-height: 85px;
+  text-align: center;
+}
+#countdown .label {
+  display: block;
+  font-size: 64px;
+  line-height: 39px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+footer {
+  max-width: 960px;
+  margin: 50px auto;
+  text-align: center;
+}
+footer .previous {
+   font-family: Xenon;
+   line-height: 19px;
+   margin-bottom: 75px; 
+}
+.left-logic {
+  display: block;
+  margin: 0 auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 227px;
+  height: 47px;
+  background-image: url(/images/leftlogic.png);
+}
+.left-logic:hover {
+  background-position: bottom;
+}
+
+.main {
+  background-image: url(/images/grad.png);
+  background-repeat: repeat-x;
+  padding-top: 85px;
+}
+.main .wrapper {
+  max-width: 960px;
+  margin: 0 auto;  
+}
+
+.lede {
+  margin: 0;
+  margin-bottom: 80px;
+  font-size: 35px;
+  text-align: center;
+  text-shadow: 1px 1px 0px #000;
+}
+.lede strong {
+  color: #fff;
+}
+
+.date-twitter {
+  font-family: Xenon;
+  font-size: 128px;
+  text-align: center;
+  text-shadow: 4px 4px 0px #000;
+  margin-top: 80px;
+}
+.date {
+  display: block;
+  color: #fff;
+  line-height: 89px;
+}
+.twitter {
+  display: block;
+  font-size: 64px;
+  line-height: 50px;
+  margin-top: 30px;
+}
+
+.tabs {
+  position: relative;
+  padding-top: 241px;
+}
+
+.tab {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  display: block;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center -170px;
+  z-index: 10;
+}
+.tab-sponsor .tab {
+  background-image: url(/images/dummy/t-sponsor.png);
+  right: 0;
+}
+.tab-talk .tab {
+  background-image: url(/images/dummy/t-talk.png);
+  left: 35%;
+}
+.tab-register .tab {
+  background-image: url(/images/dummy/t-register.png);
+  left: 0;
+}
+
+.tab h2 {
+  font-family: Xenon;
+  -webkit-font-smoothing: none;
+  -moz-font-smoothing: none;
+  -o-font-smoothing: none;
+  font-smoothing: none;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  padding: 15px 10px;
+  margin-top: 170px;
+  margin-bottom: 0;
+  line-height: 20px;
+  background-color: #00af3b;
+  border: 2px solid #000;
+  color: #87d78b;
+}
+
+.tab-sponsor .tab h2 br {
+  display: none;
+}
+
+.tab:hover {
+  cursor: pointer;
+  background-position: center top;
+}
+.tab:hover h2 {
+  color: #fff;
+}
+
+.tab-selected {
+ background-position: center top; 
+}
+.tab-selected:hover {
+  cursor: default;
+}
+.tab-selected h2 {
+  padding-bottom: 17px;
+  border-bottom: none;
+  background-color: #fff;
+  color: #000;
+}
+.tab-selected:hover h2 {
+  color: #000;
+}
+
+.tab-content .wrapper {
+  background: #fff;
+  border: 2px solid #000;
+  color: #000;
+  margin-top: -19px;
+  padding: 35px 45px;
+  font-size: 25px;
+}
+.tab-content .tab-hidden {
+  display: none;
+}
+.tab-content p {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 200;
+}
+.tab-content p:first-of-type {
+  font-weight: 100;
+  margin-top: 0;
+  font-size: 25px;
+}
+.tab-content .error {
+  margin-top: 30px;
+  color: red;
+}
+.tab-content .wrapper a {
+  font-weight: normal;
+}
+.tab-content .wrapper a:hover {
+  text-decoration: underline;
+  color: #00af3b;
+}
+
+.noJS .tabs {
+  padding-top: 0;
+  margin-top: 40px;
+}
+.noJS .tab {
+  position: static;
+  width: 100%;
+  display: block;
+  background-image: none;
+}
+.noJS .tab:hover {
+  cursor: default;
+}
+.noJS .tab h2 {
+  color: #fff;
+  margin-top: 10px;
+}
+.noJS .tab-selected h2 {
+  color: #000;
+}
+.noJS .tab-content .wrapper {
+  display: block;
+  font-size: 16px;
+  padding: 15px;
+  margin-top: -2px;
+}
+.noJS .tab-content .tab-hidden {
+  display: block;
+}
+
+
+.register-interest {
+  position: relative;
+  margin: 40px 0;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px #000;
+}
+.register-interest input {
+  margin: 0;
+  border: 0;
+  padding: 20px 30px;
+  padding-right: 117px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 40px;
+}
+.register-interest input:focus {
+  outline: 0;  
+}
+.register-interest button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 87px;
+  height: 100%;
+  cursor: pointer;
+  background-color: #000;
+  background-image: url(/images/submit.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: #fff;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.register-interest button:hover {
+  background-color: #00af3b;
+}
+
+@media screen and (max-width: 870px) {
+  .lede br {
+    display: none;
+  }
+}
+@media screen and (max-width: 970px) {
+  .lede,
+  .tabs {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.ie .lede,
+.ie .tabs {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 790px) {
+  header .logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  #countdown {
+    float: none;
+    margin: 0 auto;
+    width: 580px;
+  }
+  #countdown div {
+    margin: 14px;
+  }
+  #countdown .value {
+/*    font-size: 64px;
+    line-height: 28px;*/
+  }
+  #countdown .label {
+/*    font-size: 32px;
+    line-height: 38px;*/
+  }
+}
+
+@media screen and (min-width: 580px) and (max-width: 759px) {
+  .tab-sponsor .tab h2 br {
+    display: inline;
+  }
+  .tab-content .wrapper {
+    margin-top: 1px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  body {
+    font-weight: 200;
+  }
+  header {
+    padding-bottom: 34px;
+  }
+  header .logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  #countdown {
+    float: none;
+    margin: 0 auto;
+    width: 320px;
+  }
+  #countdown div {
+    margin: 6px;
+  }
+  #countdown .value {
+    font-size: 64px;
+    line-height: 28px;
+  }
+  #countdown .label {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .main {
+    padding-top: 55px;
+  }
+  .lede {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .tabs {
+    padding-top: 0;
+    margin-top: 40px;
+  }
+  .tab {
+    position: static;
+    width: 100%;
+    display: block;
+    background-image: none;
+  }
+  .tab:hover {
+    cursor: default;
+  }
+  .tab h2 {
+    color: #fff;
+    margin-top: 10px;
+  }
+  .tab-selected h2 {
+    color: #000;
+  }
+  .tab-content .wrapper {
+    display: block;
+    font-size: 16px;
+    padding: 15px;
+    margin-top: -2px;
+  }
+  .tab-content p {
+    font-size: 14px;
+    font-weight: 100;
+  }
+  .tab-content p:first-of-type {
+    font-size: 18px;
+  }
+  .tab-content .tab-hidden {
+    display: block;
+  }
+  .register-interest {
+    margin: 10px 0;
+  }
+  .register-interest input {
+    padding: 14px 10px;
+    padding-right: 67px;
+    font-size: 16px;
+  }
+  .register-interest button {
+    width: 57px;
+    background-image: url(/images/submit-small.png);
+  }
+  .date-twitter {
+    margin-top: 40px;
+    font-size: 64px;
+  }
+  .date {
+    line-height: 41px;
+  }
+  .twitter {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+  footer {
+    margin: 25px auto;
+  }
+  footer .previous {
+    margin-bottom: 30px;
+  }
+}
+
+/*::-webkit-validation-bubble-message {
+  border-radius: 0;
+  font-family: Xenon;
+  font-size: 32px;
+  line-height: 32px;
+  border: solid 5px #000;
+}
+
+::-webkit-validation-bubble-arrow {
+  border-color: #000;
+  box-shadow: inset 5px 5px 1px white;
+}
+
+::-webkit-validation-bubble-arrow-clipper {
+  display: block;
+  overflow: hidden;
+  height: 16px;
+  z-index: 2147483646;
+}*/

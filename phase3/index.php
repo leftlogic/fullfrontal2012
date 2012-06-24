@@ -1,8 +1,23 @@
 <?php
 include('utils.php');
+date_default_timezone_set('Europe/London');
+$now = new DateTime('now');
+$launch = new DateTime('09:55:00 2012-06-25');
+
+$turnThatShitOff = new DateTime('13:00:00 2012-06-25');
+
+$dummy = false;
+if ($now < $turnThatShitOff) {
+  $dummy = true;
+}
+
+if ($now < $launch) {
+  include('../phase2/index.php');
+  exit;
+}
 ?>
 <!DOCTYPE html> 
-<html class="noJS dummy">
+<html class="noJS<?php if ($dummy) echo " dummy"; ?>">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -10,8 +25,41 @@ include('utils.php');
   <title>Full Frontal 2012 - JavaScript Conference</title>
   
   <script>
-    document.documentElement.className = 'dummy';
+    document.documentElement.className = '<?php if ($dummy) echo "dummy"; ?>';
   </script>
+
+<!--
+Hey there, nice for you to look under the hood. Remy here, 
+your one and only curator of Full Frontal. Now, I had hoped
+to release a schedule at the same time as tickets because
+for the last four years (well, certainly the last three),
+I've tried to based my conference on content first, then
+match those speakers to the content. Indeed those speakers
+I've approached has been to speak on a specific topic I had
+in mind - so for that, I'm super excited. Since it's only
+June, it's a bit unfair to ask them for a title and abstract
+5 months in advance, so the schedule will go up here in the
+next month or so.
+
+If you're curious about how many checkins happened over the
+weekend to make sure I made the release date for that damn
+ticking clock, check this out: 
+
+https://github.com/leftlogic/fullfrontal2012/graphs/code-frequency
+
+Yeah, so much for leaving time for making sure everything
+was ready. Anyway, I hope if you're reading this, you've
+grabbed your ticket already or maybe even joining us for
+one of the workshops (the mixed-bagged workshop is something
+I think will be really cool, and great to learn from).
+
+Anyway, I've gotta hit the sack, no doubt my son will wake
+me up in around 4-5 hours.
+
+Cheers,
+
+- @rem
+-->
 
   <link rel="stylesheet" href="/fullfrontal.css">
   <link rel="shortcut icon" href="/favicon.ico">
@@ -30,7 +78,7 @@ include('utils.php');
 
 <!--[if IE 8]><body class="ie"><![endif]-->
 <!--[if gt IE 8]><body><![endif]-->
-<!--[if !IE]><!--><body class="dummy"><!--<![endif]-->
+<!--[if !IE]><!--><body class="<?php if ($dummy) echo "dummy"; ?>"><!--<![endif]-->
 <div id="dressing-gown">
 
   <header>
@@ -149,7 +197,7 @@ setTimeout(function () {
   }
 }, 100);</script>
 <?php
-include('dummy.html');
+if ($dummy) { include('dummy.html'); }
 ?>
 </body> 
 </html>

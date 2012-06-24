@@ -1,6 +1,21 @@
-var mobile = (!matchMedia('@media screen and (min-width: 820px)'));
+// document.documentElement.className = '';
 
-if (document.querySelector && !mobile) (function () { 
+// tabbing without the click handlers
+var $tabContent = $('.tab-content .wrapper').addClass('tab-hidden'),
+    $tabs = $('.tab');
+
+window.onhashchange = function () {
+  var $match = $tabs.filter('[href$="' + location.hash + '"]');
+  if ($match.length) {
+    $tabs.removeClass('tab-selected');
+    $match.addClass('tab-selected');
+    $tabContent.addClass('tab-hidden').filter(location.hash).removeClass('tab-hidden');
+  }
+};
+
+if (location.hash) window.onhashchange();
+
+if (document.querySelector) (function () { 
   //https://github.com/csnover/js-iso8601/blob/master/iso8601.js
   var noIsoDateParse = function (date) {
     var timestamp, struct, minutesOffset = 0, numericKeys = [ 1, 4, 5, 6, 7, 10, 11 ];
@@ -30,7 +45,7 @@ if (document.querySelector && !mobile) (function () {
       m = countdown.querySelector('div.mins span.value'),
       s = countdown.querySelector('div.secs span.value'),
       timeString = countdown.getAttribute('datetime'),
-      cutoff = 2,
+      cutoff = 5,
       thefinalcountdown, // performed by europe
       r, // remaining time
       _s = 1000,
@@ -43,9 +58,6 @@ if (document.querySelector && !mobile) (function () {
     time = noIsoDateParse(timeString);
   }
 
-  // TODO remove
-  // time = new Date();
-
   var pad = function (number) {
     if (number < 10) {
       return "0" + number;
@@ -53,23 +65,19 @@ if (document.querySelector && !mobile) (function () {
     return number;
   };
 
-  var theEndCallback = function () {};
-
   var theEnd = function () {
     clearInterval(thefinalcountdown);
     d.innerHTML = "ON";
     h.innerHTML = "SA";
     m.innerHTML = "LE";
     s.innerHTML = "!!";
-
-    theEndCallback();
   };
 
   var timeRemaining = function () {
     return time - new Date;
   }
 
-  function run() {
+  setTimeout(function () {
     r = timeRemaining();
 
     if (r > cutoff) {
@@ -102,59 +110,12 @@ if (document.querySelector && !mobile) (function () {
         }
       }, 1000);
     }
-  }
-
-  $.extend($.easing, {
-    easeOutQuad: function (x, t, b, c, d) {
-      return -c *(t/=d)*(t-2) + b;
-    }
-  });
-
-  function cleanup() {
-    // console.log('cleaning up');
-    document.documentElement.className = '';
-    $('#dummy').hide();
-    window.onscroll = null;
-    localStorage.seenit = 1;
-  }
-
-  if (localStorage.seenit) {
-    cleanup();
-  }
-
-
-  $(window).load(function () {
-    setTimeout(function () {
-      var scroll = $('body').scrollTop();
-      $(document.body).addClass('ready');
-      // if (document.body.scrollIntoView) {
-        // console.log(scroll, document.body.scrollTop);
-        // console.log('preparing scroll effect');
-        run();
-        theEndCallback = function () {
-          document.documentElement.className = '';
-          window.onscroll = null;
-          setTimeout(function () {
-            // SLEDGEHAMMER => nail
-            $('html,body').animate({
-              scrollTop: 0
-            }, 1500, 'easeOutQuad', function () {
-              cleanup();
-            });
-          }, 500);
-        };
-        document.getElementById('dummy').scrollIntoView();
-        // setTimeout(function () {
-        //   window.onscroll = function () {
-        //     theEndCallback = function () {};
-        //     // console.log('killing effect');
-        //     cleanup();
-        //   };
-        // }, 10);
-      // } else {
-        // console.log('not scrolling');
-        // cleanup();
-      // }
-    }, 100);
-  });
+  }, 3000);
 }()); // because crockford prefers his balls on the inside: http://www.youtube.com/watch?v=eGArABpLy0k#t=1m10s
+
+
+
+
+
+
+
