@@ -2,7 +2,6 @@
 
 - Correct links for all sponsors (confirmed: brandwatch, adobe)
 - Cross browser testing
-- Test sold out
 
 - Update background image
 - Optimise images
@@ -27,3 +26,4 @@
 - Font fucked on workshop stand alone below 640
 - Shift + click should open popups in a new window
 - Scaling of sponsor logos
+- Test sold out
