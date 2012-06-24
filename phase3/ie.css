@@ -523,6 +523,6 @@ nav li {
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
-#pullout .right section:nth-child(1) {
+#pullout .right section:first-child {
   border-right: 2px solid #fff;
 } 
