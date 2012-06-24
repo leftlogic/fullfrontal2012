@@ -135,7 +135,8 @@ if (document.querySelector && !mobile) (function () {
           document.documentElement.className = '';
           window.onscroll = null;
           setTimeout(function () {
-            $('body').animate({
+            // SLEDGEHAMMER => nail
+            $('html,body').animate({
               scrollTop: 0
             }, 1500, 'easeOutQuad', function () {
               cleanup();
