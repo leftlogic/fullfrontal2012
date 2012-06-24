@@ -142,6 +142,17 @@ nav a:focus {
   font-smoothing: auto;
 }
 
+#locations h3,
+#sponsors h3,
+.lede,
+.blurb p,
+#pullout li {
+  -webkit-font-smoothing: auto;
+  -moz-font-smoothing: auto;
+  -o-font-smoothing: auto;
+  font-smoothing: auto;
+}
+
 .button {
   display: block;
   padding: 12px 18px;
