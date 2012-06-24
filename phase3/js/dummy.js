@@ -42,7 +42,7 @@ if (document.querySelector) (function () {
   }
 
   // TODO remove
-  time = new Date() + 1000;
+  time = new Date();
 
   var pad = function (number) {
     if (number < 10) {
@@ -108,25 +108,44 @@ if (document.querySelector) (function () {
     }
   });
 
+  function cleanup() {
+    // console.log('cleaning up');
+    document.documentElement.className = '';
+    $('#dummy').hide();
+    window.onscroll = null;
+  }
+
 
   $(window).load(function () {
     setTimeout(function () {
       var scroll = $('body').scrollTop();
       $(document.body).addClass('ready');
       if (scroll === 0 && document.body.scrollIntoView) {
+        // console.log(scroll, document.body.scrollTop);
+        // console.log('preparing scroll effect');
         run();
         theEndCallback = function () {
+          document.documentElement.className = '';
+          window.onscroll = null;
           setTimeout(function () {
             $('body').animate({
               scrollTop: 0
-            }, 1000, 'easeOutQuad', function () {
-              $('#dummy').hide();
+            }, 1500, 'easeOutQuad', function () {
+              cleanup();
             });
           }, 500);
         };
         document.getElementById('dummy').scrollIntoView();
+        setTimeout(function () {
+          window.onscroll = function () {
+            theEndCallback = function () {};
+            // console.log('killing effect');
+            cleanup();
+          };
+        }, 10);
       } else {
-        $('#dummy').remove();
+        // console.log('not scrolling');
+        cleanup();
       }
     }, 100);
   });

@@ -2,7 +2,7 @@
 include('utils.php');
 ?>
 <!DOCTYPE html> 
-<html class="noJS">
+<html class="noJS dummy">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -10,7 +10,7 @@ include('utils.php');
   <title>Full Frontal 2012 - JavaScript Conference</title>
   
   <script>
-    document.documentElement.className = '';
+    document.documentElement.className = 'dummy';
   </script>
 
   <link rel="stylesheet" href="/fullfrontal.css">
