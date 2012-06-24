@@ -411,6 +411,9 @@ h2 {
 .workshop .sold-out {
   /*display: none;*/
 }
+.sold-out .button {
+  background-color: #c00;
+}
 .details img {
   display: none;
 }

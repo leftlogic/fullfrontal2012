@@ -1,13 +1,3 @@
-#Opera
-
-- Map loads at italy and zoomed out too far
-
-
-#Other
-
--sold out button shows as green at "mobile size"
-
-
 #Safari
 
 - Standard font's are not always being anti-aliased
@@ -36,3 +26,5 @@
 - IE8: small monty sponsors are appearing larger than full monty sponsors
 - workshop price and buy tickets button in workshop pullout has incorrecting vertial algnment compared with name heading
 - "HTML5, beyond markup" heading overflows too much at smaller widths
+- Opera: Map appears to be loading at the correct zoom level and locaton now
+- sold out button shows as green at "mobile size"
