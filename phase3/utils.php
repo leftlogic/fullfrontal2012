@@ -38,6 +38,8 @@ function renderTemplate($data, $template) {
 
   if (is_string($data)) {
     $data = convertMarkdown(json_decode(file_get_contents(ROOT . $data), true));
+  } else {
+    $data = convertMarkdown($data);
   }
 
   $render = $mustache->render($cache[$template], $data);

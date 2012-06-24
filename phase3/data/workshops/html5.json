@@ -1,15 +1,17 @@
 {
   "buylink": "https://leftlogic.stagehq.com/events/1517/booking/new",
-  "full-name" : "John Allsopp",
+  "name" : "John Allsopp",
   "image" : "speakers/john.png",
   "image-credit" : "Drew McLellan",
   "url-slug": "html5",
   "prev": "tooling",
   "next": "mobile",
   "sold-out": false,
-  "talk-title" : "HTML5, beyond markup",
-  "talk-description_md" : "HTML5 is much more than a bunch of new semantic markup. In this full day workshop, John Allsopp takes you beyond the header and footer, to focus on some of the powerful, but surprisingly easy to use, features of the next generation of HTML (and related W3C technologies): UI features, offline capabilities, rich media, geolocation, accelerometers, and many more hidden gems.\n\nJohn will also focus on important universal access issues like backwards compatibility, accessibility, device and browser support, to ensure your sites and apps work across the widest range of devices for as many people as possible.\n\nJust bring a laptop and the tools you use every day to work with HTML/CSS/JavaScript!",
-  "talk-audience_md" : "This workshop is for anyone who is ready to start building apps using web technologies. The core focus is the features of HTML5, particularly DOM APIs, and what they enable, not JavaScript. So, if you are comfortable with CSS and HTML, you will be fine with this workshop.\n\nHowever, we will cover aspects of the DOM, and there’ll be a little bit of JavaScript involved, but there’s no need to be a Ninja!",
+  "title" : "HTML5, beyond markup",
+  "abstract_md": "In this full day workshop, John Allsopp takes you beyond the header and footer, to focus on some of the powerful, but surprisingly easy to use, features of the next generation of HTML",
+  "description_md" : "HTML5 is much more than a bunch of new semantic markup. In this full day workshop, John Allsopp takes you beyond the header and footer, to focus on some of the powerful, but surprisingly easy to use, features of the next generation of HTML (and related W3C technologies): UI features, offline capabilities, rich media, geolocation, accelerometers, and many more hidden gems.\n\nJohn will also focus on important universal access issues like backwards compatibility, accessibility, device and browser support, to ensure your sites and apps work across the widest range of devices for as many people as possible.\n\nJust bring a laptop and the tools you use every day to work with HTML/CSS/JavaScript!",
+  "audience_md" : "This workshop is for anyone who is ready to start building apps using web technologies. The core focus is the features of HTML5, particularly DOM APIs, and what they enable, not JavaScript. So, if you are comfortable with CSS and HTML, you will be fine with this workshop.\n\nHowever, we will cover aspects of the DOM, and there’ll be a little bit of JavaScript involved, but there’s no need to be a Ninja!",
+  "note_md": "Includes a **FREE** conference pass",
   "learn" : [
     {
       "topic" : "In-depth Hands On",
@@ -44,6 +46,5 @@
       "price" : "£400",
       "ticket": true,
       "vat" : true
-  },
-  "note_md": "Includes a **FREE** conference pass"
+  }
 }

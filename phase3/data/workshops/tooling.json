@@ -1,14 +1,15 @@
 {
   "buylink": "https://leftlogic.stagehq.com/events/1518/booking/new",
-  "full-name" : "Jake Archibald, Rebecca Murphey, Remy Sharp",
+  "name" : "Jake Archibald, Rebecca Murphey, Remy Sharp",
   "image" : "speakers/tutorials.png",
   "url-slug": "tooling",
   "image-credit" : "",
   "prev": "mobile",
   "next": "html5",
-  "talk-title" : "Tooling Tutorials",
-  "talk-description_md" : "Did you ever want to go just beyond the 45 minute seminar on a particular technology? \"If only I had a bit of hands on time with such-and-such technology\".\n\nThis workshop is the pick and mix of workshops. Three trainers &mdash; Jake Archibald, Rebecca Murphey, Remy Sharp &mdash; will be running two hands on seminars each.\n\nEach session is 90 minutes and repeated in a format that will allow you to attend any four sessions throughout the day",
-  "talk-audience_md" : "Any frontend developer or designer that have dipped their toe in any of these technologies, or know *just* enough to get by - this is for you.\n\nMake sure to bring a laptop, your favourite browser and for some of the tutorials, get ready to open your terminal!",
+  "title" : "Tooling Tutorials",
+  "abstract_md": "This workshop is the pick and mix of workshops. Three trainers will each be running two hands on seminars convering: Git, RequireJS, debugging, SASS, test and automation, build process",
+  "description_md" : "Did you ever want to go just beyond the 45 minute seminar on a particular technology? \"If only I had a bit of hands on time with such-and-such technology\".\n\nThis workshop is the pick and mix of workshops. Three trainers &mdash; Jake Archibald, Rebecca Murphey, Remy Sharp &mdash; will be running two hands on seminars each.\n\nEach session is 90 minutes and repeated in a format that will allow you to attend any four sessions throughout the day",
+  "audience_md" : "Any frontend developer or designer that have dipped their toe in any of these technologies, or know *just* enough to get by - this is for you.\n\nMake sure to bring a laptop, your favourite browser and for some of the tutorials, get ready to open your terminal!",
   "learn" : [
     {
       "topic" : "Git 101",
