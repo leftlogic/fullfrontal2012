@@ -751,6 +751,10 @@ body.pullout {
   display: none;
 }
 
+.yeahpointlessiknow {
+  display: none;
+}
+
 @media screen and (max-width: 450px) {
   .lede .extra-br {
     /*display: inline;*/
@@ -777,6 +781,19 @@ body.pullout {
 @media screen and (min-width: 640px) {
   #dressing-gown.blur {
     -webkit-filter: blur(3px);
+  }
+
+  .yeahpointlessiknow {
+    display: block;
+  }
+
+  footer .date {
+    font-size: 128px;
+    line-height: 80px;
+  }
+
+  footer .date-twitter a {
+    font-size: 64px;
   }
 
   .wrapper > hr {

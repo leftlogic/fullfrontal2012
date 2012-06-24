@@ -106,7 +106,7 @@ include('utils.php');
     <?php require('includes/sponsors.php'); ?>
 
     <hr>
-    <article><h2><span>Coming soon</span></h2></article>
+    <article class="comingsoon yeahpointlessiknow"><h2><span>Coming soon</span></h2></article>
   </div></div>
 
   <footer>
