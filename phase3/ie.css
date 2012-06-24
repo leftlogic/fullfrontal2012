@@ -1,6 +1,7 @@
 body {
   min-width: 960px;
   margin: 0 auto;
+  background-image: url(/images/bg.png);
 }
 .yeahpointlessiknow {
   display: block;
