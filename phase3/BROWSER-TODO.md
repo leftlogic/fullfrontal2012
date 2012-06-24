@@ -2,7 +2,6 @@
 
 Based on very quickly put together IE stylesheet with a min-width of 960px
 
-- Images have black border that should £ symbol in buy tickets button and sponsor logos
 - "HTML5, beyond markup" heading overflows too much
 - map is too wide causing info columns to be too narrow wrapping plans names awkwardly
 - Buy Tickets pullout appears with left edge centered insead of center centered
@@ -13,7 +12,6 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 
 #IE9
 
-- Images have black border that should £ symbol in buy tickets button and sponsor logos
 - workshop price and buy tickets button in workshop pullout has incorrecting vertial algnment compared with name heading
 
 #Firefox
@@ -51,3 +49,4 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 
 - workshop pullout appears at top of page not at the current page position
 - Areas with custom font need line-height setting to appropiate values
+- Images have black border that should £ symbol in buy tickets button and sponsor logos
