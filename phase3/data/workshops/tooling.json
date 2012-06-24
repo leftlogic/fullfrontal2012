@@ -1,7 +1,8 @@
 {
+  "sold-out": false,
   "buylink": "https://leftlogic.stagehq.com/events/1518/booking/new",
   "name" : "Jake Archibald, Rebecca Murphey, Remy Sharp",
-  "image" : "speakers/tutorials.png",
+  "image" : "speakers/tooling.gif",
   "url-slug": "tooling",
   "image-credit" : "",
   "prev": "mobile",
