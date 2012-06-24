@@ -45,6 +45,7 @@ include('utils.php');
           <li><a href="#locations">Locations</a></li>
           <!-- <li><a href="#fringe">Fringe</a></li> -->
           <li><a href="#sponsors">Sponsors</a></li>
+          <li class="tickets"><a class="pullout" href="/tickets#tickets">Tickets</a></li>
         </ul>
 
         <span id="show-menu">Pull down to show menu&hellip;</span>

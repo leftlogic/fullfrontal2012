@@ -4,8 +4,8 @@
     <a class="button pullout-close" href="/#?"><span>Close</span></a>
 
     <div class="pullout-prev-next">
-      <a class="button button-white pullout-prev" href="#">Previous</a>
-      <a class="button button-white pullout-next" href="#">Next</a>
+      {{#prev}}<a class="button button-white pullout-prev" href="/workshop/{{prev}}#{{prev}}"><span>Previous</span></a>{{/prev}}
+      {{#next}}<a class="button button-white pullout-next" href="/workshop/{{next}}#{{next}}"><span>Next</span></a>{{/next}}
     </div>
   </div>
   

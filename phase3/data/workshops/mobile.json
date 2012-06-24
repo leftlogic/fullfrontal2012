@@ -4,6 +4,8 @@
   "image" : "speakers/remy.png",
   "image-credit" : "",
   "url-slug": "tooling",
+  "prev": "html5",
+  "next": "tooling",
   "talk-title" : "Mobile Web Apps",
   "talk-description_md" : "Building rich interactive web sites&hellip; dare I say web apps &mdash; is a reality with the smart phone browsers shipping with all the latest JavaScript and CSS technologies.\n\nThis day long workshop will be a mix of introducing the latest technology &amp; tricks on the mobile device and hands on practical exercises where you'll get to play with what you're learning.\n\nAlthough this workshop will have an iOS focus, a lot of the technology we will look at applies to most new WebKit based devises (Android, Playbook, etc) and smartphones running Opera Mobile.",
   "talk-audience_md" : null,

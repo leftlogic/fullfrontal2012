@@ -1,8 +1,8 @@
 # TODO - in priority
 
 - Correct links for all sponsors (confirmed: brandwatch, adobe)
-- Next / prev buttons on mobile popup
 - Cross browser testing
+- Test sold out
 
 - Update background image
 - Optimise images
@@ -14,6 +14,7 @@
 
 # Done
 
+- Next / prev buttons on mobile popup
 - Typo on Unofficial 
 - Workshop images clickable
 - Resize down to mobile should show speaker bio (now making all images show)
