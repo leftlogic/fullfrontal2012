@@ -1299,6 +1299,7 @@ body.pullout {
     color: #bfbfbf;
     font-weight: normal;
     font-size: 64px;
+    line-height: 64px;
   }
   header time {
     display: block;
