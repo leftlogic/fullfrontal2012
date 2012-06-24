@@ -33,16 +33,18 @@
 <?php
   require('../utils.php');
   $conferenceData = array(
-    'talk-title' => 'Day Conference',
+    'title' => 'Day Conference',
     'details' => array('price' => '£150'),
     'buylink' => 'https://leftlogic.stagehq.com/events/1505/booking/new',
-    'note_md' => "<p>Conference ticket only</p>"
+    'note_md' => "<p>Conference ticket only</p>",
+    'sold-out' => false
   );
 
   echo renderTemplate($conferenceData, '/pullouts/tickets.tmpl');
 
-  $workshopTickets = array('tooling', 'html5', 'mobile');
-  shuffle($workshopTickets);
+  $workshopTickets = array('html5', 'mobile');
+  // shuffle($workshopTickets);
+  array_push($workshopTickets, 'tooling');
 
   foreach ($workshopTickets as $workshop) {
     echo renderTemplate('/data/workshops/' . $workshop . '.json', '/pullouts/tickets.tmpl');
