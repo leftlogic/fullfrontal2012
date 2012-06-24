@@ -1,7 +1,7 @@
 /* from min-width: 640px */
 
 body {
-  max-width: 960px;
+  min-width: 960px;
   margin: 0 auto;
 }
 
@@ -190,7 +190,7 @@ body {
 }
 .sponsor {
   float: left;
-  width: 47%;
+  width: 22%;
   margin: 0 1.5% 60px 1.5%;
 
   -moz-box-sizing: border-box; 
