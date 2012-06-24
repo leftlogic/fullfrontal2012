@@ -1453,3 +1453,183 @@ body.pullout {
     margin: 0 1.5% 60px 1.5%;
   }
 }
+
+#dummy header {
+  position: relative;
+  font-family: Xenon;
+  background: #fff;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  z-index: 1;
+  color: #000;
+}
+#dummy header .ponch,
+#dummy header .chips {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+#dummy header .ponch {
+  background-image: url(/images/ledge.png);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  left: 55%;
+
+}
+#dummy header .chips {
+  background-image: url(/images/chip.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  right: 45%;
+}
+#dummy header .wrapper {
+  max-width: 778px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#dummy header p {
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 10px;
+}
+#dummy header .logo {
+  float: left;
+  margin-top: 35px;
+  margin: 35px 0 0 0;
+}
+#dummy #countdown {
+  display: block;
+  float: right;
+  position: relative;
+  overflow: hidden;
+  color: #bfbfbf;
+}
+#dummy #countdown div {
+  float: left;
+  max-width: 120px;
+  margin-right: 40px;
+}
+#dummy #countdown .secs{
+  margin-right: 0;
+}
+#dummy #countdown .value {
+  display: block;
+  margin-bottom: 7px; /* Should be 10px - logo a little too small */
+  padding-left: 4px;
+  font-size: 128px;
+  line-height: 85px;
+  text-align: center;
+}
+#dummy #countdown .label {
+  display: block;
+  font-size: 64px;
+  line-height: 39px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#dummy .tabs {
+  position: relative;
+  padding-top: 241px;
+}
+
+#dummy .tab {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  display: block;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center -170px;
+  z-index: 10;
+}
+#dummy .tab-sponsor .tab {
+  background-image: url(/images/dummy/t-sponsor.png);
+  right: 0;
+}
+#dummy .tab-talk .tab {
+  background-image: url(/images/dummy/t-talk.png);
+  left: 35%;
+}
+.tab-register .tab {
+  background-image: url(/images/dummy/t-register.png);
+  left: 0;
+}
+
+#dummy .tab h2 {
+  font-family: Xenon;
+  -webkit-font-smoothing: none;
+  -moz-font-smoothing: none;
+  -o-font-smoothing: none;
+  font-smoothing: none;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  padding: 15px 10px;
+  margin-top: 170px;
+  margin-bottom: 0;
+  line-height: 20px;
+  background-color: #00af3b;
+  border: 2px solid #000;
+  color: #87d78b;
+}
+
+#dummy .tab-sponsor .tab h2 br {
+  display: none;
+}
+
+#dummy .tab:hover {
+  cursor: pointer;
+  background-position: center top;
+}
+#dummy .tab:hover h2 {
+  color: #fff;
+}
+
+#dummy .tab-content .wrapper {
+  background: #fff;
+  border: 2px solid #000;
+  color: #000;
+  margin-top: -19px;
+  padding: 35px 45px;
+  font-size: 25px;
+}
+#dummy .tab-content .tab-hidden {
+  display: none;
+}
+#dummy .tab-content .wrapper a {
+  font-weight: normal;
+}
+#dummy .tab-content .wrapper a:hover {
+  text-decoration: underline;
+  color: #00af3b;
+}
+
+#dummy .main {
+  background-image: url(/images/grad.png);
+  background-repeat: repeat-x;
+  padding-top: 85px;
+}
+#dummy .main .wrapper {
+  max-width: 960px;
+  margin: 0 auto;  
+}
+
+
+#dummy {
+  padding-bottom: 2000px;
+}
+
+body {
+  opacity: 0;
+}
+
+.nojs body,
+body.ready {
+  opacity: 1;
+}
