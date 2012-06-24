@@ -109,7 +109,7 @@ window.onhashchange = function () {
       $body.append($pullout);
 
       $pullout.css({
-        top: document.body.scrollTop + 50
+        top: $(window).scrollTop() + 50
       });
     });
   }

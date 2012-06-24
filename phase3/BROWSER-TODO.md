@@ -45,6 +45,10 @@ Based on very quickly put together IE stylesheet with a min-width of 960px
 
 - JS Error: 'pageYOffset' is undefined
 - Overlay on speakers shows by default (without hover) and background is solid black so pictures don't show through
-- workshop pullout appears at top of page not at the current page position
 - semi-transparent overlay does not appear behind pullout
 - bios not accessible - hover only
+
+
+# Done
+
+- workshop pullout appears at top of page not at the current page position
