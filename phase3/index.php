@@ -145,6 +145,7 @@ setTimeout(function () {
     if (!matchMedia('@media screen and (min-width: 820px)')) {
       document.getElementById('show-menu').scrollIntoView();
     } else {
+      alert('no scroll');
     }
   }
 }, 100);</script>

@@ -1643,3 +1643,87 @@ body.dummy {
 body.ready {
   opacity: 1;
 }
+
+@media screen and (max-width: 870px) {
+  #dummy .lede br {
+    display: none;
+  }
+}
+@media screen and (max-width: 970px) {
+  #dummy .lede,
+  #dummy .tabs {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  #dummy header .logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  #dummy #countdown {
+    float: none;
+    margin: 0 auto;
+    width: 580px;
+  }
+  #dummy #countdown div {
+    margin: 14px;
+  }
+}
+
+@media screen and (min-width: 580px) and (max-width: 759px) {
+  #dummy .tab-sponsor .tab h2 br {
+    display: inline;
+  }
+  #dummy .tab-content .wrapper {
+    margin-top: 1px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #dummy header {
+    padding-bottom: 34px;
+  }
+  #dummy header .logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  #dummy #countdown {
+    float: none;
+    margin: 0 auto;
+    width: 320px;
+  }
+  #dummy #countdown div {
+    margin: 6px;
+  }
+  #dummy #countdown .value {
+    font-size: 64px;
+    line-height: 28px;
+  }
+  #dummy #countdown .label {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  #dummy .main {
+    padding-top: 55px;
+  }
+  #dummy .lede {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  #dummy .tabs {
+    padding-top: 0;
+    margin-top: 40px;
+  }
+  #dummy .tab {
+    position: static;
+    width: 100%;
+    display: block;
+    background-image: none;
+  }
+}

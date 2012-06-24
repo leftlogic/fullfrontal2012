@@ -1,4 +1,6 @@
-if (document.querySelector) (function () { 
+var mobile = (!matchMedia('@media screen and (min-width: 820px)'));
+
+if (document.querySelector && !mobile) (function () { 
   //https://github.com/csnover/js-iso8601/blob/master/iso8601.js
   var noIsoDateParse = function (date) {
     var timestamp, struct, minutesOffset = 0, numericKeys = [ 1, 4, 5, 6, 7, 10, 11 ];
@@ -113,6 +115,11 @@ if (document.querySelector) (function () {
     document.documentElement.className = '';
     $('#dummy').hide();
     window.onscroll = null;
+    localStorage.seenit = 1;
+  }
+
+  if (localStorage.seenit) {
+    cleanup();
   }
 
 
