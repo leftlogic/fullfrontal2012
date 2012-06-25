@@ -39,6 +39,7 @@
 
   <a class="sponsor small" href="http://www.bazaarvoice.com/londondev"><img src="/images/sponsors/bazaarvoice.png" alt="Bazaar Voice"></a>
   <a class="sponsor small" href="http://dharmafly.com/"><img src="/images/sponsors/dharmafly.png" alt="Dharmafly"></a>
+  <a class="sponsor small" href="http://p.ota.to/"><img src="/images/sponsors/potato.png" alt="Potato London"></a>
 
 
 </article>
