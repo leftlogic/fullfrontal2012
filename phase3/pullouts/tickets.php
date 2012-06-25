@@ -40,6 +40,7 @@
     'sold-out' => true
   );
 
+  echo renderTemplate($conferenceData, '/pullouts/tickets.tmpl');
 
   $workshopTickets = array('html5', 'tooling', 'mobile');
   // shuffle($workshopTickets);
@@ -47,7 +48,6 @@
   foreach ($workshopTickets as $workshop) {
     echo renderTemplate('/data/workshops/' . $workshop . '.json', '/pullouts/tickets.tmpl');
   }
-  echo renderTemplate($conferenceData, '/pullouts/tickets.tmpl');
 
 ?>
 
