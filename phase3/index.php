@@ -11,9 +11,11 @@ if ($now < $turnThatShitOff) {
   $dummy = true;
 }
 
-if ($now < $launch) {
-  include('../phase2/index.php');
-  exit;
+$dummy = false;
+
+if ($now < $launch3) {
+  // include('../phase2/index.php');
+  // exit;
 }
 ?>
 <!DOCTYPE html> 
