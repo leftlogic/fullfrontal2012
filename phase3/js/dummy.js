@@ -118,9 +118,9 @@ if (document.querySelector && !mobile) (function () {
     localStorage.seenit = 1;
   }
 
-  if (localStorage.seenit) {
-    cleanup();
-  }
+  // if (localStorage.seenit) {
+    // cleanup();
+  // }
 
 
   $(window).load(function () {

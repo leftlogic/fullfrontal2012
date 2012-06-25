@@ -4,14 +4,14 @@ date_default_timezone_set('Europe/London');
 $now = new DateTime('now');
 $launch = new DateTime('09:55:00 2012-06-25');
 
-$turnThatShitOff = new DateTime('13:00:00 2012-06-25');
+// $turnThatShitOff = new DateTime('13:00:00 2012-06-25');
 
 $dummy = false;
-if ($now < $turnThatShitOff) {
-  $dummy = true;
-}
+// if ($now < $turnThatShitOff) {
+//   $dummy = true;
+// }
 
-$dummy = false;
+$dummy = isset($_GET['reveal']);
 
 if ($now < $launch3) {
   // include('../phase2/index.php');
