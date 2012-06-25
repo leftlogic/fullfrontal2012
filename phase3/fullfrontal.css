@@ -418,7 +418,8 @@ h2 {
   display: none;
 }
 .workshop p,
-.fringe p {
+.fringe p,
+.speaker p {
   margin: 20px 0;
   font-size: 15px;
   color: #c0c0c0;
