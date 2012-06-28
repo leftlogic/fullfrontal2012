@@ -1,5 +1,5 @@
 {
-  "sold-out": false,
+  "sold-out": true,
   "buylink": "https://leftlogic.stagehq.com/events/1516/booking/new",
   "name" : "Remy Sharp",
   "image" : "speakers/remy.png",
