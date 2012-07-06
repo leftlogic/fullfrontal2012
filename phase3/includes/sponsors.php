@@ -28,14 +28,14 @@
   </div>
 
 
-  <h3>Half Monty Sponsors &mdash; <a href="/sponsorship.html">Join our sponsors</a></h3>
+  <h3>Half Monty Sponsors</h3>
 
   <a class="sponsor half" href="http://google.com"><img src="/images/sponsors/google.png" alt="Google"></a>
   <a class="sponsor half" href="http://mozilla.org"><img src="/images/sponsors/mozilla.png" alt="Mozilla Developer Network"></a>
   <a class="sponsor half" href="http://www.brandwatch.com/2012/06/brandwatch-is-looking-for-a-senior-javascript-developer/"><img src="/images/sponsors/brandwatch.png" alt="Brandwatch"></a>
 
 
-  <h3>Small Monty Sponsors &mdash; <a href="/sponsorship.html">Join our sponsors</a></h3>
+  <h3>Small Monty Sponsors</h3>
 
   <a class="sponsor small" href="http://www.bazaarvoice.com/londondev"><img src="/images/sponsors/bazaarvoice.png" alt="Bazaar Voice"></a>
   <a class="sponsor small" href="http://dharmafly.com/"><img src="/images/sponsors/dharmafly.png" alt="Dharmafly"></a>
