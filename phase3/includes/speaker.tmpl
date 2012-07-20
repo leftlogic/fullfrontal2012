@@ -1,11 +1,12 @@
 {{#speakers}}
 <section class="speaker">
   <h3>{{name}} <a href="https://twitter.com/{{twitter-handle}}" class="twitter">{{twitter-handle}}</a></h3>
-  <div class="details">
+  <div class="details pullout" {{#url-slug}}data-href="/speaker/{{url-slug}}#{{url-slug}}" data-hash="{{url-slug}}"{{/url-slug}}>
     <img title="{{image-credit}}" src="/images/speakers/{{image}}">
     <div class="blurb">
       {{{blurb_md}}
     </div>
   </div>
+
 </section>
 {{/speakers}}

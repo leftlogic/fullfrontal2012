@@ -15,7 +15,7 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^workshop/(.*)$ /pullouts/pullout.php?type=workshop&id=$1 [QSA,L]
-RewriteRule ^speaker/(.*)$ /pullouts/pullouts.php?type=speaker&id=$1 [QSA,L]
+RewriteRule ^speaker/(.*)$ /pullouts/pullout.php?type=speaker&id=$1 [QSA,L]
 RewriteRule ^tickets$ /pullouts/tickets.php [QSA,L]
 
 

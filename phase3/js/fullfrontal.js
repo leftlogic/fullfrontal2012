@@ -27,6 +27,152 @@ window.matchMedia = window.matchMedia || (function(doc, undefined){
 
 }(document));
 
+
+function displayPullout(e) {
+  // This function could be a lot smarter, caching pullouts instead of throwing them away for example
+  if (window.innerWidth < 640 || e.metaKey || e.ctrlKey || e.shiftKey) {
+    return true;
+  } else {
+    if (this.hash) {
+      window.location.hash = this.hash;  
+    } else {
+      if (e.target.nodeName == "A") return true;
+      window.location.hash = $(this).data('hash');
+    }
+    
+    return false;
+  }
+}
+
+var $tint = $('<div>').css({
+      position: 'fixed',
+      top: '0',
+      bottom: '0',
+      left: '0',
+      right: '0',
+      'background-color': 'rgba(0,0,0,0.75)',
+      'z-index': 50
+    }).click(function () { window.location.hash = ''; return false; }),
+    $body = $('body'),
+    re = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
+    // globals for the map
+    iconURL, smallIcon, largeIcon, map, pV, sV, bounds, zIndex;
+
+// router
+window.onhashchange = function () {
+  // make sure this is a pullout
+  $('#pullout-wrapper').remove();
+  $tint.remove();
+  var $link = $('[href$="' + window.location.hash + '"]');
+  if ($link.length == 0) {
+    $link = $('[data-href$="' + window.location.hash + '"]');
+  }
+
+  if ($link.hasClass('pullout')) {
+    // Remove one if it's already open
+
+    $.get($link.attr('href') || $link.data('href'), function(data){
+      //gown.addClass('blur');
+      var $div = $('<div>').append(data.replace(re, '')),
+          $pullout = $div.find('#pullout').wrapAll('<div id="pullout-wrapper">').parent();
+      $body.append($tint);
+      $body.append($pullout);
+
+      $pullout.css({
+        top: $(window).scrollTop() + 50
+      });
+    });
+  }
+};
+
+$(document).delegate('.pullout', 'click', displayPullout);
+$(document).delegate('[data-href]', 'click', displayPullout);
+
+
+//https://github.com/csnover/js-iso8601/blob/master/iso8601.js
+var noIsoDateParse = function (date) {
+  var timestamp, struct, minutesOffset = 0, numericKeys = [ 1, 4, 5, 6, 7, 10, 11 ];
+  if ((struct = /^(\d{4}|[+\-]\d{6})(?:-(\d{2})(?:-(\d{2}))?)?(?:T(\d{2}):(\d{2})(?::(\d{2})(?:\.(\d{3}))?)?(?:(Z)|([+\-])(\d{2})(?::(\d{2}))?)?)?$/.exec(date))) {
+      for (var i = 0, k; (k = numericKeys[i]); ++i) {
+          struct[k] = +struct[k] || 0;
+      }
+      struct[2] = (+struct[2] || 1) - 1;
+      struct[3] = +struct[3] || 1;
+      if (struct[8] !== 'Z' && struct[9] !== undefined) {
+          minutesOffset = struct[10] * 60 + struct[11];
+          if (struct[9] === '+') {
+              minutesOffset = 0 - minutesOffset;
+          }
+      }
+      timestamp = Date.UTC(struct[1], struct[2], struct[3], struct[4], struct[5] + minutesOffset, struct[6], struct[7]);
+  }
+  else {
+      timestamp = origParse ? origParse(date) : NaN;
+  }
+  return timestamp;
+};
+
+var dirty;
+var updateSchedule = function (now) {
+  if(now >= new Date('2012-11-09T17:35') && dirty) {
+    $('.finished').removeClass('finished');
+    $('.current').removeClass('current');
+    $('.time').show();
+    $('.done').hide();
+    return;
+  }
+  if(now < new Date('2012-11-09T08:00') || now >= new Date('2012-11-09T17:35')) {
+    return;
+  }
+
+  dirty = true;
+
+  var $allTalks = $('#schedule').find('.vevent').each(function () {
+    var $this = $(this),
+        start = $this.find('.dtstart').attr('datetime'),
+        end = $this.find('.dtend').attr('datetime'),
+        stime = new Date(start),
+        etime = new Date(end);
+    
+    if (stime == 'NaN') {
+      stime = noIsoDateParse(start);
+    }
+    if (etime == 'NaN') {
+      etime = noIsoDateParse(end);
+    }
+
+    if (etime < now) {
+      $this.addClass('finished').find('.time').hide();
+      $this.addClass('finished').find('.done').show();
+    }
+    if (stime < now && etime > now) {
+      $this.addClass('now');
+    }
+    if ( (etime - now) < (1000 * 60 * 15) ) {
+      $this.removeClass('talk current');
+    }
+  }).filter('.talk');
+
+  $allTalks.removeClass('current');
+  var $next = $allTalks.eq($('.talk').filter('.finished').length).addClass('current');
+
+  $('.next').hide();
+  if (!$next.hasClass('now')) {
+    $next.find('.time').find('.next').show();
+  }
+};
+
+var debugSchedule = function () {
+  var i = new Date('2012-11-09T08:00'), j = (1000 * 60 * 8);
+  setInterval(function () {
+    updateSchedule(i);
+    console.log(i);
+    i = new Date(i.getTime() + j);
+  }, 500);
+};
+
+
+/* Map Stuff */
 (function () {
 
 function genMarkers(venues, icon) {
@@ -96,55 +242,6 @@ function newHoverIconAction(el, latlng, marker, standardIcon, hoverIcon) {
     }
   };
 }
-
-function displayPullout(e) {
-  // This function could be a lot smarter, caching pullouts instead of throwing them away for example
-  if (window.innerWidth < 640 || e.metaKey || e.ctrlKey || e.shiftKey) {
-    return true;
-  } else {
-    window.location.hash = this.hash;
-    return false;
-  }
-}
-
-var $tint = $('<div>').css({
-      position: 'fixed',
-      top: '0',
-      bottom: '0',
-      left: '0',
-      right: '0',
-      'background-color': 'rgba(0,0,0,0.75)',
-      'z-index': 50
-    }).click(function () { window.location.hash = ''; return false; }),
-    $body = $('body'),
-    re = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
-    // globals for the map
-    iconURL, smallIcon, largeIcon, map, pV, sV, bounds, zIndex;
-
-// router
-window.onhashchange = function () {
-  // make sure this is a pullout
-  $('#pullout-wrapper').remove();
-  $tint.remove();
-  var $link = $('a[href$="' + window.location.hash + '"]');
-  if ($link.hasClass('pullout')) {
-    // Remove one if it's already open
-
-    $.get($link.attr('href'), function(data){
-      //gown.addClass('blur');
-      var $div = $('<div>').append(data.replace(re, '')),
-          $pullout = $div.find('#pullout').wrapAll('<div id="pullout-wrapper">').parent();
-      $body.append($tint);
-      $body.append($pullout);
-
-      $pullout.css({
-        top: $(window).scrollTop() + 50
-      });
-    });
-  }
-};
-
-$(document).delegate('.pullout', 'click', displayPullout);
 
 // do the map after the page has loaded
 $(window).load(function () {

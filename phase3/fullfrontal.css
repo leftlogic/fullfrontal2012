@@ -336,7 +336,7 @@ h2 {
   margin-bottom: 30px;
   font-family: Xenon;
   font-size: 32px;
-  text-align: center;
+  text-align: left;
 
   -webkit-font-smoothing: none;
   -moz-font-smoothing: none;
@@ -346,10 +346,18 @@ h2 {
 .schedule-heading {
   display: none;
 }
-.schedule time {
+.schedule .time,
+.schedule .done {
   display: block;
   font-size: 16px;
   margin-bottom: 10px;
+}
+.schedule .done,
+.schedule .next {
+  display: none;
+}
+.schedule .summary {
+  line-height: 28px;
 }
 
 .schedule .finished,
@@ -363,9 +371,8 @@ h2 {
 .schedule .current {
   background: #0eaf16;
   color: #fff;
-  margin: 20px -50%;
-  padding: 10px;
-  width: 200%;
+  margin: 20px -20px;
+  padding: 10px 20px;
 }
 .schedule .current a {
   color: #fff;
@@ -564,6 +571,10 @@ body.pullout {
   -o-font-smoothing: none;
   font-smoothing: none;
 }
+#pullout h1 .twitter {
+  font-size: 16px;
+  line-height: 16px; 
+}
 #pullout hr {
   border: none;
   border-top: 2px solid #e5e5e5;
@@ -689,6 +700,7 @@ body.pullout {
 #pullout .talk-download {
   padding-left: 40px;
   line-height: 16px;
+  margin-right: 20px;
 }
 #pullout .talk-listen {
   background-image: url('/images/listen.gif');
@@ -871,12 +883,20 @@ body.pullout {
     display: inline;
   }
 
-  .schedule {
+  .schedule-half {
     float: left;
-    width: 25%;
+    width: 50%;
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
     box-sizing: border-box;
+  }
+  .schedule {
+    float: left;
+    width: 100%;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+    padding-right: 20px;
   }
   .schedule .schedule-heading {
     display: list-item;
@@ -892,8 +912,9 @@ body.pullout {
   }
   .schedule .current {
     width: auto;
-    margin: 0;
+    margin: -10px;
     margin-bottom: 30px;
+    padding: 10px;
   }
 
   .speaker,
@@ -908,6 +929,9 @@ body.pullout {
   .workshop .details {
     position: relative;
     display: block;
+  }
+  [data-href] {
+    cursor: pointer;
   }
   .speaker img,
   .workshop .details img {
@@ -1112,6 +1136,10 @@ body.pullout {
     float: left;
     margin: 10px 0 20px 0;
   }
+  #pullout h1 .twitter {
+  font-size: 32px;
+  line-height: 32px; 
+}
   #pullout h2 {
     margin-bottom: 30px;
   }
@@ -1176,6 +1204,7 @@ body.pullout {
   .pullout #pullout .pullout-close {
     top: 0;
     right: 0;
+    display: none;
   }
 
   #pullout .pullout-close span {
@@ -1353,7 +1382,6 @@ body.pullout {
     width: 20%;
     text-align: center;
   }
-
 }
 
 @media screen and (min-width: 960px) {
@@ -1369,7 +1397,6 @@ body.pullout {
   #locations span.bullet {
     display: inline;
   }
-
 
   .workshop > h3,
   .workshop > div {
@@ -1404,6 +1431,9 @@ body.pullout {
   .sponsor {
     width: 30%;
     margin: 0 1.5% 60px 1.5%;
+  }
+  .schedule {
+    width: 50%;
   }
 }
 
