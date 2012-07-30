@@ -3,31 +3,30 @@
   "buylink": "https://leftlogic.stagehq.com/events/1518/booking/new",
   "name" : "Jake Archibald, Rebecca Murphey, Remy Sharp",
   "short-name": "Archibald, Murphey, Sharp",
-  "image" : "speakers/tooling.gif",
   "url-slug": "tooling",
   "image-credit" : "",
   "prev": "mobile",
   "next": "html5",
   "title" : "Tooling Tutorials",
   "abstract_md": "This workshop is the pick and mix of workshops. Three trainers will each be running two hands on seminars convering: Git, RequireJS, debugging, SASS, test and automation, build process",
-  "description_md" : "Did you ever want to go just beyond the 45 minute seminar on a particular technology? \"If only I had a bit of hands on time with such-and-such technology\".\n\nThis workshop is the pick and mix of workshops. Three trainers &mdash; Jake Archibald, Rebecca Murphey, Remy Sharp &mdash; will be running two hands on seminars each.\n\nEach session is 90 minutes and repeated in a format that will allow you to attend any four sessions throughout the day",
+  "description_md" : "Did you ever want to go just beyond the 45 minute seminar on a particular technology? \"If only I had a bit of hands on time with such-and-such technology\".\n\nThis workshop is the pick and mix of workshops. Three trainers &mdash; Jake Archibald, Rebecca Murphey, Remy Sharp &mdash; will be running two hands on seminars each.\n\nEach session is 90 minutes and repeated in a format that will allow you to attend any four sessions throughout the day.\n\n### Modularizing your JavaScript with RequireJS <small>&mdash; Rebecca Murphey</small>\n\nLearn how to use the [RequireJS](http://requirejs.org/) library and optimizer to modularize your JavaScript and create production-ready builds. In this session, we'll walk through the process of incorporating RequireJS into an existing project; along the way, we'll see what makes a module, how a module can express dependencies using the AMD format, and how to configure a project so that production-ready builds are just a simple command away.\n\n### Writing Testable JavaScript <small>&mdash; Rebecca Murphey</small>\n\nYou know you should be writing tests for your JavaScript, but if you're like [many developers](http://storify.com/rmurphey/what-s-making-it-hard-to-get-started-with-js-testi), you don't know where to start. In this session, we'll take some code written in the \"traditional\" jQuery style, write tests expressing what the code should be doing, and then refactor the code so it's actually testable. In the process, we'll explore [QUnit](http://docs.jquery.com/Qunit) for testing, and [Grunt](https://github.com/cowboy/grunt) for automating the testing process.\n\n### Massive git <small>&mdash; Jake Archibald</small>\n\nIn this tutorial we'll simulate a multi-contributor git project, encountering all the little gotchas, discovering shortcuts, learning best practice and how deal with not-so-best practice. We'll start with basic pushing/pulling and quickly move onto branching workflows, history rewriting and disaster recovery.\n\n### It's your Sass on the line <small>&mdash; Jake Archibald</small>\n\nSass & Compass add some much needed features to CSS such as variables, conditionals, functions and mixins. In this tutorial we'll go through practical applications of Sass's current & future features along with how it fits into popular CSS methodologies. We'll also cover how Sass generates CSS so you can write Sass while keeping the output lean and easy to debug.\n\n### Debugging <small>&mdash; Remy Sharp</small>\n\nWe've come a long way since the days of `alert` debugging, but how well do you know all the built in developer tools that come with the browsers? This tutorial will show you how to step debug your JavaScript, add breakpoints in your code either on specific conditions or even when you don't know where the code is! We'll look at how these tools can help optimise your code, and finally how you can debug mobile devices.\n\n### Build Process <small>&mdash; Remy Sharp</small>\n\nDid you ever release a site and tell yourself you really must minify that code? What about running test and reports? It's such a hassle, so a lot of us just skip that step. As it happens, today it's much easier. There are a number of tools that will help automate all these steps. We'll specifically look at tools like [Grunt](https://github.com/cowboy/grunt) and see how we can write a few simple scripts and suddenly our site is automatically rolling all our scripts in to a single include, automatically compressed and automatically taking care of itself.",
   "audience_md" : "Any frontend developer or designer that have dipped their toe in any of these technologies, or know *just* enough to get by - this is for you.\n\nMake sure to bring a laptop, your favourite browser and for some of the tutorials, get ready to open your terminal!",
   "learn" : [
     {
-      "topic" : "Git 101",
-      "desc" : "Take full control of revision control"
-    },{
       "topic" : "RequireJS",
       "desc" : "Managing dependancies"
     },{
-      "topic" : "Debugging",
-      "desc" : "In the browser and mobile"
+      "topic" : "Testing",
+      "desc" : "How to write cases and automate your testing"
+    },{
+      "topic" : "Git",
+      "desc" : "Take full control of revision control"
     },{
       "topic" : "SASS",
       "desc" : "The CSS preprocessor"
     },{
-      "topic" : "Testing",
-      "desc" : "How to write cases and automate your testing"
+      "topic" : "Debugging",
+      "desc" : "In the browser and mobile"
     },{
       "topic" : "Build Process",
       "desc" : "Automating the final tasks before deploying"
