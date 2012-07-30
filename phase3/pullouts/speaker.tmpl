@@ -4,31 +4,31 @@
     <a class="button pullout-close" href="/#?"><span>Close</span></a>
 
     <div class="pullout-prev-next">
-      <a class="button button-white pullout-prev" href="#">Previous</a>
-      <a class="button button-white pullout-next" href="#">Next</a>
+      {{#prev}}<a class="button button-white pullout-prev" href="/speaker/{{prev}}#{{prev}}"><span>Previous</span></a>{{/prev}}
+      {{#next}}<a class="button button-white pullout-next" href="/speaker/{{next}}#{{next}}"><span>Next</span></a>{{/next}}
     </div>
   </div>
   
-  <h1>{{full-name}}</h1>
+  <h1>{{name}} <a href="https://twitter.com/{{twitter-handle}}" class="twitter">{{twitter-handle}}</a></h1>
 
   <hr>
 
-  <h2>{{talk-title}}</h2>
+  <h2>{{title}}</h2>
 
   {{#image}}
-    <img class="speaker-image" src="/images/{{image}}" title="{{image-credit}}>
+    <img class="speaker-image" title="{{image-credit}}" src="/images/speakers/{{image}}">
   {{/image}}
 
-  {{{talk-description}}}
+  {{{description_md}}}
 
   <div class="talk-buttons">
-  {{#talk-audio-url}}
+  {{#audio-url}}
     <a class="button talk-listen" href="{{talk-audio-url}}">Listen to {{short-name}}'s session</a>
-  {{/talk-audio-url}}
+  {{/audio-url}}
 
-  {{#talk-slides-url}}
+  {{#slides-url}}
     <a class="button talk-download" href="{{talk-slides-url}}">Download {{short-name}}'s slides</a>
-  {{/talk-slides-url}}
+  {{/slides-url}}
   </div>
 
 </article>

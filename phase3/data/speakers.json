@@ -29,17 +29,33 @@
     "image" : "john.png",
     "image-credit": "",
     "blurb_md" : "[John](http://johnfallsopp.com/) has been doing things to the web since before many of you were born. This is not necessarily a good thing."
-  }, {
+  },{
     "name": "Andrew Betts",
+    "short-name" : "Andrew",
     "twitter-handle": "triblondon",
     "image": "andrew.png",
     "image-credit": "",
-    "blurb_md": "Founder of [Assanka](http://assanka.net), the company acquired earlier this year by the FT, Andrew now heads up FT Labs and the team that builds some of the world's finest HTML5 web apps"
+    "blurb_md": "Founder of [Assanka](http://assanka.net), the company acquired earlier this year by the FT, Andrew now heads up FT Labs and the team that builds some of the world's finest HTML5 web apps",
+    "url-slug": "andrew",
+    "title" : "Offline Rules: using new browser technologies to make sites work offline and be more awesome online",
+    "description_md" : "In the last couple of years a deluge of new offline storage technologies have appeared.  I'll explain why they are all excellent and rubbish at the same time, why you need to use all of them, and walk through the techniques to consider when building a web application that can load and function with no network connectivity. But making use of client side storage is not just necessary to make an app that works offline - it can also hugely improve the user experience of your site when the user does have connectivity as well. The examples will feature real-life code from our FT and the Economist applications, so you know that the techniques here are applicable to large, complex problems and not just contrived examples.",
+    "audio-url" : "/bar",
+    "slides-url" : "/bar",
+    "prev" : "james",
+    "next" : "james"
   },{
-      "name": "James Pearce",
-      "twitter-handle": "jamespearce",
-      "image": "james.png",
-      "image-credit": "Robert Nyman",
-      "blurb_md": "Head of Mobile Developer Relations at Facebook, a developer and writer with a special passion for mobile and exploring its untapped potential."
-      }]
+    "name": "James Pearce",
+    "short-name" : "James",
+    "twitter-handle": "jamespearce",
+    "image": "james.png",
+    "image-credit": "Robert Nyman",
+    "blurb_md": "Head of Mobile Developer Relations at Facebook, a developer and writer with a special passion for mobile and exploring its untapped potential.",
+    "url-slug": "james",
+    "title" : "Awesome DUMMY worksop",
+    "description_md" : "In the last couple of years a deluge of new offline storage technologies have appeared.  I'll explain why they are all excellent and rubbish at the same time, why you need to use all of them, and walk through the techniques to consider when building a web application that can load and function with no network connectivity. But making use of client side storage is not just necessary to make an app that works offline - it can also hugely improve the user experience of your site when the user does have connectivity as well. The examples will feature real-life code from our FT and the Economist applications, so you know that the techniques here are applicable to large, complex problems and not just contrived examples.",
+    "audio-url" : "/bar",
+    "slides-url" : "/bar",
+    "prev" : "andrew",
+    "next" : "andrew"
+  }]
 }

@@ -90,7 +90,7 @@ Cheers,
       <nav>
         <ul>
           <li><a href="#speakers">Speakers</a></li>
-          <!-- <li><a href="#schedule">Schedule</a></li> -->
+          <li><a href="#schedule">Schedule</a></li>
           <li><a href="#workshops">Workshops</a></li>
           <li><a href="#locations">Locations</a></li>
           <!-- <li><a href="#fringe">Fringe</a></li> -->
@@ -136,7 +136,9 @@ Cheers,
 
     <hr>
 
-    <?php //require('includes/schedule.php'); <hr> ?>
+    <?php require('includes/schedule.php');  ?>
+
+    <hr>
 
     <?php require('includes/speakers.php'); ?>
 

@@ -29,7 +29,19 @@
   $id = $_GET['id']; // id=html5
   $type = $_GET['type']; // type=workshop
 
-  echo renderTemplate('/data/' . $type . 's/' . $id . '.json', '/pullouts/' . $type . '.tmpl');
+  if ($type == "speaker") {
+    $speakers = json_decode(file_get_contents(ROOT . '/data/speakers.json'));
+
+    foreach ($speakers->speakers as $speaker) {
+      if ($id == $speaker->{'url-slug'}) {
+        echo renderTemplate($speaker, '/pullouts/speaker.tmpl');
+        break;
+      }  
+    }    
+  } else {
+    echo renderTemplate('/data/' . $type . 's/' . $id . '.json', '/pullouts/' . $type . '.tmpl');
+  }
+  
 ?>
 
   <script>
