@@ -279,7 +279,8 @@ footer .left-logic:active {
 }
 
 .wrapper > article > *,
-.lede {
+.lede,
+article .sponsor {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -1092,6 +1093,14 @@ body.pullout {
     margin-bottom: -999999px !important;
   }
 
+  .half-monty-wrapper,
+  .small-monty-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*width: 50%;*/
+    /*float: left;*/
+  }
 
   #pullout { 
     width: 80%;

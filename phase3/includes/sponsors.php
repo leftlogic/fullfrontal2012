@@ -27,20 +27,22 @@
     </section>
   </div>
 
+  <div class="half-monty-wrapper sponsor-wrapper">
+    <h3>Half Monty Sponsors</h3>
 
-  <h3>Half Monty Sponsors</h3>
+    <a class="sponsor half" href="http://google.com"><img src="/images/sponsors/google.png" alt="Google"></a>
+    <a class="sponsor half" href="http://mozilla.org"><img src="/images/sponsors/mozilla.png" alt="Mozilla Developer Network"></a>
+    <a class="sponsor half" href="http://www.brandwatch.com/2012/06/brandwatch-is-looking-for-a-senior-javascript-developer/"><img src="/images/sponsors/brandwatch.png" alt="Brandwatch"></a>
+    <a class="sponsor half" href="http://www.blackberry.com/developer"><img src="/images/sponsors/blackberry.png" alt="BlackBerry"></a>
+  </div>
 
-  <a class="sponsor half" href="http://google.com"><img src="/images/sponsors/google.png" alt="Google"></a>
-  <a class="sponsor half" href="http://mozilla.org"><img src="/images/sponsors/mozilla.png" alt="Mozilla Developer Network"></a>
-  <a class="sponsor half" href="http://www.brandwatch.com/2012/06/brandwatch-is-looking-for-a-senior-javascript-developer/"><img src="/images/sponsors/brandwatch.png" alt="Brandwatch"></a>
+  <div class="small-monty-wrapper sponsor-wrapper">
+    <h3>Small Monty Sponsors</h3>
 
-
-  <h3>Small Monty Sponsors</h3>
-
-  <a class="sponsor small" href="http://www.bazaarvoice.com/londondev"><img src="/images/sponsors/bazaarvoice.png" alt="Bazaar Voice"></a>
-  <a class="sponsor small" href="http://dharmafly.com/"><img src="/images/sponsors/dharmafly.png" alt="Dharmafly"></a>
-  <a class="sponsor small" href="http://p.ota.to/"><img src="/images/sponsors/potato.png" alt="Potato London"></a>
-  <a class="sponsor small" href="https://www.yammer.com"><img src="/images/sponsors/yammer.png" alt="Yammer"></a>
-
+    <a class="sponsor small" href="http://www.bazaarvoice.com/londondev"><img src="/images/sponsors/bazaarvoice.png" alt="Bazaar Voice"></a>
+    <a class="sponsor small" href="http://dharmafly.com/"><img src="/images/sponsors/dharmafly.png" alt="Dharmafly"></a>
+    <a class="sponsor small" href="http://p.ota.to/"><img src="/images/sponsors/potato.png" alt="Potato London"></a>
+    <a class="sponsor small" href="https://www.yammer.com"><img src="/images/sponsors/yammer.png" alt="Yammer"></a>
+  </div>
 
 </article>
