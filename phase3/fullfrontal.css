@@ -358,6 +358,7 @@ h2 {
 }
 .schedule .summary {
   line-height: 28px;
+  display: block;
 }
 
 .schedule .finished,

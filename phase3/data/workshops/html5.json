@@ -1,5 +1,5 @@
 {
-  "sold-out": false,
+  "sold-out": true,
   "buylink": "https://leftlogic.stagehq.com/events/1517/booking/new",
   "name" : "John Allsopp",
   "image" : "speakers/john.png",

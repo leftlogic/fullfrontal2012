@@ -42,7 +42,7 @@
 
   echo renderTemplate($conferenceData, '/pullouts/tickets.tmpl');
 
-  $workshopTickets = array('html5', 'tooling', 'mobile');
+  $workshopTickets = array('tooling', 'html5', 'mobile');
   // shuffle($workshopTickets);
 
   foreach ($workshopTickets as $workshop) {
@@ -55,7 +55,7 @@
       Please note that due to the way StageHQ (our payment system) works,
       the VAT won't show up separately when buying the tickets (nor in PayPal).
       VAT has been separately added, and our VAT registration is: 993 1266 95.
-      A VAT invoice can be <a href="mailto:events@leftlogic.com?subject=Add%20to%20node%20workshop%20waiting%20list">provided on request</a>.
+      A VAT invoice can be <a href="mailto:events@leftlogic.com?subject=Add%20to%20workshop%20waiting%20list">provided on request</a>.
     </small>
   </article>
 

@@ -5,6 +5,7 @@
   "short-name": "Archibald, Murphey, Sharp",
   "url-slug": "tooling",
   "image-credit" : "",
+  "image" : "speakers/tooling.gif",
   "prev": "mobile",
   "next": "html5",
   "title" : "Tooling Tutorials",
