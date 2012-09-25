@@ -77,7 +77,7 @@
     "url-slug": "anna",
     "blurb_md": "Anna is a freelance front end developer based in Brighton. She mostly works on projects in education and tweets a lot about Adventure Time.",
     "title": "Exploring the game console browser landscape",
-    "description_md" : "[We've been promised the abstract is coming soon!]"
+    "description_md" : "With IE coming to the Xbox, console browsers are growing up fast. We've advanced to a new level of exciting challenges in the form of voice recognition, gestural interfaces and second screens and it's time we start thinking about how our sites will work with these.\n\nWe'll race through the console landscape, unlock the treasure chest of features, and prepare ourselves for battle with the browser."
   }],
   "comments": "{\"audio-url\":\"/bar\",\"slides-url\":\"/bar\"}"
 }
