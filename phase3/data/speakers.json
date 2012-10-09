@@ -64,7 +64,7 @@
     "title" : "Offline Rules: using new browser technologies to make sites work offline and be more awesome online",
     "description_md" : "In the last couple of years a deluge of new offline storage technologies have appeared.  I'll explain why they are all excellent and rubbish at the same time, why you need to use all of them, and walk through the techniques to consider when building a web application that can load and function with no network connectivity. But making use of client side storage is not just necessary to make an app that works offline - it can also hugely improve the user experience of your site when the user does have connectivity as well. The examples will feature real-life code from our FT and the Economist applications, so you know that the techniques here are applicable to large, complex problems and not just contrived examples.",
     "prev" : "james",
-    "next" : "james"
+    "next" : "anna"
   },{
     "name": "James Pearce",
     "short-name" : "James",
@@ -73,7 +73,7 @@
     "image-credit": "Robert Nyman",
     "blurb_md": "Head of Mobile Developer Relations at Facebook, a developer and writer with a special passion for mobile and exploring its untapped potential.",
     "url-slug": "james",
-    "title" : "TBA",
+    "title" : "How I stopped worrying and learned to love the <body/>",
     "description_md" : "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's got work to do, and it's looking a little out of its depth. The Web's best hope for the future is if we think about it a little differently and admit what we must do to address its shortcomings.",
     "next" : "john"
   },{
