@@ -33,6 +33,7 @@
   <a class="sponsor half" href="http://google.com"><img src="/images/sponsors/google.png" alt="Google"></a>
   <a class="sponsor half" href="http://mozilla.org"><img src="/images/sponsors/mozilla.png" alt="Mozilla Developer Network"></a>
   <a class="sponsor half" href="http://www.brandwatch.com/2012/06/brandwatch-is-looking-for-a-senior-javascript-developer/"><img src="/images/sponsors/brandwatch.png" alt="Brandwatch"></a>
+  <a class="sponsor half" href="http://www.rim.com"><img src="/images/sponsors/blackberry.png" alt="Blackberry"></a>
 
 
   <h3>Small Monty Sponsors</h3>
