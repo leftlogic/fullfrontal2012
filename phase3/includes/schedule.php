@@ -120,8 +120,8 @@
       <li class="vevent talk">
         <div class="done">Finished</div>
         <span class="time">
-          <time class="dtstart" title="2012-11-09T15:20" datetime="2012-11-09T15:20">15:20</time> &mdash;
-          <time class="dtend" title="2012-11-09T16:00" datetime="2012-11-09T16:00">16:00</time>
+          <time class="dtstart" title="2012-11-09T15:10" datetime="2012-11-09T15:10">15:10</time> &mdash;
+          <time class="dtend" title="2012-11-09T15:50" datetime="2012-11-09T15:50">15:50</time>
           <span class="next">Up Next</span>
         </span>
         <a href="/speaker/rebecca#rebecca" class="pullout summary">Writing Testable JavaScript</a>
