@@ -121,7 +121,7 @@ var updateSchedule = function (now) {
     $('.done').hide();
     return;
   }
-  if(now < new Date('2012-11-09T08:00') || now >= new Date('2012-11-09T17:35')) {
+  if(now < new Date('2012-11-06T08:00') || now >= new Date('2012-11-09T17:35')) {
     return;
   }
 
@@ -160,7 +160,13 @@ var updateSchedule = function (now) {
   if (!$next.hasClass('now')) {
     $next.find('.time').find('.next').show();
   }
+
+  setTimeout(function () {
+    updateSchedule(+new Date);
+  }, 1000 * 60);
 };
+
+updateSchedule(+new Date);
 
 var debugSchedule = function () {
   var i = new Date('2012-11-09T08:00'), j = (1000 * 60 * 8);
