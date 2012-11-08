@@ -194,7 +194,7 @@ Cheers,
 setTimeout(function () {
   var pageYOffset = window.pageYOffset === undefined ? document.body.scrollTop : window.pageYOffset;
   if (!pageYOffset && (!location.hash || location.hash === '#?') && document.getElementById('show-menu')) {
-    if (!matchMedia('@media screen and (min-width: 820px)').matches && localStorage.seenit) {
+    if (!matchMedia('@media screen and (min-width: 820px)').matches) {
       document.getElementById('show-menu').scrollIntoView();
     } else {
     }
