@@ -112,7 +112,9 @@ var noIsoDateParse = function (date) {
   return timestamp;
 };
 
-var dirty;
+var dirty,
+    pageYOffset = window.pageYOffset === undefined ? document.body.scrollTop : window.pageYOffset;
+
 var updateSchedule = function (now) {
   if(now >= new Date('2012-11-09T17:35') && dirty) {
     $('.finished').removeClass('finished');
@@ -146,7 +148,7 @@ var updateSchedule = function (now) {
       $this.addClass('finished').find('.done').show();
     }
     if (stime < now && etime > now) {
-      $this.addClass('now');
+      $this.addClass('now');      
     }
     if ( (etime - now) < (1000 * 60 * 15) ) {
       $this.removeClass('talk current');
@@ -159,6 +161,13 @@ var updateSchedule = function (now) {
   $('.next').hide();
   if (!$next.hasClass('now')) {
     $next.find('.time').find('.next').show();
+  }
+
+  if (!pageYOffset && (!location.hash || location.hash === '#?') && document.getElementById('show-menu')) {
+    if (!matchMedia('@media screen and (min-width: 820px)').matches) {
+      $(document).scrollTop($next.position().top);
+    } else {
+    }
   }
 
   setTimeout(function () {

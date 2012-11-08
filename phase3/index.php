@@ -191,15 +191,18 @@ Cheers,
 
 </script>
 <script>
-setTimeout(function () {
-  var pageYOffset = window.pageYOffset === undefined ? document.body.scrollTop : window.pageYOffset;
-  if (!pageYOffset && (!location.hash || location.hash === '#?') && document.getElementById('show-menu')) {
-    if (!matchMedia('@media screen and (min-width: 820px)').matches) {
-      document.getElementById('show-menu').scrollIntoView();
-    } else {
+var now = +new Date;
+if(now < new Date('2012-11-06T08:00') || now >= new Date('2012-11-09T17:35')) {
+  setTimeout(function () {
+    if (!pageYOffset && (!location.hash || location.hash === '#?') && document.getElementById('show-menu')) {
+      if (!matchMedia('@media screen and (min-width: 820px)').matches) {
+        document.getElementById('show-menu').scrollIntoView();
+      } else {
+      }
     }
-  }
-}, 100);</script>
+  }, 100);
+}
+</script>
 <?php
 if ($dummy) { include('dummy.html'); }
 ?>
