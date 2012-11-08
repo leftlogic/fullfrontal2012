@@ -163,11 +163,8 @@ var updateSchedule = function (now) {
     $next.find('.time').find('.next').show();
   }
 
-  if (!pageYOffset && (!location.hash || location.hash === '#?') && document.getElementById('show-menu')) {
-    if (!matchMedia('@media screen and (min-width: 820px)').matches) {
-      $(document).scrollTop($next.position().top);
-    } else {
-    }
+  if (!pageYOffset && (!location.hash || location.hash === '#?')) {
+      $(document).scrollTop($next.position().top - 7);
   }
 
   setTimeout(function () {
