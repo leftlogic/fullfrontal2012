@@ -113,6 +113,9 @@ Cheers,
           </span>
         <span>
       </h1>
+
+      <span class="sold-out"><a class="sold-out pullout button buy-tickets" href="/tickets#tickets">Sold Out
+      </a></span>
       
       <span class="sold-out"><a class="sold-out pullout button buy-tickets" href="/tickets#tickets">Sold Out
       </a></span>
