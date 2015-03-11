@@ -7,7 +7,10 @@
     "url-slug": "paul",
     "blurb_md" : "Developer Advocate @ Google on Chrome. Mr [Web Intents](http://webintents.org). Developer of many techie things including Twollo, Twe2, Topicala, Ahoyo and FriendDeck.",
     "title": "Building Web Apps of the future. Tomorrow, today and yesterday.",
-    "description_md": "\"I skate to where the puck is going to be, not where it has been.\" - Wayne Gretzky. Building apps using AppCache and IndexedDb.  Pfft! That is so 2011.  The browser is an amazing runtime that can already deliver amazing apps.  Let's dive into the technologies that will help you deliver amazing web apps that blow your users socks off now and in the future.",
+    "description_md": "\"I skate to where the puck is going to be, not where it has been.\" - Wayne Gretzky. Building apps using AppCache and IndexedDb.  Pfft! That is so 2011.  The browser is an amazing runtime that can already deliver amazing apps.  Let's dive into the technologies that will help you deliver amazing web apps that blow your users socks off now and in the future.\n\n<iframe width=\"500\" height=\"281\" src=\"http://www.youtube.com/embed/O3AukCYymEU\" frameborder=\"0\" allowfullscreen></iframe>",
+    "short-name": "Paul",
+    "audio-url":"/audio/5-paul.mp3",
+    "slides-url":"https://speakerdeck.com/paulkinlan/building-web-apps-of-the-future-tomorrow-today-and-yesterday",
     "prev": "anna",
     "next": "rebecca"
   },{
@@ -18,7 +21,10 @@
     "url-slug": "rebecca",
     "blurb_md" : "Senior JS dev at [Bocoup](http://bocoup.com/), client-side architecture fanatic, co-host of the long-lost [yayQuery](http://yayquery.com/) podcast",
     "title": "Writing Testable JavaScript",
-    "description_md": "It's one thing to write the code you need to write to get something working; it's another thing to write the code you need to write if you want to be able to prove that it works -- and that it keeps working as you refactor and add new features. In this talk, we'll look at what it means to write testable JavaScript code, and even write and run a few tests using [Grunt](http://gruntjs.com/) and the [Mocha](http://visionmedia.github.com/mocha/) testing framework.",
+    "description_md": "It's one thing to write the code you need to write to get something working; it's another thing to write the code you need to write if you want to be able to prove that it works -- and that it keeps working as you refactor and add new features. In this talk, we'll look at what it means to write testable JavaScript code, and even write and run a few tests using [Grunt](http://gruntjs.com/) and the [Mocha](http://visionmedia.github.com/mocha/) testing framework.\n\n<iframe width=\"500\" height=\"281\" src=\"http://www.youtube.com/embed/OzjogCFO4Zo\" frameborder=\"0\" allowfullscreen></iframe>",
+    "short-name": "Rebecca",
+    "audio-url":"/audio/6-rebecca.mp3",
+    "slides-url":"https://speakerdeck.com/rmurphey/writing-testable-javascript",
     "prev": "paul",
     "next": "steven"
   },{
@@ -29,7 +35,10 @@
     "url-slug": "chris",
     "blurb_md" : "Chris Wilson has worked on NCSA Mosaic, IE and now Chrome as an Open Web advocate.  He loves enabling awesome user experiences on the web.",
     "title": "Tales of Suckage and Awesomeness",
-    "description_md": "This talk is an exploration of how the web has evolved since its humble beginnings in the early 1990s, from high and low points in the trenches of the Browser Wars to the enviable opportunities and sizable challenges we face today, and draws the connections between the choices made then and the landscape we find ourselves in today.",
+    "description_md": "This talk is an exploration of how the web has evolved since its humble beginnings in the early 1990s, from high and low points in the trenches of the Browser Wars to the enviable opportunities and sizable challenges we face today, and draws the connections between the choices made then and the landscape we find ourselves in today.\n\n<iframe width=\"500\" height=\"281\" src=\"http://www.youtube.com/embed/XiFJWL83KaA\" frameborder=\"0\" allowfullscreen></iframe>",
+    "short-name": "Chris",
+    "audio-url":"/audio/8-chris.mp3",
+    "slides-url":"https://speakerdeck.com/cwilso/tales-of-suckage-and-awesomeness",
     "prev": "steven"
   },{
     "name" : "Steven Wittens",
@@ -39,7 +48,10 @@
     "url-slug": "steven",
     "blurb_md" : "[Steven Wittens](http://acko.net) is a wannabe demo scener, recreational mathematician and maker of webs front and back who desperately wants the browser to become a real boy already.",
     "title": "Making things with Maths",
-    "description_md": "For years the web has been happy playing in the sandbox that was the browser, locked away from all the things that native apps could do. But now we've grown up, and we have WebGL, Canvas, Web Audio, Media Capture and more. To really exploit this power, we have to step outside the comfort zone of text-oriented publishing and engage with the full field of computer engineering.\n\nMaths are an essential part of this. While for most people, maths inspires dread, it's the most powerful tool we have, and the most flexible lego set you can get your hands on. In this talk I want to show you some clever mathematical machines, and what the pieces inside are doing. In a browser, naturally. And while true mathematicians will frown at the clear disregard for rigorous derivation, I think my way is more fun.",
+    "description_md": "For years the web has been happy playing in the sandbox that was the browser, locked away from all the things that native apps could do. But now we've grown up, and we have WebGL, Canvas, Web Audio, Media Capture and more. To really exploit this power, we have to step outside the comfort zone of text-oriented publishing and engage with the full field of computer engineering.\n\nMaths are an essential part of this. While for most people, maths inspires dread, it's the most powerful tool we have, and the most flexible lego set you can get your hands on. In this talk I want to show you some clever mathematical machines, and what the pieces inside are doing. In a browser, naturally. And while true mathematicians will frown at the clear disregard for rigorous derivation, I think my way is more fun.\n\n<iframe width=\"500\" height=\"281\" src=\"http://www.youtube.com/embed/ONN3jBly364\" frameborder=\"0\" allowfullscreen></iframe>",
+    "short-name": "Steven",
+    "audio-url":"/audio/7-steven.mp3",
+    "slides-url":"http://acko.net/files/fullfrontal/fullfrontal/slides-net/",
     "prev": "rebecca",
     "next": "chris"
   },{
@@ -50,8 +62,11 @@
     "url-slug": "john",
     "blurb_md" : "[John](http://johnfallsopp.com/) has been doing things to the web since before many of you were born. This is not necessarily a good thing.",
     "title": "Is HTML relevent in the era of web apps?",
-    "description_md": "With the rise of web apps, the place of HTML, long the bedrock technology for web developers has become a little shakier. Widely used application frameworks like SenchaTouch and SproutCore effectively bypass HTML altogether, going straight from JavaScript to the DOM.\n\nSo is the era of HTML over? Or does it still have a place building web applications, as well as web pages?\n\nJohn Allsopp believes so, and in this presentation will consider in very practical terms why eschewing HTML in web application development may not be a great leap forward at all.",
+    "description_md": "With the rise of web apps, the place of HTML, long the bedrock technology for web developers has become a little shakier. Widely used application frameworks like SenchaTouch and SproutCore effectively bypass HTML altogether, going straight from JavaScript to the DOM.\n\nSo is the era of HTML over? Or does it still have a place building web applications, as well as web pages?\n\nJohn Allsopp believes so, and in this presentation will consider in very practical terms why eschewing HTML in web application development may not be a great leap forward at all.\n\n<iframe width=\"500\" height=\"281\" src=\"http://www.youtube.com/embed/KTqIGKmCqd0\" frameborder=\"0\" allowfullscreen></iframe>",
     "prev": "james",
+    "audio-url":"/audio/2-john.mp3",
+    "slides-url":"http://johnfallsopp.com/presentations/presentations/FullFrontal/preso.html?presenter",
+    "short-name" : "John",
     "next": "andrew"
   },{
     "name": "Andrew Betts",
@@ -62,7 +77,9 @@
     "blurb_md": "Founder of [Assanka](http://assanka.net), the company acquired earlier this year by the FT, Andrew now heads up FT Labs (the team that builds some of the world's finest HTML5 web apps) and is co-chair of the W3C 'Fixing appcache' community group.",
     "url-slug": "andrew",
     "title" : "Offline Rules: using new browser technologies to make sites work offline and be more awesome online",
-    "description_md" : "In the last couple of years a deluge of new offline storage technologies have appeared.  I'll explain why they are all excellent and rubbish at the same time, why you need to use all of them, and walk through the techniques to consider when building a web application that can load and function with no network connectivity. But making use of client side storage is not just necessary to make an app that works offline - it can also hugely improve the user experience of your site when the user does have connectivity as well. The examples will feature real-life code from our FT and the Economist applications, so you know that the techniques here are applicable to large, complex problems and not just contrived examples.",
+    "description_md" : "In the last couple of years a deluge of new offline storage technologies have appeared.  I'll explain why they are all excellent and rubbish at the same time, why you need to use all of them, and walk through the techniques to consider when building a web application that can load and function with no network connectivity. But making use of client side storage is not just necessary to make an app that works offline - it can also hugely improve the user experience of your site when the user does have connectivity as well. The examples will feature real-life code from our FT and the Economist applications, so you know that the techniques here are applicable to large, complex problems and not just contrived examples.\n\n<iframe width=\"500\" height=\"281\" src=\"http://www.youtube.com/embed/RrGo1Sz4IgQ\" frameborder=\"0\" allowfullscreen></iframe>",
+    "audio-url":"/audio/3-andrew.mp3",
+    "slides-url":"https://speakerdeck.com/triblondon/offline-rules-full-frontal-2012",
     "prev" : "james",
     "next" : "anna"
   },{
@@ -74,19 +91,23 @@
     "blurb_md": "Head of Mobile Developer Relations at Facebook, a developer and writer with a special passion for mobile and exploring its untapped potential.",
     "url-slug": "james",
     "title" : "How I stopped worrying and learned to love the <body/>",
-    "description_md" : "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's got work to do, and it's looking a little out of its depth. The Web's best hope for the future is if we think about it a little differently and admit what we must do to address its shortcomings.",
+    "description_md" : "The Web's place in history as a flexible & fluid way to store documents is well assured. But in a post-PC world, it's got work to do, and it's looking a little out of its depth. The Web's best hope for the future is if we think about it a little differently and admit what we must do to address its shortcomings.\n\n<iframe width=\"500\" height=\"281\" src=\"http://www.youtube.com/embed/32wer_j5soQ\" frameborder=\"0\" allowfullscreen></iframe>",
+    "audio-url":"/audio/1-james.mp3",
+    "slides-url":"https://speakerdeck.com/jamesgpearce/23181",
     "next" : "john"
   },{
     "name": "Anna Debenham",
-    "short-name": "anna",
+    "short-name": "Anna",
     "twitter-handle": "anna_debenham",
     "image": "anna.png",
     "image-credit": "Geri Coady",
     "url-slug": "anna",
     "blurb_md": "Anna is a freelance front end developer based in Brighton. She mostly works on projects in education and tweets a lot about Adventure Time.",
     "title": "Exploring the game console browser landscape",
-    "description_md" : "With IE coming to the Xbox, console browsers are growing up fast. We've advanced to a new level of exciting challenges in the form of voice recognition, gestural interfaces and second screens and it's time we start thinking about how our sites will work with these.\n\nWe'll race through the console landscape, unlock the treasure chest of features, and prepare ourselves for battle with the browser.",
+    "description_md" : "With IE coming to the Xbox, console browsers are growing up fast. We've advanced to a new level of exciting challenges in the form of voice recognition, gestural interfaces and second screens and it's time we start thinking about how our sites will work with these.\n\nWe'll race through the console landscape, unlock the treasure chest of features, and prepare ourselves for battle with the browser.\n\n<iframe width=\"500\" height=\"281\" src=\"http://www.youtube.com/embed/lGWyXVyCZhs\" frameborder=\"0\" allowfullscreen></iframe>",
     "prev": "andrew",
+    "audio-url":"/audio/4-anna.mp3",
+    "slides-url":"https://speakerdeck.com/anna/exploring-the-game-console-browser-landscape",
     "next": "paul"
   }],
   "comments": "{\"audio-url\":\"/bar\",\"slides-url\":\"/bar\"}"
